@@ -1,0 +1,42 @@
+@import '../css/main.css';
+
+nav {
+    height: 3.4rem;
+    background-color: white;
+    display: flex;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    /*border: solid black 1px;*/
+}
+.nav-brand-container a {
+    margin-left: 0.8rem;
+}
+.nav-brand-link img {
+    width: 9rem;
+    /*margin-left: 0.8rem;*/
+}
+.nav-brand-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    /*border: solid black 1px;*/
+}
+.nav-links-container-desktop {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    /*border: solid black 1px;*/
+}
+.nav-links-container-mobile-tablet {
+    display: none;
+    /*visibility: hidden;*/
+}
+.nav-link {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: var(--blue);
+}
+.nav-link:hover {
+    color: var(--purple);
+}

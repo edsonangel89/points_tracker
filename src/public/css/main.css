@@ -1,0 +1,11 @@
+:root {
+    --blue: #0096ff;
+    --purple: #5800ff;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: helvetica;
+}
