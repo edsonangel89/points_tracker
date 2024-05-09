@@ -9,84 +9,56 @@
     $name_users_table = 'users';
 
     function get_users() {
-        $table = $name_users_table;
-            $sql_get_users = " SELECT * FROM $table ";
-            try {
-                $conn = new mysqli($server_db, $user_db, $password_db, $name_db);
-                $query = $conn->query($sql_get_users);
-                if($query->num_rows > 0) {
-                    $users = [];
-                    while($row = $query->fetch_assoc()) {
-                        $users[] = $row;
-                    }
-                    return $users;
-                }
-                $conn->close();
-                //setcookie('testcookie', 'testvalue', time() + 60,'','', false, true);
-                echo json_encode($users);
-            }
-            catch(mysqli_sql_exception $e) {
-                echo $e->GetMessage();
-            }
+        $users = User::get_users();
+        http_response_code(200);
+        echo json_encode($users);
     }
 
     function get_user_by_id($uid) {
-        $table = $name_users_table;
-            $sql_query = "SELECT * FROM $table WHERE UserID=$uid";
-            try {
-                $conn = new mysqli($server_db, $user_db, $password_db, $name_db);
-                $query = $conn->query($sql_query);
-                if($query->num_rows > 0) {
-                    $user = $query->fetch_assoc();
-                }
-                else {
-                    $conn->close();
-                    echo json_encode('Usuario no existe');
-                }
-                $conn->close();
-                echo json_encode($user);
-            }
-            catch(mysqli_sql_exception $e) {
-                echo $e->GetMessage();
-            }
+        $user = User::get_user_by_id($uid);
+        http_response_code(200);
+        echo json_encode($user);
     }
 
-    //get_user_by_id(2);
-
-    function add_new_user() {
-        try {
-                
+    function get_user_by_email($email) {
+        $user = User::get_user_by_email($email);
+        if($user) {
+            return $user;
         }
-        catch(mysqli_sql_exception $e) {
-
+        else {
+            return false;
         }
     }
 
-    function update_user_info_by_id($uid, $fname, $lname, $email, $password, $role) {
-        try {
-                
+    function add_user($fname, $lname, $email, $password, $role, $points, $prizes) {
+        $create = User::add_user($fname, $lname, $email, $password, $role, $points, $prizes);
+        if($create) {
+            http_response_code(201);
         }
-        catch(mysqli_sql_exception $e) {
-
+        else {
+            http_response_code(400);
         }
+        
     }
 
-    function update_user_points_by_id($uid, $points) {
-        try {
-                
-        }
-        catch(mysqli_sql_exception $e) {
+    function update_user_info_by_id($uid, $fname, $lname) {
+        User::update_user_info($uid, $fname, $lname);
+        http_response_code(200);
+    }
 
-        }
+    function update_user_points_by_id($uid, $points, $prizes) {
+        User::update_user_points($uid, $points, $prizes);
+        http_response_code(200);
+    }
+
+    function get_points_prizes($uid) {
+        $user_points = User::get_points_prizes($uid);
+        return $user_points;
     }
 
     function delete_user_by_id($uid) {
-        try {
-                
-        }
-        catch(mysqli_sql_exception $e) {
-
-        }
+        User::delete_user($uid);
+        http_response_code(200);
     }
 
 ?>

@@ -16,6 +16,7 @@
             <div class="nav-links-container-desktop">
                 <a class="nav-link" href="#">Soporte</a>
                 <a class="nav-link" href="#">Iniciar sesion</a>
+                <a class="nav-link" href="http://localhost/checker/api/sessions/logout?uid=1">Cerrar sesion</a>
             </div>
             <div class="nav-links-container-mobile-tablet">
                 <a class="nav-link" href="#"><span class="material-symbols-outlined">support_agent</span></a>
@@ -25,11 +26,23 @@
     </header>
     <main>
         <section>
-
+            <form id="login-form">
+                <label>User</label><br>
+                <input id="email" required/><br>
+                <label>Password</label><br>
+                <input id="password" required/><br>
+                <input type="submit" value="Login"/>
+            </form>
+            <form id="points-form">
+                <label>Points</label><br>
+                <input id="points" type="number" min="0" required/><br>
+                <input type="submit" value="Puntos"/>
+            </form>
         </section>
     </main>
     <footer>
 
     </footer>
+    <script src="src/public/js/testForm.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@
     $main_routes = [
         '/' => 'src/routes/viewRoutes.php',
         '/api/users' => 'src/routes/userRoutes.php',
+        '/api/sessions' => 'src/routes/sessionRoutes.php',
         '404' => 'src/views/404.php'
     ];
 
@@ -16,6 +17,9 @@
     }
     elseif (preg_match_all('[\/api\/users]', $path)) {
         require $main_routes['/api/users'];
+    }
+    elseif (preg_match_all('[\/api\/sessions]', $path)) {
+        require $main_routes['/api/sessions'];
     }
     else {
         require $main_routes['404'];
