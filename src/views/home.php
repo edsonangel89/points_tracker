@@ -14,35 +14,29 @@
                 <a class="nav-brand-link" href="#"><img src="src/public/assets/brand/logo__svg.svg" alt="logo image"/></a>
             </div>
             <div class="nav-links-container-desktop">
-                <a class="nav-link" href="#">Soporte</a>
-                <a class="nav-link" href="#">Iniciar sesion</a>
-                <a class="nav-link" href="http://localhost/checker/api/sessions/logout?uid=1">Cerrar sesion</a>
+                <!--<a class="nav-link" href="#">Soporte</a>-->
+                <a class="nav-link" href="http://localhost/checker/login">Iniciar sesion</a>
             </div>
             <div class="nav-links-container-mobile-tablet">
-                <a class="nav-link" href="#"><span class="material-symbols-outlined">support_agent</span></a>
-                <a class="nav-link" href="#"><span class="material-symbols-outlined">login</span></a>
+                <!--<a class="nav-link" href="#"><span class="material-symbols-outlined">support_agent</span></a>-->
+                <a class="nav-link" href="http://localhost/checker/login"><span class="material-symbols-outlined">login</span></a>
             </div>
         </nav>
     </header>
     <main>
         <section>
-            <form id="login-form">
+            <!--<form id="login-form">
                 <label>User</label><br>
                 <input id="email" required/><br>
                 <label>Password</label><br>
                 <input id="password" required/><br>
-                <input type="submit" value="Login"/>
-            </form>
-            <form id="points-form">
-                <label>Points</label><br>
-                <input id="points" type="number" min="0" required/><br>
-                <input type="submit" value="Puntos"/>
+                <input type="submit" value="Login"/>-->
             </form>
         </section>
     </main>
     <footer>
 
     </footer>
-    <script src="src/public/js/testForm.js"></script>
+    <!--<script src="src/public/js/loginForm.js"></script>-->
 </body>
 </html>

@@ -57,13 +57,13 @@
                 $query = $conn->query($sql_query);
                 if($query->num_rows > 0) {
                     $user = $query->fetch_assoc();
+                    $conn->close();
+                    return $user;
                 }
                 else {
                     $conn->close();
                     return false;
                 }
-                $conn->close();
-                return $user;
             }
             catch (sqli_sql_exception $e) {
                 echo $e->GetMessage();
@@ -71,7 +71,7 @@
             }
         }
 
-        static public function add_user($fname, $lname, $email, $password, $role, $points, $prizes) {
+        static public function add_user($fname, $lname, $email, $password, $role, $points, $prizes, $verify) {
             $table = self::$name_users_table;
             $sql_create_user = "INSERT INTO $table (
                 FirstName,
@@ -80,7 +80,8 @@
                 Password,
                 Role,
                 Points,
-                Prizes
+                Prizes,
+                EmailVerified
             ) VALUES (
                 '$fname',
                 '$lname',
@@ -88,7 +89,8 @@
                 '$password',
                 '$role',
                 '$points',
-                '$prizes'
+                '$prizes',
+                '$verify'
             )";
             try {
                 $conn = new mysqli(self::$server_db, self::$user_db, self::$password_db, self::$name_db);
@@ -99,7 +101,13 @@
                 }
             }
             catch (mysqli_sql_exception $e) {
-                echo $e->GetMessage();
+                $error = $e->GetMessage();
+                if(preg_match_all('/Duplicate/', $error)) {
+                    echo json_encode('duplicated-user');
+                }
+                else {
+                    echo json_encode('db-error');
+                }
             }
         }
 
@@ -176,6 +184,33 @@
                 if($delete) {
                     $conn->close();
                     return true;
+                }
+                else {
+                    $conn->close();
+                    return false;
+                }
+            }
+            catch (sqli_sql_exception $e) {
+                echo $e->GetMessage();
+                return false;
+            }
+        }
+
+        static public function update_email_verify($email) {
+            $table = self::$name_users_table;
+            $sql_email_verify = "UPDATE $table SET
+            EmailVerified=1 WHERE Email='$email'
+            ";
+            try {
+                $conn = new mysqli(self::$server_db, self::$user_db, self::$password_db, self::$name_db);
+                $email_verify = $conn->query($sql_email_verify);
+                if($email_verify) {
+                    $conn->close();
+                    return true;
+                }
+                else {
+                    $conn->close();
+                    return false;
                 }
             }
             catch (sqli_sql_exception $e) {

@@ -2,9 +2,6 @@ const form = document.getElementById('login-form');
 const inputEmail = document.getElementById('email');
 const inputPassword = document.getElementById('password');
 
-const pointsForm = document.getElementById('points-form');
-const inputPoints = document.getElementById('points');
-
 form.addEventListener('submit', function(e) {
     e.preventDefault();
     const formData = new FormData();
@@ -14,26 +11,24 @@ form.addEventListener('submit', function(e) {
         method: 'POST',
         body: formData
     })
-    .then(response => {
-    })
+    .then(response => response.json())
     .then(data => {
         inputEmail.value = '';
         inputPassword.value = '';
+        switch(data) {
+            case 'Non-user':
+                alert('No existe usuario');
+            break;
+            case 'Wrong-password':
+                alert('Contrasena incorrecta');
+            break;
+            case 'Non-verified':
+                alert('Correo no verificado, confirma tu correo electronico en bandeja de entrada y vuelve a intentar');
+            break;
+            default:
+                window.location.href = '/checker/home';
+            break;
+        }
     });
 })
 
-pointsForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append('points', inputPoints.value);
-    
-    fetch('http://localhost/checker/api/users/update/points/4', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => {
-    })
-    .then(data => {
-        inputPoints.value = 0;
-    });
-})

@@ -1,0 +1,29 @@
+@import '../css/main.css';
+@import '../css/home.css';
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.user-id {
+    width: 70%;
+    padding: 0.6rem;
+    text-align: center;
+    font-size: 2rem;
+    border-bottom: solid gray 1px;
+}
+.user-name {
+    width: 100%;
+    padding: 0.6rem;
+    text-align: center;
+    font-size: 1.3rem;
+    border-bottom: solid gray 1px;
+}
+.user-points {
+    width: 100%;
+    padding: 0.6rem;
+    text-align: center;
+    font-size: 3rem;
+    border-bottom: solid gray 1px;
+}

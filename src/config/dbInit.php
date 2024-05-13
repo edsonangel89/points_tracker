@@ -17,7 +17,8 @@
         Password VARCHAR(255) NOT NULL,
         Points INT,
         Prizes INT,
-        Role ENUM('superadmin', 'admin', 'user') NOT NULL 
+        Role ENUM('superadmin', 'admin', 'user') NOT NULL,
+        EmailVerified BOOLEAN NOT NULL 
     )";
 
     $hashed_password = encrypt_password("puntoaquapointstracker2024");
@@ -26,13 +27,15 @@
         LastName,
         Email,
         Password,
-        Role
+        Role,
+        EmailVerified
     ) VALUES (
         'Superadmin',
         'Admin',
         'edsonangelmc@gmail.com',
         '$hashed_password',
-        'superadmin'
+        'superadmin',
+        1
     )";
 
     try {

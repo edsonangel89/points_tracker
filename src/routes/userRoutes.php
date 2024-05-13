@@ -3,14 +3,19 @@
     require 'src/controllers/userControllers.php';
     require 'src/controllers/viewControllers.php';
     require 'src/utils/jwt.php';
+    require 'src/utils/inputValidation.php';
+
+    session_start();
 
     $user_routes = [
         '/' => '',
         '/get/' => 'get_users',
         '/get/id' => 'get_user_by_id',
+        '/get/email' => 'get_user_by_email',
         '/add/' => 'add_user',
         '/update/info/id' => 'update_user_info_by_id',
         '/update/points/id' => 'update_user_points_by_id',
+        '/update/confirm/' => 'confirm_email',
         '/delete/' => 'delete_user_by_id',
         '404' => 'not_found_page'
     ];
@@ -19,21 +24,46 @@
 
     if(preg_match_all('/\/get\//', $sub_path)) {
         $user_id = substr($sub_path, 5);
-        if($user_id) {
-            call_user_func($user_routes['/get/id'], $user_id);
+        $headers = getallheaders();
+        if(!$user_id) {
+            if(isset($_SESSION['ID']) && isset($_COOKIE['Authorization'])) {
+                call_user_func($user_routes['/get/']);
+            }
+            else {
+                call_user_func($user_routes['404']);
+            }
         }
         else {
-            call_user_func($user_routes['/get/']);
+            if(isset($_SESSION['ID'])) {
+                if($_SESSION['ID'] == $user_id || isset($_COOKIE['Authorization'])) {
+                    call_user_func($user_routes['/get/id'], $user_id);
+                }
+                else {
+                    call_user_func($user_routes['404']);
+                }
+            }
+            else {
+                if($user_id == 'email') {
+                    if(isset($_POST['email'])) {
+                        $user_email = validate_email($_POST['email']);
+                        echo json_encode(call_user_func($user_routes['/get/email'], $user_email));
+                    }
+                }
+                else {
+                    call_user_func($user_routes['404']);
+                }
+            }
         }
     }
     elseif(preg_match_all('/\/add/', $sub_path)) {
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
-        $email = $_POST['email'];
-        $password = encrypt_password($_POST['password']);
-        $role = $_POST['role'];
+        $fname = validate_text_input($_POST['fname']);
+        $lname = validate_text_input($_POST['lname']);
+        $email = validate_email($_POST['email']);
+        $password = encrypt_password(validate_password($_POST['password']));
+        $role = 'user';
         $points = 0;
         $prizes = 0;
+        $verify = false;
 
         $user = [
             $fname,
@@ -42,16 +72,21 @@
             $password,
             $role,
             $points,
-            $prizes
+            $prizes,
+            $verify
         ];
 
         call_user_func_array($user_routes['/add/'], $user);
     }
     elseif(preg_match_all('/\/update\/info\//', $sub_path)) {
         $user_id = substr($sub_path, 13);
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
-        if($user_id) {
+        $fname = validate_text_input($_POST['fname']);
+        $lname = validate_text_input($_POST['lname']);
+        if(!isset($_SESSION['ID'])) {
+            http_response_code(401);
+            call_user_func($user_routes['404']);
+        }
+        if($user_id && $user_id == $_SESSION['ID']) {
             $user = [
                 $user_id,
                 $fname,
@@ -69,7 +104,22 @@
             call_user_func($user_routes['404']);
         }
     }
-    elseif(preg_match_all('/\/update\/points\//', $path)) {
+    elseif(preg_match_all('/\/update\/confirm\//', $sub_path)) {
+        if(isset($_GET['token']) && isset($_GET['email'])) {
+            $token = $_GET['token'];
+            $email = $_GET['email'];
+            $user_info = [
+                $email,
+                $token
+            ];
+            call_user_func_array($user_routes['/update/confirm/'], $user_info);
+        }
+        else {
+            http_response_code(404);
+            echo json_encode('Non-user');
+        }
+    }   
+    elseif(preg_match_all('/\/update\/points\//', $path) && $_SESSION['ROLE'] == 'superadmin') {
         $user_id = substr($sub_path, 15);
         $user_info = get_points_prizes($user_id);
         $current_points = $user_info['Points'];
@@ -105,18 +155,21 @@
                 }
             }
             else {
-                echo 'You dont have authorization';
-                exit;
+                http_response_code(401);
+                echo json_encode('Non-authorized');
             }
         }
         else {
-            echo 'No token';
-            exit;
+            http_response_code(404);
+            echo json_encode('Non-token');
         }
     }
     elseif(preg_match_all('/\/delete\//', $path)) {
         $user_id = substr($sub_path, 8);
-        if($user_id) {
+        if($user_id && $_SESSION['ID'] == $user_id) {
+            call_user_func($user_routes['/delete/'], $user_id);
+        }
+        elseif($user_id && $_SESSION['ID'] == 1) {
             if($user_id == 1) {
                 http_response_code(400);
             }
@@ -130,7 +183,7 @@
         }
     }
     else {
-        echo 'NOT FOUND';
+        http_response_code(404);
         call_user_func($user_routes['404']);
     }
 
