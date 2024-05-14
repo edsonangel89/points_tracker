@@ -48,9 +48,6 @@
             </form>
         </section>
     </main>
-    <footer>
-
-    </footer>
     <script src="src/public/js/loginForm.js"></script>
 </body>
 </html>

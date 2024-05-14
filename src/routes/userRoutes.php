@@ -5,8 +5,6 @@
     require 'src/utils/jwt.php';
     require 'src/utils/inputValidation.php';
 
-    session_start();
-
     $user_routes = [
         '/' => '',
         '/get/' => 'get_users',
@@ -15,6 +13,7 @@
         '/add/' => 'add_user',
         '/update/info/id' => 'update_user_info_by_id',
         '/update/points/id' => 'update_user_points_by_id',
+        '/update/prize/id' => 'update_user_prize_by_id',
         '/update/confirm/' => 'confirm_email',
         '/delete/' => 'delete_user_by_id',
         '404' => 'not_found_page'
@@ -123,7 +122,7 @@
         $user_id = substr($sub_path, 15);
         $user_info = get_points_prizes($user_id);
         $current_points = $user_info['Points'];
-        $current_prizes = $user_info['Prizes'];
+        $current_prize = $user_info['Prize'];
         $incoming_points = $_POST['points'];
         $total_points = $current_points + $incoming_points;
         if(isset($_COOKIE['Authorization'])) {   
@@ -131,7 +130,7 @@
             if($jwt_match) {
                 if($total_points > 10) {
                     $new_points = $total_points - 11;
-                    $current_prizes++;
+                    $current_prize = true;
                 }
                 else {
                     $new_points = $total_points;
@@ -140,13 +139,53 @@
                     $user = [
                         $user_id,
                         $new_points,
-                        $current_prizes
+                        $current_prize
                     ];
                     if($user_id == 1) {
                         http_response_code(400);
                     }
                     else {
                         call_user_func_array($user_routes['/update/points/id'], $user);
+                    }
+                }
+                else {
+                    http_response_code(404);
+                    call_user_func($user_routes['404']);
+                }
+            }
+            else {
+                http_response_code(401);
+                echo json_encode('Non-authorized');
+            }
+        }
+        else {
+            http_response_code(404);
+            echo json_encode('Non-token');
+        }
+    }
+    elseif(preg_match_all('/\/update\/prize\//', $path) && $_SESSION['ROLE'] == 'superadmin') {
+        $user_id = substr($sub_path, 14);
+        $user_info = get_points_prizes($user_id);
+        $current_prize = $user_info['Prize'];
+        if(isset($_COOKIE['Authorization'])) {   
+            $jwt_match = verify_jwt($_COOKIE['Authorization']);
+            if($jwt_match) {
+                if($current_prize) {
+                    $current_prize = false;
+                }
+                else {
+                    $current_prize = $current_prize;
+                }
+                if($user_id) {
+                    $user = [
+                        $user_id,
+                        $current_prize
+                    ];
+                    if($user_id == 1) {
+                        http_response_code(400);
+                    }
+                    else {
+                        call_user_func_array($user_routes['/update/prize/id'], $user);
                     }
                 }
                 else {

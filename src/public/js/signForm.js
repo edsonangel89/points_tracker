@@ -91,7 +91,7 @@ inputEmail.addEventListener('change', function(e) {
     .then(response => response.json())
     .then(data => {
         if(data) {
-            alert(data);
+            alert('Usuario ya existe');
             inputEmail.value = '';
         }        
     })

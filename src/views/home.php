@@ -35,7 +35,18 @@
         </section>
     </main>
     <footer>
+        <div class="">
 
+        </div>
+        <div class="footer-social-media-links">
+            <a><span>Facebook</span></a>
+            <a><span>Maps</span></a>
+        </div>
+        <div class="footer-rights">
+            <p>Powered By</p>
+            <img />
+            <p>All rights reserved <?php echo date('Y');?></p>
+        </div>
     </footer>
     <!--<script src="src/public/js/loginForm.js"></script>-->
 </body>

@@ -78,10 +78,11 @@
     }
 
     function update_user_points_by_id($uid, $points, $prizes) {
-        $user = User::update_user_points($uid, $points, $prizes);
-        if($user) {
+        $update = User::update_user_points($uid, $points, $prizes);
+        if($update) {
+            $user = User::get_user_by_id($uid);
             http_response_code(200);
-            echo json_encode('user-points');
+            echo json_encode($user);
         }
         else {
             http_response_code(401);
@@ -91,6 +92,18 @@
     function get_points_prizes($uid) {
         $user_points = User::get_points_prizes($uid);
         return $user_points;
+    }
+
+    function update_user_prize_by_id($uid, $prize) {
+        $update = User::update_user_prize($uid, $prize);
+        if($update) {
+            $user = User::get_user_by_id($uid);
+            http_response_code(200);
+            echo json_encode('prize-updated');
+        }
+        else {
+            http_response_code(401);
+        }
     }
 
     function delete_user_by_id($uid) {

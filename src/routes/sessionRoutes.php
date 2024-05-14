@@ -43,7 +43,6 @@
         }
     }
     elseif(preg_match_all('/\/user/', $sub_path)) {
-        session_start();
         if(isset($_SESSION['ID'])) {
             call_user_func($session_routes['/user'], $_SESSION['ID']);
         }

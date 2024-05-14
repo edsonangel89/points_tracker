@@ -1,0 +1,74 @@
+@import './main.css';
+@import './admin.css';
+
+table {
+    width: 100%;
+}
+th, td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem;
+    /*border: solid black 1px;*/
+}
+thead tr {
+    border-bottom: solid gray 1px;
+}
+tr {
+    display: grid;
+    grid-template-columns: 5% 25% 25% 35% 10%;
+    /*border: solid black 1px;*/
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+    th {
+        font-size: 0.5rem;
+    }
+    td {
+        font-size: 0.4rem;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+    th {
+        font-size: 0.6rem;
+    }
+    td {
+        font-size: 0.5rem;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+    th {
+        font-size: 0.7rem;
+    }
+    td {
+        font-size: 0.6rem;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+    th {
+        font-size: 0.8rem;
+    }
+    td {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 768px) {
+    th {
+        font-size: 0.9rem;
+    }
+    td {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    
+}
+
+@media (min-width: 1280px) {
+    
+}

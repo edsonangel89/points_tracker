@@ -90,6 +90,15 @@
         
     }
 
+    function get_info($current_role) {
+        if($current_role == 'admin') {
+            require 'src/views/info.php';
+        }
+        else {
+            header('Location: /checker/');
+        }
+    }
+
     function not_found_page() {
         require 'src/views/404.php';
     }

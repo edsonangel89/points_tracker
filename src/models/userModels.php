@@ -71,7 +71,7 @@
             }
         }
 
-        static public function add_user($fname, $lname, $email, $password, $role, $points, $prizes, $verify) {
+        static public function add_user($fname, $lname, $email, $password, $role, $points, $prize, $verify) {
             $table = self::$name_users_table;
             $sql_create_user = "INSERT INTO $table (
                 FirstName,
@@ -80,7 +80,7 @@
                 Password,
                 Role,
                 Points,
-                Prizes,
+                Prize,
                 EmailVerified
             ) VALUES (
                 '$fname',
@@ -89,7 +89,7 @@
                 '$password',
                 '$role',
                 '$points',
-                '$prizes',
+                '$prize',
                 '$verify'
             )";
             try {
@@ -130,11 +130,11 @@
             }
         }
 
-        static public function update_user_points($uid, $points, $prizes) {
+        static public function update_user_points($uid, $points, $prize) {
             $table = self::$name_users_table;
             $sql_update_points = "UPDATE $table SET
             Points='$points',
-            Prizes='$prizes' 
+            Prize='$prize' 
             WHERE UserID='$uid'
             ";
             try {
@@ -150,11 +150,30 @@
             }
         }
 
+        static public function update_user_prize($uid, $prize) {
+            $table = self::$name_users_table;
+            $sql_update_points = "UPDATE $table SET
+            Prize='$prize' 
+            WHERE UserID='$uid'
+            ";
+            try {
+                $conn = new mysqli(self::$server_db, self::$user_db, self::$password_db, self::$name_db);
+                $update_prize = $conn->query($sql_update_points);
+                if($update_prize) {
+                    $conn->close();
+                    return true;
+                }
+            }
+            catch (sqli_sql_exception $e) {
+                echo $e->GetMessage();
+            }
+        }
+
         static public function get_points_prizes($uid) {
             $table = self::$name_users_table;
             $sql_get_points_prizes = "SELECT
             Points,
-            Prizes
+            Prize
             FROM $table WHERE UserID='$uid'
             ";
             try {

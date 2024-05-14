@@ -1,0 +1,49 @@
+@import './main.css';
+@import './home.css';
+@import './login.css';
+
+input {
+    text-align: center;
+}
+.input input {
+    height: 4rem;
+    font-size: 3rem;
+}
+.notification-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #7209B7;
+}
+.notification-container label {
+    font-size: 2rem;
+}
+.accept-form-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10rem;
+}
+.accept-form {
+    width: 70%;
+    background-color: white;
+    border: solid #7209B7 1px;
+}
+.accept-form-container {
+    visibility: hidden;
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+
+}
+
+@media (min-width: 1280px) {
+
+}

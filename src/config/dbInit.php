@@ -16,7 +16,7 @@
         Email VARCHAR(100) UNIQUE NOT NULL,
         Password VARCHAR(255) NOT NULL,
         Points INT,
-        Prizes INT,
+        Prize BOOLEAN NOT NULL,
         Role ENUM('superadmin', 'admin', 'user') NOT NULL,
         EmailVerified BOOLEAN NOT NULL 
     )";
@@ -27,6 +27,7 @@
         LastName,
         Email,
         Password,
+        Prize,
         Role,
         EmailVerified
     ) VALUES (
@@ -34,6 +35,7 @@
         'Admin',
         'edsonangelmc@gmail.com',
         '$hashed_password',
+        0,
         'superadmin',
         1
     )";

@@ -10,7 +10,6 @@
             $user_db_email = $user['Email'];
             if(decrypt_password($password, $user_db_password)) {
                 if($user['EmailVerified']) {
-                    session_start();
                     if(!isset($_SESSION['ID'])) {
                         $_SESSION['ID'] = $user['UserID'];
                         $_SESSION['FNAME'] = $user['FirstName'];
@@ -18,12 +17,14 @@
                         $_SESSION['EMAIL'] = $user['Email'];
                         $_SESSION['ROLE'] = $user['Role'];
                         $_SESSION['POINTS'] = $user['Points'];
+                        $_SESSION['PRIZE'] = $user['Prize'];
                         if($_SESSION['ROLE'] == 'superadmin') {
                             $jwt = generate_jwt($user_db_email);
                             setcookie('Authorization', "$jwt", time() + 3600,"/",false, true);
                             echo json_encode('superadmin-logged');
                         }
                         elseif ($_SESSION['ROLE'] == 'user'){
+                            setcookie('User', $_SESSION['ID'], time() + 3600,"/",false, true);
                             echo json_encode('user-logged');
                         }
                     }

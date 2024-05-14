@@ -21,17 +21,6 @@ nav {
     justify-content: start;
     /*border: solid black 1px;*/
 }
-.nav-links-container-desktop {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    /*border: solid black 1px;*/
-}
-.nav-links-container-mobile-tablet {
-    display: none;
-    /*visibility: hidden;*/
-}
 .nav-link {
     margin-right: 1rem;
     text-decoration: none;
@@ -39,4 +28,60 @@ nav {
 }
 .nav-link:hover {
     color: var(--purple);
+}
+.footer-social-media-links {
+    /*border: solid black 1px;*/
+}
+.footer-rights {
+    width: 100%;
+    text-align: center;
+    /*border: solid black 1px;*/
+}
+footer {
+    padding: 0.8rem;
+    background-color: var(--purple);
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .nav-links-container-mobile-tablet {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        /*border: solid black 1px;*/
+    }
+    .nav-links-container-desktop {
+        display: none;
+        /*visibility: hidden;*/
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    .nav-links-container-mobile-tablet {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        /*border: solid black 1px;*/
+    }
+    .nav-links-container-desktop {
+        display: none;
+        /*visibility: hidden;*/
+    }
+}
+
+@media (min-width: 1280px) {
+    .nav-links-container-desktop {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        /*border: solid black 1px;*/
+    }
+    .nav-links-container-mobile-tablet {
+        display: none;
+        /*visibility: hidden;*/
+    }
 }

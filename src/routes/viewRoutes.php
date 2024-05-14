@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    //session_start();
 
     require 'src/controllers/viewControllers.php';
 
@@ -7,6 +7,7 @@
         '/home' => 'get_home',
         '/login' => 'get_login',
         '/sign' => 'get_sign',
+        '/info' => 'get_info',
         '/mail' => 'get_confirm',
         '/succeed' => 'get_succeed'
     ];

@@ -40,6 +40,24 @@ input[type='submit'] {
     color: white;
     padding: 0.3rem;
 }
+.link-sign {
+    display: flex;
+    padding-top: 0.2rem;
+    padding-right: 0.7rem;
+    justify-content: end;
+    font-size: 0.9rem;
+    /*border: solid black 1px;*/
+}
+.link-sign span {
+    padding-right: 0.4rem;
+}
+.link-sign a{
+    color: white;
+    text-decoration: none;
+}
+.link-sign a:hover{
+    text-decoration: underline;
+}
 
 @media (max-width: 768px) {
     .form-container {
@@ -157,6 +175,7 @@ input[type='submit'] {
         border: none;
         font-size: 1.2rem;
     }
+    
 }
 @media (min-width: 1280px) {
     .form-container {
@@ -209,23 +228,5 @@ input[type='submit'] {
         border-radius: 0.3rem;
         border: none;
         font-size: 1.2rem;
-    }
-    .link-sign {
-        display: flex;
-        padding-top: 0.2rem;
-        padding-right: 0.7rem;
-        justify-content: end;
-        font-size: 0.9rem;
-        /*border: solid black 1px;*/
-    }
-    .link-sign span {
-        padding-right: 0.4rem;
-    }
-    .link-sign a{
-        color: white;
-        text-decoration: none;
-    }
-    .link-sign a:hover{
-        text-decoration: underline;
     }
 }
