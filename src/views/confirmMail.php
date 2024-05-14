@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/public/css/confirm.css"/>
     <title></title>
 </head>
 <body>
-    <h2>Hemos enviado un correo a tu cuenta</h2>
-    <h2>Confirma tu cuenta de correo electronico</h2>
+    <main>
+        <div class="email-confirm">
+            <p>Te hemos enviado un correo</p>
+            <p>Verifica en tu bandeja de entrada en el correo electrónico que registraste</p>
+            <a href="http://localhost/checker/">Volver a la pagina principal</a>
+        </div>
+    </main>
 </body>
 </html>

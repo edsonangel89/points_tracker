@@ -8,6 +8,7 @@ const passwordAlerts = document.getElementsByClassName('contrasena-alert');
 
 signForm.addEventListener('submit', function(e) {
     e.preventDefault();
+    const regexpPassword = /[a-bA-Z0-9]/;
     const formData = new FormData();
 
     const valueFname = inputFname.value;
@@ -27,21 +28,29 @@ signForm.addEventListener('submit', function(e) {
         return;
     }
 
-    fetch('http://localhost/checker/api/users/add', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        window.location.href = `/checker/mail?email=${data[0]}&token=${data[1]}&`;
-        inputFname.value = '';
-        inputLname.value = '';
-        inputEmail.value = '';
-        inputPassword.value = '';
-        inputConfirmPassword.value = '';
-    })
-
+    if(inputPassword.value != inputConfirmPassword.value) {
+        alert('Las contraseñas deben coincidir')
+    }
+    else {
+        if(!regexpPassword.test(inputPassword.value)) {
+            alert('La contraseña solo puede contener letras mayúsculas o minúsculas y números');
+        }
+        else {
+            fetch('http://localhost/checker/api/users/add', {
+            method: 'POST',
+            body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                window.location.href = `/checker/mail?email=${data[0]}&token=${data[1]}`;
+                inputFname.value = '';
+                inputLname.value = '';
+                inputEmail.value = '';
+                inputPassword.value = '';
+                inputConfirmPassword.value = '';
+            })
+        }
+    }
 })
 
 inputPassword.addEventListener('input', function(e) {
@@ -55,7 +64,7 @@ inputPassword.addEventListener('input', function(e) {
     }
     else {
         inputPassword.style.border = 'none';
-        updateConfirmPassword.style.border = 'none';
+        inputConfirmPassword.style.border = 'none';
         passwordAlerts[0].style.display = 'none';
         passwordAlerts[1].style.display = 'none';
     }  

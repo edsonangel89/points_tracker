@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="src/public/css/login.css" />
-    <title>Inicio</title>
+    <link rel="stylesheet" href="src/public/css/sign.css" />
+    <title>Registro</title>
 </head>
 <body>
     <header>
@@ -39,24 +40,27 @@
                     <input id="lname" type="text" class="input-submit-login" maxlength=35 required/><br>
                 </div>
                 <div class="label">
-                    <label>Correo electronico</label><br>
+                    <label>Correo electrónico</label><br>
                 </div>
                 <div class="input">
                     <input id="email" type="text" class="input-submit-login" maxlength=60 required/><br>
                 </div>
+                <div class="password-advice">
+                    <p>La contraseña solo puede contener letras mayúsculas o minúsculas y números</p>
+                </div>
                 <div class="label">
-                    <label>Contrasena</label><br>
+                    <label>Contraseña</label><br>
                 </div>
                 <div class="input">
                     <input id="password" type="password" class="input-submit-login" maxlength=30 required/><br>
-                    <span class='contrasena-alert'>No coinciden las contrenas</span><br>
+                    <span class='contrasena-alert'>No coinciden las contraseñas</span><br>
                 </div>
                 <div class="label">
-                    <label>Confirmar contrasena</label><br>
+                    <label>Confirmar contraseña</label><br>
                 </div>
                 <div class="input">
                     <input id="confirm-password" type="password" class="input-submit-login" maxlength=30 required/><br>
-                    <span class='contrasena-alert'>No coinciden las contrenas</span><br>
+                    <span class='contrasena-alert'>No coinciden las contraseñas</span><br>
                 </div>
                 <div class="input-submit-login">
                     <input type="submit" value="Registrar"/>

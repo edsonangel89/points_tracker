@@ -42,18 +42,15 @@
         if($create) {
             http_response_code(201);
             send_email($email);
-            //header(': /mail');
-            //header('Location: /mail');
             $token = generate_jwt($email);
             $token_match = verify_jwt($token);
             $user_info = [
                 $email,
                 $token
             ];
-            //echo json_encode('User added');
             if($token_match) {
                 http_response_code(201);
-                echo json_encode('New-user-added');
+                echo json_encode($user_info);
             }
             else {
                 echo json_encode('Non-token');
@@ -62,7 +59,6 @@
         else {
             http_response_code(400);
         }
-        
     }
 
     function update_user_info_by_id($uid, $fname, $lname) {

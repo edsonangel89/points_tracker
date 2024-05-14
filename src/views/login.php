@@ -27,23 +27,23 @@
         <section>
             <form id="login-form" class="form-container">
                 <div class="label">
-                    <label>Correo electronico</label><br>
+                    <label>Correo electrónico</label><br>
                 </div>
                 <div class="input">
                     <input id="email" type="text" class="input-submit-login" maxlength=60 required/><br>
                 </div>
                 <div class="label">
-                    <label>Contrasena</label><br>
+                    <label>Contraseña</label><br>
                 </div>
                 <div class="input">
                     <input id="password" type="password" class="input-submit-login" maxlength=30 required/><br>
                 </div>
                 <div class="link-sign">
-                    <span>Aun no tienes cuenta?</span>
-                    <a href="http://localhost/checker/sign">Registrate</a><br>
+                    <span>Aún no tienes cuenta?</span>
+                    <a href="http://localhost/checker/sign">Regístrate</a><br>
                 </div>
                 <div class="input-submit-login">
-                    <input type="submit" value="Iniciar sesion"/>
+                    <input type="submit" value="Iniciar sesión"/>
                 </div>
             </form>
         </section>

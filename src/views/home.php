@@ -15,7 +15,7 @@
             </div>
             <div class="nav-links-container-desktop">
                 <!--<a class="nav-link" href="#">Soporte</a>-->
-                <a class="nav-link" href="http://localhost/checker/login">Iniciar sesion</a>
+                <a class="nav-link" href="http://localhost/checker/login">Iniciar sesión</a>
             </div>
             <div class="nav-links-container-mobile-tablet">
                 <!--<a class="nav-link" href="#"><span class="material-symbols-outlined">support_agent</span></a>-->

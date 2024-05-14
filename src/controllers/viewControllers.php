@@ -49,6 +49,8 @@
         require 'src/utils/jwt.php';
         require 'src/controllers/userControllers.php';
         $user = get_user_by_email($_GET['email']);
+        //echo json_encode($user);
+        //exit;
         $email_verified = $user['EmailVerified'];
         if(isset($_GET['token']) && !$email_verified) {
             $token = $_GET['token']; 

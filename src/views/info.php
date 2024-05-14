@@ -20,7 +20,7 @@
                 <!--<a class="nav-link" href="#">Soporte</a>-->
                 <!--<a class="nav-link" href="#">Iniciar sesion</a>-->
                 <a class="nav-link" href="http://localhost/checker/">Puntos</a>
-                <a class="nav-link" href="http://localhost/checker/api/sessions/logout?uid=<?php echo $user_id ?>">Cerrar sesion</a>
+                <a class="nav-link" href="http://localhost/checker/api/sessions/logout?uid=<?php echo $user_id ?>">Cerrar sesión</a>
             </div>
             <div class="nav-links-container-mobile-tablet">
                 <!--<a class="nav-link" href="#"><span class="material-symbols-outlined">support_agent</span></a>-->
@@ -51,7 +51,7 @@
                         <th>ID</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
-                        <th>Correo electronico</th>
+                        <th>Correo electrónico</th>
                         <th>Puntos</th>
                     </tr>
                 </thead>

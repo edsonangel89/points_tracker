@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina no encontrada</title>
+    <link rel="stylesheet" href="src/public/css/404.css"/>
+    <title>Not found</title>
 </head>
 <body>
-    <h1>Pagina no encontrada</h1>
+    <main>
+        <div class="not-found-container">
+            <p class="big">404</p>
+            <p>Página no encontrada</p>
+            <a href="http://localhost/checker">Volver a la página principal</a>
+        </div>
+    </main>
+    
 </body>
 </html>

@@ -9,7 +9,7 @@
             return $email;
         }
         else {
-            return false;
+            echo json_encode('invalid-password');
         }
     }
 

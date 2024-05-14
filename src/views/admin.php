@@ -20,7 +20,7 @@
                 <!--<a class="nav-link" href="#">Soporte</a>--> 
                 <!--<a class="nav-link" href="#">Iniciar sesion</a>-->
                 <a id="customer-link-desktop" class="nav-link" href="http://localhost/checker/info">Clientes</a>
-                <a id="logout-link-desktop" class="nav-link" href="http://localhost/checker/api/sessions/logout?uid=<?php echo $user_id ?>">Cerrar sesion</a>
+                <a id="logout-link-desktop" class="nav-link" href="http://localhost/checker/api/sessions/logout?uid=<?php echo $user_id ?>">Cerrar sesión</a>
             </div>
             <div class="nav-links-container-mobile-tablet">
                 <!--<a class="nav-link" href="#"><span class="material-symbols-outlined">support_agent</span></a>-->
