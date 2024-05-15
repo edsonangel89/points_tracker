@@ -31,7 +31,7 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="login-form-container">
             <form id="info-form" class="form-container">
                 <div class="label">
                     <label>Cliente</label><br>
@@ -40,7 +40,7 @@
                     <input id="client" type="number" min="2" required/><br>     
                 </div>
                 <div class="input-submit-login">
-                    <input type="submit" value="Ver informacion"/>
+                    <input type="submit" value="Ver información"/>
                 </div>
             </form>
         </section>
@@ -48,11 +48,11 @@
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Correo electrónico</th>
-                        <th>Puntos</th>
+                        <th id="tid">ID</th>
+                        <th id="tfn">Nombre</th>
+                        <th id="tln">Apellido</th>
+                        <!--<th id="tem">Correo electrónico</th>-->
+                        <th id="tpo">Puntos</th>
                     </tr>
                 </thead>
                 <tbody id="user-table"></tbody>

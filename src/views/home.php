@@ -45,7 +45,7 @@
         <div class="footer-rights">
             <p>Powered By</p>
             <img />
-            <p>All rights reserved <?php echo date('Y');?></p>
+            <p>Punto Aqua <?php echo date('Y');?></p>
         </div>
     </footer>
     <!--<script src="src/public/js/loginForm.js"></script>-->

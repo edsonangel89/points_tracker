@@ -24,7 +24,7 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="login-form-container">
             <form id="login-form" class="form-container">
                 <div class="label">
                     <label>Correo electrónico</label><br>

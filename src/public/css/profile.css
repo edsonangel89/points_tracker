@@ -10,15 +10,21 @@
     width: 70%;
     padding: 0.6rem;
     text-align: center;
-    font-size: 2rem;
+    font-size: 4rem;
     border-bottom: solid gray 1px;
+}
+.user-id th {
+    font-size: 1.8rem;
 }
 .user-name {
     width: 100%;
     padding: 0.6rem;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     border-bottom: solid gray 1px;
+}
+.user-name th {
+    font-size: 1.2rem;
 }
 .user-points {
     width: 100%;

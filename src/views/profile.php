@@ -40,7 +40,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><?php echo $user_id;?></td>
+                        <td id="uid"><?php echo $user_id;?></td>
                     </tr>
                 </tbody>
             </table>

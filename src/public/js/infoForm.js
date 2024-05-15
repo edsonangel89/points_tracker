@@ -19,13 +19,13 @@ infoForm.addEventListener('submit', function(e) {
             const newRow = document.createElement('tr');
             newRow.setAttribute('id', 'user');
             newRow.innerHTML = `
-                <td>${user.UserID}</td>
-                <td>${user.FirstName}</td>
-                <td>${user.LastName}</td>
-                <td>${user.Email}</td>
-                <td>${user.Points}</td>
+                <td id='uid'>${user.UserID}</td>
+                <td id='ufn'>${user.FirstName}</td>
+                <td id='uln'>${user.LastName}</td>
+                
+                <td id='upo'>${user.Points}</td>
             `;
-            userTable.appendChild(newRow);
+            userTable.appendChild(newRow);  //<td id='uem'>${user.Email}</td>
             inputId.value = '';
         }
         else {
