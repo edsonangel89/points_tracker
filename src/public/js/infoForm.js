@@ -6,7 +6,7 @@ infoForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const idValue = inputId.value;
 
-    fetch(`http://localhost/checker/api/users/get/${idValue}`, {
+    fetch(`http://www.puntoaqua.com/api/users/get/${idValue}`, {
         method: 'GET'
     })
     .then(response => response.json())

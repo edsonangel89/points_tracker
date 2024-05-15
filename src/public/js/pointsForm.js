@@ -34,7 +34,7 @@ pointsForm.addEventListener('submit', function(e) {
 inputClient.addEventListener('change', function(e) {
     const uid = inputClient.value;
 
-    fetch(`http://localhost/checker/api/users/get/${uid}`, {
+    fetch(`http://www.puntoaqua.com/api/users/get/${uid}`, {
         method: 'GET'
     })
     .then(response => response.json())
@@ -52,7 +52,7 @@ inputClient.addEventListener('change', function(e) {
 acceptForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const user = localStorage.getItem('userId');
-    fetch(`http://localhost/checker/api/users/update/prize/${user}`, {
+    fetch(`http://www.puntoaqua.com/api/users/update/prize/${user}`, {
         method: 'GET'
     })
     .then(response => response.json())

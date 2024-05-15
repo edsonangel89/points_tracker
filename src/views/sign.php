@@ -12,7 +12,7 @@
     <header>
         <nav>
             <div class="nav-brand-container">
-                <a class="nav-brand-link" href="http://localhost/checker/home"><img src="src/public/assets/brand/logo__svg.svg" alt="logo image"/></a>
+                <a class="nav-brand-link" href="/home"><img src="src/public/assets/brand/logo__svg.svg" alt="logo image"/></a>
             </div>
             <div class="nav-links-container-desktop">
                 <!--<a class="nav-link" href="#">Soporte</a>-->

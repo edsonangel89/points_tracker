@@ -15,11 +15,11 @@
             </div>
             <div class="nav-links-container-desktop">
                 <!--<a class="nav-link" href="#">Soporte</a>-->
-                <a class="nav-link" href="http://localhost/checker/login">Iniciar sesión</a>
+                <a class="nav-link" href="/login">Iniciar sesión</a>
             </div>
             <div class="nav-links-container-mobile-tablet">
                 <!--<a class="nav-link" href="#"><span class="material-symbols-outlined">support_agent</span></a>-->
-                <a class="nav-link" href="http://localhost/checker/login"><span class="material-symbols-outlined">login</span></a>
+                <a class="nav-link" href="/login"><span class="material-symbols-outlined">login</span></a>
             </div>
         </nav>
     </header>

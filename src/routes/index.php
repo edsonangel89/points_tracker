@@ -1,6 +1,6 @@
 <?php
 
-    $path = substr(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), 8);
+    $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     
     $main_routes = [
         '/' => 'src/routes/viewRoutes.php',

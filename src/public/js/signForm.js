@@ -36,7 +36,7 @@ signForm.addEventListener('submit', function(e) {
             alert('La contraseña solo puede contener letras mayúsculas o minúsculas y números');
         }
         else {
-            fetch('http://localhost/checker/api/users/add', {
+            fetch('http://www.puntoaqua.com/api/users/add', {
             method: 'POST',
             body: formData
             })
