@@ -14,13 +14,13 @@
     function get_login($current_role) {
         switch($current_role) {
             case 'superadmin':
-                header('Location: /checker/home');
+                header('Location: /');
             break;
             case 'admin':
-                header('Location: /checker/home');
+                header('Location: /');
             break;
             case 'user':
-                header('Location: /checker/home');
+                header('Location: /');
             break;
             default:
                 require 'src/views/login.php';
@@ -31,13 +31,13 @@
     function get_sign($current_role) {
         switch($current_role) {
             case 'superadmin':
-                header('Location: /checker/home');
+                header('Location: /');
             break;
             case 'admin':
-                header('Location: /checker/home');
+                header('Location: /');
             break;
             case 'user':
-                header('Location: /checker/home');
+                header('Location: /');
             break;
             default:
                 require 'src/views/sign.php';
@@ -58,7 +58,8 @@
                 require 'src/views/confirmMail.php';
             }
             else {
-                require 'src/views/404.php';
+                http_response_code(404);
+                echo json_encode('token-failed');
             }
         }
         else {

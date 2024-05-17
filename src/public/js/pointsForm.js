@@ -52,7 +52,7 @@ inputClient.addEventListener('change', function(e) {
 acceptForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const user = localStorage.getItem('userId');
-    fetch(`http://www.puntoaqua.com/api/users/update/prize/${user}`, {
+    fetch(`https://www.puntoaqua.com/api/users/update/prize/${user}`, {
         method: 'GET'
     })
     .then(response => response.json())

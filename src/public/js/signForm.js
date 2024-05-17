@@ -8,7 +8,7 @@ const passwordAlerts = document.getElementsByClassName('contrasena-alert');
 
 signForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    const regexpPassword = /[a-bA-Z0-9]/;
+    const regexpPassword = /[a-zA-Z0-9]/;
     const formData = new FormData();
 
     const valueFname = inputFname.value;
@@ -42,7 +42,7 @@ signForm.addEventListener('submit', function(e) {
             })
             .then(response => response.json())
             .then(data => {
-                window.location.href = `https://www.puntoaqua.com/mail?email=${data[0]}&token=${data[1]}`;
+                window.location.href = `/mail?email=${data[0]}&token=${data[1]}`;
                 inputFname.value = '';
                 inputLname.value = '';
                 inputEmail.value = '';

@@ -9,7 +9,7 @@
     align-items: center;
 }
 form {
-    width: 98%;
+    width: 95%;
     height: 100%;
     padding: 0.8rem;
     background-color: #7209B7;
@@ -53,19 +53,21 @@ input[type='submit'] {
     padding-right: 0.7rem;
     justify-content: end;
     font-size: 0.7rem;
+    color: white;
     /*border: solid black 1px;*/
 }
 .link-sign span {
     padding-right: 0.4rem;
     font-size: 1rem;
+    color: white;
 }
 .link-sign a{
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
     font-size: 1rem;
 }
 .link-sign a:hover{
-    text-decoration: underline;
+    text-decoration: none;
 }
 .input input, .input select{
     width: 100%;
@@ -94,10 +96,10 @@ input[type='submit'] {
     color: white;
     font-size: 1rem;
 }
-@media (min-width: 220px) and (max-width: 310px) {
+/*@media (min-width: 220px) and (max-width: 310px) {
     .input input, .input select {
         font-size: 0.4rem;
-        height: 1.3rem
+        height: 1.6rem
     }
     .input-submit-login input {
         height: 1.3rem;
@@ -134,11 +136,11 @@ input[type='submit'] {
 }
 @media (min-width: 310px) and (max-width: 430px) {
     .input input, .input select {
-        height: 2.2rem;
+        height: 2.3rem;
         font-size: 0.8rem;
     }
     .input-submit-login input {
-        height: 2.2rem;
+        height: 2.3rem;
         font-size: 1rem;
     }
     .link-sign span {
@@ -151,9 +153,9 @@ input[type='submit'] {
         font-size: 1rem;
     }
     
-}
+} (min-width: 430px) and*/
 
-@media (min-width: 430px) and (max-width: 768px) {
+@media  (max-width: 768px) {
     .form-container {
         width: 95%;
         margin: 1rem auto;
@@ -171,16 +173,16 @@ input[type='submit'] {
     }
     .label label {
         color: white;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     .input {
         padding: 0.3rem;
     }
     .input input, .input select{
         width: 100%;
-        height: 2.5rem;
+        height: 3rem;
         padding: 0.5rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
         border-radius: 0.3rem;
         border: none;
     }
@@ -188,12 +190,12 @@ input[type='submit'] {
         padding: 0.3rem;
     }
     .input-submit-login input {
-        height: 2.5rem;
+        height: 3rem;
         margin-top: 1.5rem;
         padding: 0.5rem;
         border-radius: 0.3rem;
         border: none;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     .input-submit-add input {
         width: 100%;
@@ -206,15 +208,10 @@ input[type='submit'] {
     }
     .link-sign span {
         padding-right: 0.4rem;
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     .link-sign a{
-        font-size: 0.8rem;
-        color: white;
-        text-decoration: none;
-    }
-    .link-sign a:hover{
-        text-decoration: underline;
+        font-size: 1rem;
     }
     .checkbox {
         font-size: 1.5rem;
@@ -230,7 +227,7 @@ input[type='submit'] {
 @media (min-width: 768px) and (max-width: 1280px) {
     
     .form-container {
-        width: 65%;
+        width: 75%;
         margin: 1rem auto;
     }
     .add-form-container {
