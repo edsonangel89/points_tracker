@@ -14,7 +14,7 @@
         '/update/info/id' => 'update_user_info_by_id',
         '/update/points/id' => 'update_user_points_by_id',
         '/update/prize/id' => 'update_user_prize_by_id',
-        '/update/confirm/' => 'confirm_email',
+        '/update/confirm' => 'confirm_email',
         '/delete/' => 'delete_user_by_id',
         '404' => 'not_found_page'
     ];
@@ -111,7 +111,7 @@
                 $email,
                 $token
             ];
-            call_user_func_array($user_routes['/update/confirm/'], $user_info);
+            call_user_func_array($user_routes['/update/confirm'], $user_info);
         }
         else {
             http_response_code(404);

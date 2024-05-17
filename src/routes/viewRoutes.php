@@ -9,7 +9,8 @@
         '/sign' => 'get_sign',
         '/info' => 'get_info',
         '/mail' => 'get_confirm',
-        '/succeed' => 'get_succeed'
+        '/succeed' => 'get_succeed',
+        '/confirm' => 'confirm'
     ];
 
     if(array_key_exists($path, $views_routes)) {

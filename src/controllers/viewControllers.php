@@ -92,6 +92,35 @@
         
     }
 
+    function confirm() {
+        require 'src/controllers/userControllers.php';
+        //require 'src/utils/jwt.php';
+        //require 'src/models/userModels.php';
+        if(isset($_GET['email']) && isset($_GET['token'])) {
+            $email = $_GET['email'];
+            $token = $_GET['token'];
+           /* $match = verify_jwt($token);
+            //$is_email_verify = User::update_email_verify($email);
+            if($match && $is_email_verify) {
+                http_response_code(200);
+                header("Location: /succeed?email=$email&token=$token");
+            }
+            else {
+                http_response_code(400);
+                echo json_encode('email-no-verified');
+            }*/
+            //echo json_encode($email);
+            //echo json_encode($token);
+            //exit;
+            confirm_email($email, $token);
+            exit;
+
+        }
+        else {
+            require 'src/views/404.php';
+        }
+    }
+
     function get_info($current_role) {
         if($current_role == 'admin') {
             require 'src/views/info.php';

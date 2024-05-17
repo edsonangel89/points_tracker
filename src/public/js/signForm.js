@@ -36,13 +36,13 @@ signForm.addEventListener('submit', function(e) {
             alert('La contraseña solo puede contener letras mayúsculas o minúsculas y números');
         }
         else {
-            fetch('http://www.puntoaqua.com/api/users/add', {
+            fetch('https://www.puntoaqua.com/api/users/add', {
             method: 'POST',
             body: formData
             })
             .then(response => response.json())
             .then(data => {
-                window.location.href = `/checker/mail?email=${data[0]}&token=${data[1]}`;
+                window.location.href = `https://www.puntoaqua.com/mail?email=${data[0]}&token=${data[1]}`;
                 inputFname.value = '';
                 inputLname.value = '';
                 inputEmail.value = '';
@@ -93,7 +93,7 @@ inputEmail.addEventListener('change', function(e) {
 
     formData.append('email', email);
 
-    fetch('http://localhost/checker/api/users/get/email', {
+    fetch('https://www.puntoaqua.com/api/users/get/email', {
         method: 'POST',
         body: formData 
     })

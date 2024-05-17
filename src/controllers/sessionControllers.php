@@ -20,11 +20,11 @@
                         $_SESSION['PRIZE'] = $user['Prize'];
                         if($_SESSION['ROLE'] == 'superadmin') {
                             $jwt = generate_jwt($user_db_email);
-                            setcookie('Authorization', "$jwt", time() + 3600,"/",false, true);
+                            setcookie('Authorization', "$jwt", time() + 3600,"/",true, true);
                             echo json_encode('superadmin-logged');
                         }
                         elseif ($_SESSION['ROLE'] == 'user'){
-                            setcookie('User', $_SESSION['ID'], time() + 3600,"/",false, true);
+                            setcookie('User', $_SESSION['ID'], time() + 3600,"/",true, true);
                             echo json_encode('user-logged');
                         }
                     }
@@ -56,7 +56,7 @@
         if($user && isset($_SESSION['ID'])) {
             setcookie('Authorization', "", time() - 3600,"/",false, true);
             session_destroy();
-            header('Location: /checker');
+            header('Location: /');
         }
         else {
             http_response_code(404);

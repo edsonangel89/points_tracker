@@ -41,7 +41,7 @@
             $mail->Body    = "
                 This is the HTML message body <b>in bold!</b>
                 <p>Oprime el siguiente enlace para confirmar tu correo electronico</p>
-                <a href=" . "http://www.libertyws.com.mx/api/users/update/confirm/?email=" . "$user_email" . "token=" . "$token" .">$token</a>
+                <a href=" . "https://www.puntoaqua.com/api/users/update/confirm/?email=" . $user_email . "&token=" . $token .">$token</a>
             ";
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -50,7 +50,7 @@
         }
         catch (Exception $e) {
             echo json_encode('Email not sent');
-            echo $e->GetMessage();
+            //echo $e->GetMessage();
         }
     }
 ?>

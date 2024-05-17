@@ -26,7 +26,7 @@ form.addEventListener('submit', function(e) {
                 alert('Correo no verificado, confirma tu correo electronico en bandeja de entrada y vuelve a intentar');
             break;
             default:
-                window.location.href = '/home';
+                window.location.href = '/';
             break;
         }
     });

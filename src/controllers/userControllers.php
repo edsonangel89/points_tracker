@@ -53,6 +53,7 @@
                 echo json_encode($user_info);
             }
             else {
+                http_response_code(200);
                 echo json_encode('Non-token');
             }
         }
@@ -128,15 +129,17 @@
     }
 
     function confirm_email($email, $token) {
+        //require 'src/utils/jwt.php';
+        //require 'src/models/userModels.php';
         $match = verify_jwt($token);
         $is_email_verify = User::update_email_verify($email);
         if($match && $is_email_verify) {
             http_response_code(200);
-            header("Location: /checker/succeed?email=$email&token=$token");
+            header("Location: /succeed?email=$email&token=$token");
         }
         else {
             http_response_code(400);
-            return false;
+            echo json_encode('email-no-verified');
         }
     }
 

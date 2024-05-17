@@ -40,7 +40,7 @@
                 </div>
                 <div class="link-sign">
                     <span>Aún no tienes cuenta?</span>
-                    <a href="http://www.puntoaqua.com/sign">Regístrate</a><br>
+                    <a href="https://www.puntoaqua.com/sign">Regístrate</a><br>
                 </div>
                 <div class="input-submit-login">
                     <input type="submit" value="Iniciar sesión"/>

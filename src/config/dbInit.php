@@ -42,18 +42,26 @@
 
     try {
         $conn_db = new mysqli($server_db, $user_db, $password_db, $name_db);
+        $conn_db->query($sql_create_users_table);
+        $conn_db->query($sql_define_superuser);
+        //$conn->close();
+        $conn_db->close();
+        //$conn->close();
     }
     catch (mysqli_sql_exception $e) {
         try {
-            $conn = new mysqli($server_db, $user_db, $password_db);
-            $conn->query($sql_create_db);
+            //$conn = new mysqli($server_db, $user_db, $password_db);
+            //$conn->query($sql_create_db);
             $conn_db = new mysqli($server_db, $user_db, $password_db, $name_db);
             $conn_db->query($sql_create_users_table);
             $conn_db->query($sql_define_superuser);
+            //$conn->close();
             $conn_db->close();
         }
         catch (mysqli_sql_exception $e) {
-            echo $e->GetMessage();
+            $conn_db = new mysqli($server_db, $user_db, $password_db, $name_db);
+            $conn_db->close();
+            //echo json_encode('error-database');
         }
     }
 

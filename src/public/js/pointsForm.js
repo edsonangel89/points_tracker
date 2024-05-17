@@ -11,7 +11,7 @@ pointsForm.addEventListener('submit', function(e) {
     const formData = new FormData();
     formData.append('points', inputPoints.value);
 
-    fetch(`http://localhost/checker/api/users/update/points/${inputClient.value}`, {
+    fetch(`https://www.puntoaqua.com/api/users/update/points/${inputClient.value}`, {
         method: 'POST',
         body: formData
     })
@@ -34,7 +34,7 @@ pointsForm.addEventListener('submit', function(e) {
 inputClient.addEventListener('change', function(e) {
     const uid = inputClient.value;
 
-    fetch(`http://www.puntoaqua.com/api/users/get/${uid}`, {
+    fetch(`https://www.puntoaqua.com/api/users/get/${uid}`, {
         method: 'GET'
     })
     .then(response => response.json())
