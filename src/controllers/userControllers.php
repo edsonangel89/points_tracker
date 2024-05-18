@@ -42,13 +42,17 @@
         if($create) {
             http_response_code(201);
             $token = generate_jwt($email);
-            sleep(1);
-            $token_match = verify_jwt($token);
+            //sleep(1);
+            //$token_match = verify_jwt($token);
             $user_info = [
                 $email,
                 $token
             ];
-            if($token_match) {
+            http_response_code(201);
+                send_email($email);
+                //header("Location: /mail?email=$email&token=$token");
+                echo json_encode($user_info);
+            /*if($token_match) {
                 http_response_code(201);
                 send_email($email);
                 //header("Location: /mail?email=$email&token=$token");
@@ -57,7 +61,7 @@
             else {
                 http_response_code(400);
                 echo json_encode('Non-token');
-            }
+            }*/
         }
         else {
             http_response_code(400);
