@@ -20,9 +20,12 @@
         $signature_expected = hash_hmac('sha256', "$header_encoded.$payload_encoded", "test", true);
         $signature_expected_base64 = base64_encode($signature_expected);
 
-        //echo json_encode($signature_received_base64 . " // " . $signature_expected_base64);
+        $header_decoded = base64_decode($header_encoded);
+        $payload_decoded = base64_decode($payload_encoded);
 
-        if ($signature_received_base64 === $signature_expected_base64) {
+        echo json_encode($header_decoded . " // " . $payload_decoded);
+
+        /*if ($signature_received_base64 === $signature_expected_base64) {
             return true;
             //echo json_encode($signature_received_base64 . " // " . $signature_expected_base64);
             //exit;
@@ -32,7 +35,7 @@
             //echo json_encode($signature_received_base64 . " // " . $signature_expected_base64);
             //exit;
             //echo 'no equal';
-        }
+        }*/
         
     }
 
