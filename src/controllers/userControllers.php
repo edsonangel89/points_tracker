@@ -50,8 +50,8 @@
             ];
             if($token_match) {
                 http_response_code(201);
-                header("Location: /mail?email=$email&token=$token");
-                //echo json_encode($user_info);
+                //header("Location: /mail?email=$email&token=$token");
+                echo json_encode($user_info);
             }
             else {
                 http_response_code(200);
