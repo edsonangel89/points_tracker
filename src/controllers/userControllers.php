@@ -41,7 +41,6 @@
         $create = User::add_user($fname, $lname, $email, $password, $role, $points, $prizes, $verify);
         if($create) {
             http_response_code(201);
-            send_email($email);
             $token = generate_jwt($email);
             $token_match = verify_jwt($token);
             $user_info = [
@@ -50,6 +49,7 @@
             ];
             if($token_match) {
                 http_response_code(201);
+                send_email($email);
                 //header("Location: /mail?email=$email&token=$token");
                 echo json_encode($user_info);
             }
