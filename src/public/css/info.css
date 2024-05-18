@@ -36,6 +36,7 @@ tr {
     }
     .user-info tbody{
         width: 80%;
+        background-color: blue;
         /*border: solid gray 1px;*/
     }
     tr {
