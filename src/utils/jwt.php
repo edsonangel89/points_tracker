@@ -33,7 +33,7 @@
             //exit;
             //echo 'no equal';
         }
-        exit;
+        
     }
 
 ?>
