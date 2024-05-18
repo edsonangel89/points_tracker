@@ -29,6 +29,4 @@
         }*/
     }
 
-    verify_jwt('test');
-
 ?>

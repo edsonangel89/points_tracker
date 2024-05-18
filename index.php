@@ -1,5 +1,10 @@
 <?php
     session_start();
+
+    require 'src/utils/jwt.php';
+    
+    verify_jwt('test');
+    
     /*if ($_SESSION['ROLE'] == 'user') {
         //call_user_func($views_routes[$path], 'user');
         session_destroy();
