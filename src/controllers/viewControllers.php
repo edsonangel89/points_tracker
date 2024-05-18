@@ -53,7 +53,7 @@
         //exit;
         $email_verified = $user['EmailVerified'];
         if(isset($_GET['token']) && !$email_verified) {
-            $token = json_encode($_GET['token']);
+            $token = json_encode($_GET['email']);
             //$token = generate_jwt($email);
             $token_match = verify_jwt($token); 
             echo $token;
