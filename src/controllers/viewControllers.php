@@ -56,7 +56,7 @@
             $token = json_encode($_GET['token']);
             //$token = generate_jwt($email);
             $token_match = verify_jwt($token); 
-            echo $token;
+            //echo $token;
             //exit;
             if($token_match) {
                 require 'src/views/confirmMail.php';
