@@ -135,7 +135,7 @@
         $is_email_verify = User::update_email_verify($email);
         if($match && $is_email_verify) {
             http_response_code(200);
-            header("Location: /succeed?email=" . $email . "&token=" . $token  . "");
+            header("Location: /succeed?email=$email&token=$token");
         }
         else {
             http_response_code(400);
