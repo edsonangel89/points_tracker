@@ -2,8 +2,8 @@
     session_start();
 
     require 'src/utils/jwt.php';
-    
-    verify_jwt('test');
+    //generate_jwt('eascenciog65@gmail.com');
+    verify_jwt(generate_jwt('eascenciog65@gmail.com'));
     
     /*if ($_SESSION['ROLE'] == 'user') {
         //call_user_func($views_routes[$path], 'user');
