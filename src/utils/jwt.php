@@ -7,7 +7,8 @@
         $payload_base64 = base64_encode($payload);
         $signature = hash_hmac('sha256',"$header_base64.$payload_base64","test", true);
         $signature_base64 = base64_encode($signature);
-        return "$header_base64.$payload_base64.$signature_base64";
+        echo $signature_base64 . "\n";
+        //return "$header_base64.$payload_base64.$signature_base64";
     }
 
     function verify_jwt($jwt) {
@@ -26,9 +27,9 @@
 
         
 
-        echo json_encode($header_decoded . " // " . $payload_decoded);
-        //exit;
-        if ($signature_received_base64 === $signature_expected_base64) {
+        echo json_encode($signature_received_base64 . " // " . $signature_expected_base64);
+        exit;
+        /*if ($signature_received_base64 === $signature_expected_base64) {
             return true;
             echo json_encode($header_decoded . " // " . $payload_decoded);
             exit;
@@ -38,7 +39,7 @@
             //echo json_encode($signature_received_base64 . " // " . $signature_expected_base64);
             //exit;
             //echo 'no equal';
-        }
+        }*/
         
     }
 
