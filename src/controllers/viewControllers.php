@@ -54,10 +54,11 @@
         $email_verified = $user['EmailVerified'];
         if(isset($_GET['email']) && !$email_verified) {
             $email = $_GET['email'];
-            $token = generate_jwt($email); 
+            $token = generate_jwt($email);
+            $token_match = verify_jwt($token); 
             echo $token;
             //exit;
-            if(verify_jwt(json_encode($token))) {
+            if($token_match) {
                 require 'src/views/confirmMail.php';
             }
             else {
