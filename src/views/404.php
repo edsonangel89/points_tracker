@@ -11,7 +11,7 @@
         <div class="not-found-container">
             <p class="big">404</p>
             <p>Página no encontrada</p>
-            <a href="http://localhost/checker">Volver a la página principal</a>
+            <a href="http://www.puntoaqua.com/">Volver a la página principal</a>
         </div>
     </main>
     
