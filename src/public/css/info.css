@@ -47,7 +47,7 @@ tr {
         /*border: solid gray 1px;*/
     }
     td {
-        font-size: 1rem;
+        font-size: 1.4rem;
         display: flex;
         flex-direction: column;
         align-items: center;
