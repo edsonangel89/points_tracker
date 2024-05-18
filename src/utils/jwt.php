@@ -30,8 +30,8 @@
 
         
 
-        echo $signature_received_base64 . " // " . $signature_expected_base64 ;
-        exit;
+        //echo $signature_received_base64 . " // " . $signature_expected_base64 ;
+        //exit;
         if ($signature_received_base64 == $signature_expected_base64) {
             return true;
             //echo json_encode('EQUAL');
