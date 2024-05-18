@@ -1,6 +1,6 @@
 <?php
 
-    //require 'src/utils/jwt.php';
+    require 'src/utils/jwt.php';
 
     function get_home($current_role) {
         $roles = [
@@ -46,7 +46,7 @@
     }
 
     function get_confirm() {
-        require 'src/utils/jwt.php';
+        //require 'src/utils/jwt.php';
         require 'src/controllers/userControllers.php';
         $user = get_user_by_email($_GET['email']);
         //echo json_encode($user);
