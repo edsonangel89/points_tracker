@@ -3,7 +3,7 @@
 
     require 'src/utils/jwt.php';
     $test = generate_jwt('eascenciog65@gmail.com');
-    echo "JWT => " . $test;
+    echo "JWT => " . $test . "\n";
     verify_jwt($test);
 
     
