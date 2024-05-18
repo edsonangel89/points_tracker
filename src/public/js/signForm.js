@@ -42,9 +42,10 @@ signForm.addEventListener('submit', function(e) {
             })
             .then(response => response.json())
             .then(data => {
-                //console.log(data);
+                console.log(data[0]);
+                console.log(data[1]);
                 //alert(data);
-                window.location.href = `https://www.puntoaqua.com/mail?email=${data[0]}&token=${data[1]}`;
+                //window.location.href = `https://www.puntoaqua.com/mail?email=${data[0]}&token=${data[1]}`;
                 inputFname.value = '';
                 inputLname.value = '';
                 inputEmail.value = '';
