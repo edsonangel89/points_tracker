@@ -14,7 +14,7 @@
         list($header_base64, $payload_base64, $signature_received_base64) = explode('.', $jwt);
         $header = base64_encode($header_base64);
         $payload = base64_encode($payload_base64);
-        echo $header;
+        echo $header . " // " . $payload;
         //echo $payload;
         exit;
         $signature_expected = hash_hmac('sha256', "$header_base64.$payload_base64", "test", true);
