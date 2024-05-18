@@ -26,7 +26,6 @@
     }
 
     function validate_text_input($input) {
-        //$input = trim($input);
         $input = stripslashes($input);
         $input = htmlspecialchars($input);
         if(preg_match_all('/[a-zA-Z]/', $input)) {
