@@ -59,7 +59,7 @@
             echo $token;
             echo $token_gen;
             //exit;
-            if($token_match) {
+            if($token == $token_gen) {
                 require 'src/views/confirmMail.php';
             }
             else {
