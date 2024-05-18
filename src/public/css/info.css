@@ -96,7 +96,7 @@ tr {
     }
 }
 
-@media (min-width: 300px) and (max-width: 400px) {
+/*@media (min-width: 300px) and (max-width: 400px) {
     .form-container {
         width: 95%;
     }
@@ -127,7 +127,7 @@ tr {
     th, td {
         font-size: 0.9rem;
     }
-}
+}*/
 
 @media (min-width: 768px) and (max-width: 1280px) {
     table {
