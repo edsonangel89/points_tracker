@@ -132,10 +132,7 @@
         //include 'src/utils/jwt.php';
         //include 'src/models/userModels.php';
         $match = verify_jwt($token);
-        echo json_encode($match);
         $is_email_verify = User::update_email_verify($email);
-        echo json_encode($is_email_verify);
-        exit;
         if($match && $is_email_verify) {
             http_response_code(200);
             header("Location: /succeed?email=" . $email . "&token=" . $token  . "");
