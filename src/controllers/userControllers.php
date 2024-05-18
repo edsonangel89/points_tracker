@@ -54,7 +54,7 @@
                 //echo json_encode($user_info);
             if($token_match) {
                 http_response_code(201);
-                send_email($email);
+                //send_email($email);
                 //header("Location: /mail?email=$email&token=$token");
                 echo json_encode($user_info);
             }
