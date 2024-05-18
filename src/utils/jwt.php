@@ -15,7 +15,7 @@
         $signature_expected = hash_hmac('sha256', "$header_base64.$payload_base64", "test", true);
         $signature_expected_base64 = base64_encode($signature_expected);
 
-        echo json_encode($signature_received_base64 . " // " . $signature_expected_base64);
+        //echo json_encode($signature_received_base64 . " // " . $signature_expected_base64);
 
         if ($signature_received_base64 === $signature_expected_base64) {
             return true;
