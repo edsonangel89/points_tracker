@@ -3,7 +3,7 @@
     function generate_jwt($user_info) {
         $header = json_encode(['type' => 'JWT', 'alg' => 'HS256']);
         $header_base64 = base64_encode($header);
-        $payload = json_encode(['email' => "$user_info"]);
+        $payload = json_encode($user_info);
         $payload_base64 = base64_encode($payload);
         $signature = hash_hmac('sha256',"$header_base64.$payload_base64","test", true);
         $signature_base64 = base64_encode($signature);
