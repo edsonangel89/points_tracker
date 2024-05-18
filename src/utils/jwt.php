@@ -13,15 +13,15 @@
     function verify_jwt($jwt) {
         list($header_base64, $payload_base64, $signature_received_base64) = explode('.', $jwt);
         $header = base64_encode($header_base64);
-        $header_test = base64_decode($header);
+        $header_encoded = base64_decode($header);
         $header_test_more = base64_decode($header_test);
         $payload = base64_encode($payload_base64);
-        $payload_test = base64_decode($payload);
+        $payload_encoded = base64_decode($payload);
         $payload_test_more = base64_decode($payload_test);
         echo "Verify => " . $header_test_more . " // " . $payload_test_more . "\n";
         //echo $payload;
         exit;
-        $signature_expected = hash_hmac('sha256', "$header_base64.$payload_base64", "test", true);
+        $signature_expected = hash_hmac('sha256', "$header_encoded.$payload_encoded", "test", true);
         $signature_expected_base64 = base64_encode($signature_expected);
 
         //echo json_encode($signature_received_base64 . " // " . $signature_expected_base64);
