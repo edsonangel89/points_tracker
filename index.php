@@ -1,10 +1,10 @@
 <?php
     session_start();
 
-    require 'src/utils/jwt.php';
+    /*require 'src/utils/jwt.php';
     $test = generate_jwt('eascenciog65@gmail.com');
     echo "JWT => " . $test . "\n";
-    verify_jwt($test);
+    verify_jwt($test);*/
 
     
     /*if ($_SESSION['ROLE'] == 'user') {
