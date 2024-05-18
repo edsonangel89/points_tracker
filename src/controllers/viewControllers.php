@@ -1,6 +1,6 @@
 <?php
 
-    require 'src/utils/jwt.php';
+    //require 'src/utils/jwt.php';
 
     function get_home($current_role) {
         $roles = [
