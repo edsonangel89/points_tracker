@@ -44,7 +44,7 @@ signForm.addEventListener('submit', function(e) {
             .then(data => {
                 //console.log(data);
                 alert(data);
-                window.location.href = `/mail?email=${data[0]}&token=${data[1]}`;
+                window.location.href = `https://www.puntoaqua.com/mail?email=${data[0]}&token=${data[1]}`;
                 inputFname.value = '';
                 inputLname.value = '';
                 inputEmail.value = '';

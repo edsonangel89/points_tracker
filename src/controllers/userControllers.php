@@ -54,7 +54,7 @@
                 echo json_encode($user_info);
             }
             else {
-                http_response_code(200);
+                http_response_code(400);
                 echo json_encode('Non-token');
             }
         }
