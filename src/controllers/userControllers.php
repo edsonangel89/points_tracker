@@ -42,6 +42,7 @@
         if($create) {
             http_response_code(201);
             $token = generate_jwt($email);
+            sleep(1);
             $token_match = verify_jwt($token);
             $user_info = [
                 $email,
