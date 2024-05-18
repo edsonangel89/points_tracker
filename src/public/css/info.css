@@ -43,11 +43,11 @@ tr {
         grid-template-columns: auto auto auto auto;
     }
     th {
-        font-size: 1rem;
+        font-size: 1.4rem;
         /*border: solid gray 1px;*/
     }
     td {
-        font-size: 0.8rem;
+        font-size: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
