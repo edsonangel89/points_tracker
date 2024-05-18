@@ -39,7 +39,6 @@
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Confirmacion de correo electronico';
             $mail->Body    = "
-                This is the HTML message body <b>in bold!</b>
                 <p>Oprime el siguiente enlace para confirmar tu correo electronico</p>
                 <a href=" . "https://www.puntoaqua.com/api/users/update/confirm/?email=" . $user_email . "&token=" . $token .">Confirmar correo</a>
             ";
