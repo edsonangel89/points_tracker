@@ -40,7 +40,7 @@ tr {
     }
     tr {
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: 20% 20% 20% 20%;
     }
     th {
         font-size: 1.4rem;
