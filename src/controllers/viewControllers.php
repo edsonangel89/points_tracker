@@ -54,8 +54,8 @@
         $email_verified = $user['EmailVerified'];
         if(isset($_GET['token']) && !$email_verified) {
             $token = $_GET['token']; 
-            //echo json_encode($token);
-            //exit;
+            echo json_encode($token);
+            exit;
             if(verify_jwt($token)) {
                 require 'src/views/confirmMail.php';
             }
