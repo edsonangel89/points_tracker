@@ -24,7 +24,7 @@
         $payload_decoded = base64_decode($payload_encoded);
 
         echo json_encode($header_decoded . " // " . $payload_decoded);
-
+        exit;
         /*if ($signature_received_base64 === $signature_expected_base64) {
             return true;
             //echo json_encode($signature_received_base64 . " // " . $signature_expected_base64);
