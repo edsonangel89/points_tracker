@@ -16,7 +16,8 @@
         $header_test = base64_decode($header);
         $payload = base64_encode($payload_base64);
         $payload_test = base64_decode($payload);
-        echo "Verify => " . $header_test . " // " . $payload_test . "\n";
+        $payload_test_more = base64_decode($payload_test);
+        echo "Verify => " . $header_test . " // " . $payload_test_more . "\n";
         //echo $payload;
         exit;
         $signature_expected = hash_hmac('sha256', "$header_base64.$payload_base64", "test", true);
