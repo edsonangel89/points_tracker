@@ -15,7 +15,7 @@
         $header = base64_encode($header_base64);
         $payload = base64_encode($payload_base64);
         echo $header;
-        echo $payload;
+        //echo $payload;
         exit;
         $signature_expected = hash_hmac('sha256', "$header_base64.$payload_base64", "test", true);
         $signature_expected_base64 = base64_encode($signature_expected);
