@@ -7,12 +7,12 @@
         $payload_base64 = base64_encode($payload);
         $signature = hash_hmac('sha256',"$header_base64.$payload_base64","test", true);
         $signature_base64 = base64_encode($signature);
-        echo $signature_base64 . "\n";
+        //echo $signature_base64 . "\n";
         return "$header_base64.$payload_base64.$signature_base64";
     }
 
     function verify_jwt($jwt) {
-        echo 'jwt => ' . $jwt . "\n";
+        //echo 'jwt => ' . $jwt . "\n";
         list($header_base64, $payload_base64, $signature_received_base64) = explode('.', $jwt);
         $header = base64_encode($header_base64);
         $header_encoded = base64_decode($header);
@@ -27,12 +27,12 @@
 
         
 
-        echo json_encode($signature_received_base64 . " // " . $signature_expected_base64 . "\n");
+        //echo json_encode($signature_received_base64 . " // " . $signature_expected_base64 . "\n");
         //exit;
         if ($signature_received_base64 === $signature_expected_base64) {
-            //return true;
-            echo json_encode('EQUAL');
-            exit;
+            return true;
+            //echo json_encode('EQUAL');
+            //exit;
             //echo 'equal';
         } else {
             return false;
