@@ -12,7 +12,7 @@
     }
 
     function verify_jwt($jwt) {
-        //echo 'jwt => ' . $jwt;
+        echo 'jwt => ' . $jwt . "\n";
         list($header_base64, $payload_base64, $signature_received_base64) = explode('.', $jwt);
         $header = base64_encode($header_base64);
         $header_encoded = base64_decode($header);
