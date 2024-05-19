@@ -56,9 +56,9 @@
             $token = preg_filter('/\+/', '%2B', urlencode(htmlspecialchars($_GET['token'])));
             $token_gen = urlencode(generate_jwt(htmlspecialchars($_GET['email']))); 
             $token_match = verify_jwt($token); 
-            echo $token;
-            echo $token_gen;
-            exit;
+            //echo $token;
+            //echo $token_gen;
+            //exit;
             if($token == $token_gen) {
                 require 'src/views/confirmMail.php';
             }
