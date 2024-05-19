@@ -134,7 +134,7 @@
         //include 'src/utils/jwt.php';
         //include 'src/models/userModels.php';
         
-        $match = verify_jwt($token);
+        $match = verify_jwt(urldecode(htmlspecialchars($token)));
         //echo json_encode($email);
         //echo json_encode($token);
         //exit;
