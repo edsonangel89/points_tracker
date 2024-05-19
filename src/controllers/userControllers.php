@@ -134,7 +134,7 @@
         include 'src/utils/jwt.php';
         //include 'src/models/userModels.php';
         
-        $match = verify_jwt($token);
+        //$match = verify_jwt($token);
         
         if($match) {
             http_response_code(200);
