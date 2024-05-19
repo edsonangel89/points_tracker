@@ -132,15 +132,15 @@
 
     function confirm_email() {
         include 'src/utils/jwt.php';
-        //include 'src/models/userModels.php';
+        include 'src/models/userModels.php';
         if(isset($_GET['token']) && isset($_GET['email'])) {
-            $token = $_GET['token'];
+            $token = urldecode(htmlspecialchars($_GET['token']));
             $email = $_GET['email'];
             $user_info = [
                 $email,
                 $token
             ];
-            $match = verify_jwt(urldecode(htmlspecialchars($token)));
+            $match = verify_jwt($token);
             $is_email_verify = User::update_email_verify(htmlspecialchars($email));
             if($match && $is_email_verify) {
                 http_response_code(200);
