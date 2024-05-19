@@ -133,15 +133,27 @@
     function confirm_email($email, $token) {
         //include 'src/utils/jwt.php';
         //include 'src/models/userModels.php';
-        $match = verify_jwt(urldecode(htmlspecialchars($token)));
-        $is_email_verify = User::update_email_verify(htmlspecialchars($email));
-        if($match && $is_email_verify) {
-            http_response_code(200);
-            header("Location: /succeed?email=$email&token=$token");
+        if(isset($_GET['token']) && isset($_GET['email'])) {
+            $token = $_GET['token'];
+            $email = $_GET['email'];
+            $user_info = [
+                $email,
+                $token
+            ];
+            $match = verify_jwt(urldecode(htmlspecialchars($token)));
+            $is_email_verify = User::update_email_verify(htmlspecialchars($email));
+            if($match && $is_email_verify) {
+                http_response_code(200);
+                header("Location: /succeed?email=$email&token=$token");
+            }
+            else {
+                http_response_code(400);
+                echo json_encode('email-no-verified');
+            }
         }
         else {
-            http_response_code(400);
-            echo json_encode('email-no-verified');
+            http_response_code(404);
+            echo json_encode('Non-user');
         }
     }
 
