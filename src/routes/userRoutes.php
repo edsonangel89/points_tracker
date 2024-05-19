@@ -104,7 +104,19 @@
         }
     }
     elseif(preg_match_all('/\/update\/confirm/', $sub_path)) {
-        call_user_func_array($user_routes['/update/confirm']);
+        if(isset($_GET['token']) && isset($_GET['email'])) {
+            $token = urldecode(htmlspecialchars($_GET['token']));
+            $email = $_GET['email'];
+            $user_info = [
+                $email,
+                $token
+            ];
+            call_user_func_array($user_routes['/update/confirm'], $user_info);
+        }
+        else {
+            http_response_code(404);
+            echo json_encode('Non-user');
+        }
     }   
     elseif(preg_match_all('/\/update\/points\//', $path) && $_SESSION['ROLE'] == 'superadmin') {
         $user_id = substr($sub_path, 15);

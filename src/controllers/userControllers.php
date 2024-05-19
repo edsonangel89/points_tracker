@@ -130,30 +130,19 @@
         }
     }
 
-    function confirm_email() {
+    function confirm_email($email, $token) {
         include 'src/utils/jwt.php';
         include 'src/models/userModels.php';
-        if(isset($_GET['token']) && isset($_GET['email'])) {
-            $token = urldecode(htmlspecialchars($_GET['token']));
-            $email = $_GET['email'];
-            $user_info = [
-                $email,
-                $token
-            ];
-            $match = verify_jwt($token);
-            $is_email_verify = User::update_email_verify(htmlspecialchars($email));
-            if($match && $is_email_verify) {
-                http_response_code(200);
-                header("Location: /succeed?email=$email&token=$token");
-            }
-            else {
-                http_response_code(400);
-                echo json_encode('email-no-verified');
-            }
+        
+        $match = verify_jwt($token);
+        $is_email_verify = User::update_email_verify(htmlspecialchars($email));
+        if($match && $is_email_verify) {
+            http_response_code(200);
+            header("Location: /succeed?email=$email&token=$token");
         }
         else {
-            http_response_code(404);
-            echo json_encode('Non-user');
+            http_response_code(400);
+            echo json_encode('email-no-verified');
         }
     }
 
