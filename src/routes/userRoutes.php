@@ -104,7 +104,7 @@
         }
     }
     elseif(preg_match_all('/\/update\/confirm/', $sub_path)) {
-        call_user_func_array($user_routes['/update/confirm'], $user_info);
+        call_user_func_array($user_routes['/update/confirm']);
     }   
     elseif(preg_match_all('/\/update\/points\//', $path) && $_SESSION['ROLE'] == 'superadmin') {
         $user_id = substr($sub_path, 15);
