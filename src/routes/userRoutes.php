@@ -103,7 +103,7 @@
             call_user_func($user_routes['404']);
         }
     }
-    elseif(preg_match_all('/\/update\/confirm\//', $sub_path)) {
+    elseif(preg_match_all('/\/update\/confirm/', $sub_path)) {
         if(isset($_GET['token']) && isset($_GET['email'])) {
             $token = $_GET['token'];
             $email = $_GET['email'];

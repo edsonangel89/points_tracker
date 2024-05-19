@@ -54,7 +54,7 @@
                 //echo json_encode($user_info);
             if($token_match) {
                 http_response_code(201);
-                //send_email($email);
+                send_email($email);
                 //header("Location: /mail?email=$email&token=$token");
                 echo json_encode($user_info);
             }
@@ -133,8 +133,8 @@
     function confirm_email($email, $token) {
         //include 'src/utils/jwt.php';
         //include 'src/models/userModels.php';
-        $match = verify_jwt($token);
-        $is_email_verify = User::update_email_verify($email);
+        $match = verify_jwt(urldecode(htmlspecialchars($token)));
+        $is_email_verify = User::update_email_verify(htmlspecialchars($email));
         if($match && $is_email_verify) {
             http_response_code(200);
             header("Location: /succeed?email=$email&token=$token");
