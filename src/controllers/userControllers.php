@@ -132,12 +132,13 @@
 
     function confirm_email($email, $token) {
         include 'src/utils/jwt.php';
-        include 'src/models/userModels.php';
+        //include 'src/models/userModels.php';
         
         $match = verify_jwt($token);
-        $is_email_verify = User::update_email_verify($email);
-        if($match && $is_email_verify) {
+        
+        if($match) {
             http_response_code(200);
+            User::update_email_verify($email);
             header("Location: /succeed?email=$email&token=$token");
         }
         else {
