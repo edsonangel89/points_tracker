@@ -40,7 +40,7 @@
             $mail->Subject = 'Confirmacion de correo electronico';
             $mail->Body    = "
                 <p>Oprime el siguiente enlace para confirmar tu correo electronico</p>
-                <a href=" . "https://www.puntoaqua.com/api/users/update/confirm/?email=" . $user_email . "&token=" . $token .">Confirmar correo</a>
+                <a href=" . "https://www.puntoaqua.com/api/users/update/confirm?email=" . $user_email . "&token=" . $token .">Confirmar correo</a>
             ";
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
