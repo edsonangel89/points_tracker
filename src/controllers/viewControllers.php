@@ -53,7 +53,7 @@
         //exit;
         $email_verified = $user['EmailVerified'];
         if(isset($_GET['token']) && !$email_verified) {
-            $token = preg_filter('/+/', urlencode(htmlspecialchars($_GET['token'])));
+            $token = preg_filter('/\+/', urlencode(htmlspecialchars($_GET['token'])));
             $token_gen = urlencode(generate_jwt(htmlspecialchars($_GET['email'])));
             $token_match = verify_jwt($token); 
             echo $token;
