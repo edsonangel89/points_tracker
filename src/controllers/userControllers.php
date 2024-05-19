@@ -135,7 +135,7 @@
         include 'src/models/userModels.php';
         
         $match = verify_jwt($token);
-        $is_email_verify = User::update_email_verify(htmlspecialchars($email));
+        $is_email_verify = User::update_email_verify($email);
         if($match && $is_email_verify) {
             http_response_code(200);
             header("Location: /succeed?email=$email&token=$token");
