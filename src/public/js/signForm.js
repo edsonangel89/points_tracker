@@ -45,7 +45,9 @@ signForm.addEventListener('submit', function(e) {
                 console.log(data[0]);
                 console.log(data[1]);
                 //alert(data);
-                window.location.href = "/mail?email=" + data[0] + "&token=" + data[1] + "";
+                const email = decodeURI(data[0]);
+                const token = decodeURI(data[1]);
+                window.location.href = "/mail?email=" + email + "&token=" + token + "";
                 inputFname.value = '';
                 inputLname.value = '';
                 inputEmail.value = '';
