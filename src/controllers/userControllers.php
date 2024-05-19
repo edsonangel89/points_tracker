@@ -131,7 +131,7 @@
     }
 
     function confirm_email($email, $token) {
-        //include 'src/utils/jwt.php';
+        include 'src/utils/jwt.php';
         //include 'src/models/userModels.php';
         if(isset($_GET['token']) && isset($_GET['email'])) {
             $token = $_GET['token'];
