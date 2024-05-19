@@ -136,7 +136,7 @@
         
         //$match = verify_jwt($token);
         //echo json_encode($email);
-        echo json_encode($token);
+        echo $token;
         exit;
         if($match) {
             http_response_code(200);
