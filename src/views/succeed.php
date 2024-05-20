@@ -9,7 +9,6 @@
 <body>
     <main>
         <div class="email-confirm">
-            <p>Muchas gracias</p>
             <p>Correo electrónico verificado</p>
             <a href="/login">Ir a la página de inicio de sesión</a>
         </div>
