@@ -25,13 +25,14 @@
     </header>
     <main>
         <section>
-            <!--<form id="login-form">
-                <label>User</label><br>
-                <input id="email" required/><br>
-                <label>Password</label><br>
-                <input id="password" required/><br>
-                <input type="submit" value="Login"/>-->
-            </form>
+            <div class="intructions-container">
+                <h2>Ya puedes verificar tus puntos en linea</h2>
+                <h3>Sigue estos sencillos pasos</h3>
+                <p>1.- Registro</p>
+                <p>2.- Verificacion de correo</p>
+                <p>3.- Iniciar sesion</p>
+                <p>4.- Comienza a generar puntos</p>
+            </div>
         </section>
     </main>
     <footer>
