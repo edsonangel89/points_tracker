@@ -62,8 +62,8 @@ footer {
     .footer-rights p{
         font-size: 1.3rem;
     }
-    .footer-social-media-links a{
-        font-size: 1.3rem;
+    .footer-social-media-links span{
+        font-size: 2rem;
     }
 }
 
