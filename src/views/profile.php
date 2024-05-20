@@ -2,7 +2,7 @@
     $user_id = htmlspecialchars($_SESSION['ID']);
     $user_fname = htmlspecialchars($_SESSION['FNAME']);
     $user_lname = htmlspecialchars($_SESSION['LNAME']);
-    $user_points = htmlspecialchars($_SESSION['POINTS']);
+    $user_points = get_points_prizes($_SESSION['ID']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
