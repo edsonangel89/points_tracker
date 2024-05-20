@@ -56,6 +56,9 @@
                     http_response_code(201);
                     //send_email($email);
                     //header("Location: /mail?email=$email&token=$token");
+                    header("Cache-Control: no-cache");
+                    header("Pragma: no-cache");
+                    header("Expires: 0");
                     echo json_encode($user_info);
                 }
                 else {
