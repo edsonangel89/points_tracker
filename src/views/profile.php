@@ -1,4 +1,5 @@
 <?php
+    require 'src/controllers/userControllers.php';
     $user_id = htmlspecialchars($_SESSION['ID']);
     $user_fname = htmlspecialchars($_SESSION['FNAME']);
     $user_lname = htmlspecialchars($_SESSION['LNAME']);
