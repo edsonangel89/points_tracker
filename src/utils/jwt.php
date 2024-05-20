@@ -18,7 +18,7 @@
         //echo 'payload_base64 => ' . $payload_base64;
         //echo 'signature_received_base64 => ' . $signature_received_base64;
         $header_encoded = base64_encode($header_base64);
-        echo 'header => ' . $header_encoded;
+        echo 'header_encoded => ' . $header_encoded;
         $header_decoded = base64_decode($header);
         echo 'header_decoded => ' . $header_decoded;
 
