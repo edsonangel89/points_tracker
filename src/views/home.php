@@ -34,10 +34,10 @@
                 </div>
                 <div class="instructions-steps">
                     <ol>
-                        <li>1.- Registro</li>
-                        <li>2.- Verificacion de correo</li>
-                        <li>3.- Iniciar sesion</li>
-                        <li>4.- Comienza a generar puntos</li>
+                        <li>Registro</li>
+                        <li>Verificacion de correo</li>
+                        <li>Iniciar sesion</li>
+                        <li>Comienza a generar puntos</li>
                     </ol>
                 </div>
             </div>
