@@ -6,12 +6,14 @@
     require 'src/libs/PHPMailer/src/Exception.php';
     require 'src/libs/PHPMailer/src/PHPMailer.php';
     require 'src/libs/PHPMailer/src/SMTP.php';
+    require 'src/controllers/userControllers.php';
     //require 'src/utils/jwt.php';
 
     function send_email($user_email) {
 
         $mail = new PHPMailer(true);
         $token = generate_jwt($user_email);
+        $user = get_user_by_email($user_email);
 
         try {
             //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
@@ -39,6 +41,7 @@
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Confirmacion de correo electronico';
             $mail->Body    = "
+                <h2>Hola" . $user['FirstName'] . "</h2>
                 <p>Oprime el siguiente enlace para confirmar tu correo electronico</p>
                 <a href=" . "https://www.puntoaqua.com/api/users/update/confirm?email=" . $user_email . "&token=" . $token .">Confirmar correo</a>
             ";
