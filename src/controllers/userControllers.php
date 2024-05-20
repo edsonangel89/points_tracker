@@ -53,10 +53,20 @@
                 //header("Location: /mail?email=$email&token=$token");
                 //echo json_encode($user_info);
             if($token_match) {
-                http_response_code(201);
-                send_email($email);
-                //header("Location: /mail?email=$email&token=$token");
-                echo json_encode($user_info);
+                if(send_email($email) != 'email-not-sent') {    
+                    http_response_code(201);
+                    //send_email($email);
+                    //header("Location: /mail?email=$email&token=$token");
+                    echo json_encode($user_info);
+                }
+                else {
+                    http_response_code(400);
+                    echo json_encode('email-no-sent');
+                }
+            }
+            else {
+                http_response_code(400);
+                echo json_encode('token-no-match');
             }
         }
         else {

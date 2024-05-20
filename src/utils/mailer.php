@@ -48,7 +48,7 @@
 
         }
         catch (Exception $e) {
-            echo json_encode('Email not sent');
+            echo json_encode('email-not-sent');
             //echo $e->GetMessage();
         }
     }
