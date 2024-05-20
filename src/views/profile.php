@@ -4,7 +4,7 @@
     $user_fname = htmlspecialchars($_SESSION['FNAME']);
     $user_lname = htmlspecialchars($_SESSION['LNAME']);
     $user = get_points_prizes($_SESSION['ID']);
-    $user_points = json_encode($user->Points);
+    $user_points = $user->Points;
 ?>
 <!DOCTYPE html>
 <html lang="en">
