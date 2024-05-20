@@ -40,7 +40,7 @@
         echo '<br>signature_expected_base64 => ' . $signature_expected_base64;
         
 
-        //echo $signature_received_base64 . " // " . $signature_expected_base64 ;
+        echo "<br><br>" . $signature_received_base64 . " // " . $signature_expected_base64 ;
         //exit;
         if ($signature_received_base64 == $signature_expected_base64) {
             return true;
