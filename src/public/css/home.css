@@ -35,7 +35,7 @@ nav {
     color: var(--purple);
 }
 main {
-    margin-top: 3rem;
+    margin: 3rem auto;
 }
 .instructions-container {
     display: flex;
