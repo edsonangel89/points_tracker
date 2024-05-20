@@ -60,7 +60,7 @@ footer {
         /*visibility: hidden;*/
     }
     .footer-rights p{
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -77,7 +77,7 @@ footer {
         /*visibility: hidden;*/
     }
     .footer-rights p{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -94,6 +94,6 @@ footer {
         /*visibility: hidden;*/
     }
     .footer-rights p{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
