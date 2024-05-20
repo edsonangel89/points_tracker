@@ -32,7 +32,7 @@ nav {
 .footer-social-media-links {
     margin: 0.8rem auto;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: start;
     /*border: solid black 1px;*/
 }
