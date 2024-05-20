@@ -14,13 +14,13 @@
     function verify_jwt($jwt) {
         //echo 'jwt => ' . $jwt . "\n";
         list($header_base64, $payload_base64, $signature_received_base64) = explode('.', $jwt);
-        //echo 'jwt => ' . $header_base64;
-        //echo 'jwt => ' . $payload_base64;
-        //echo 'jwt => ' . $signature_received_base64;
+        echo 'header_base64 => ' . $header_base64;
+        echo 'payload_base64 => ' . $payload_base64;
+        echo 'signature_received_base64 => ' . $signature_received_base64;
         $header = base64_encode($header_base64);
         echo 'header => ' . $header;
         
-        $header_encoded = base64_decode($header);
+        $header_decoded = base64_decode($header);
         echo 'header_encoded => ' . $header_encoded;
         $payload = base64_encode($payload_base64);
         echo ' payload => ' . $payload;
