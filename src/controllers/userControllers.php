@@ -50,7 +50,7 @@
             //header("Location: /mail?email=$email&token=$token");
             //echo json_encode($user_info);
         if($token_match) {
-            if(send_email($email) != 'email-not-sent') {  
+            if(send_email($email) != 'email-no-sent') {  
                 $create = User::add_user($fname, $lname, $email, $password, $role, $points, $prizes, $verify);
                 if($create) {
                     http_response_code(201);
