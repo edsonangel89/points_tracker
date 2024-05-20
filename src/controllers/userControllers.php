@@ -132,7 +132,7 @@
 
     function confirm_email($email, $token) {
         //require 'src/utils/jwt.php';
-        //require 'src/models/userModels.php';
+        require 'src/models/userModels.php';
         
         $match = verify_jwt($token);
         //exit;
