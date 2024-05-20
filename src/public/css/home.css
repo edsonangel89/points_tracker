@@ -42,6 +42,9 @@ nav {
 .footer-social-media-links a:hover {
     color: lightgray;
 }
+i {
+    display: inline-block;
+}
 .footer-rights {
     margin: 0.8rem auto;
     width: 100%;
