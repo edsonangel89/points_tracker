@@ -30,6 +30,7 @@ nav {
     color: var(--purple);
 }
 .footer-social-media-links {
+    margin: 0.8rem auto;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -42,6 +43,7 @@ nav {
     color: lightgray;
 }
 .footer-rights {
+    margin: 0.8rem auto;
     width: 100%;
     text-align: center;
     /*border: solid black 1px;*/
