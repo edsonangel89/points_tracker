@@ -42,6 +42,9 @@ footer {
     background-color: var(--purple);
     color: white;
 }
+.footer-lws-link {
+    width: 3rem;
+}
 
 
 @media (max-width: 768px) {

@@ -44,7 +44,7 @@
         </div>
         <div class="footer-rights">
             <p>Powered By</p>
-            <a class="nav-brand-link" href="https://www.puntoaqua.com/"><img src="src/public/assets/brand/logo__svg.svg" alt="logo image"/></a>
+            <a class="footer-lws-link" href="https://www.libertyws.com.mx/"><img src="src/public/assets/Logo-lws.png" alt="lws image"/></a>
             <p>Punto Aqua <?php echo date('Y');?></p>
         </div>
     </footer>
