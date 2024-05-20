@@ -6,7 +6,7 @@
     require 'src/libs/PHPMailer/src/Exception.php';
     require 'src/libs/PHPMailer/src/PHPMailer.php';
     require 'src/libs/PHPMailer/src/SMTP.php';
-    require 'src/controllers/userControllers.php';
+    //require 'src/controllers/userControllers.php';
     //require 'src/utils/jwt.php';
 
     function send_email($user_email) {
