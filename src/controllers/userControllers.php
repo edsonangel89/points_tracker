@@ -134,10 +134,10 @@
         //include 'src/utils/jwt.php';
         //include 'src/models/userModels.php';
         
-        //$match = verify_jwt($token);
+        $match = verify_jwt($token);
         //echo json_encode($email);
-        echo $token;
-        exit;
+        //echo $token;
+        //exit;
         if($match) {
             http_response_code(200);
             User::update_email_verify($email);
