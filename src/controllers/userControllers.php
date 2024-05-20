@@ -140,9 +140,9 @@
         //echo $token;
         //exit;
         if($match) {
-            echo $match . "<br>";
-            echo $email . "<br>";
-            echo $token . "<br>";
+            //echo $match . "<br>";
+            //echo $email . "<br>";
+            //echo $token . "<br>";
             //exit;
             User::update_email_verify(urldecode($email));
             http_response_code(200);
