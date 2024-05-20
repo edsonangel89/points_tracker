@@ -36,7 +36,7 @@
         $payload_decoded = base64_decode($payload_encoded);
         echo ' payload_decoded => ' . $payload_decoded;
         */
-        $signature_expected = hash_hmac('sha256', "$$header_urldecoded.$payload_base64", "test", true);
+        $signature_expected = hash_hmac('sha256', "$$header_urldecoded.$payload_urldecoded", "test", true);
         echo '<br>signature_expected => ' . $signature_expected;
         $signature_expected_base64 = base64_encode($signature_expected);
         echo '<br>signature_expected_base64 => ' . $signature_expected_base64;
