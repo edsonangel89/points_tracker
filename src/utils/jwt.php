@@ -14,6 +14,7 @@
     function verify_jwt($jwt) {
         //echo 'jwt => ' . $jwt . "\n";
         list($header_base64, $payload_base64, $signature_received_base64) = explode('.', $jwt);
+        $signature_received_base64_urldec = urldecode($signature_received_base64);
         echo '<br>header_base64 => ' . $header_base64;
         echo '<br>payload_base64 => ' . $payload_base64;
         echo '<br>signature_received_base64 => ' . $signature_received_base64;
@@ -42,7 +43,7 @@
         echo '<br>signature_expected_base64 => ' . $signature_expected_base64;
         
 
-        echo "<br><br>" . $signature_received_base64 . " // " . $signature_expected_base64 ;
+        echo "<br><br>" . $signature_received_base64_urldec . " // " . $signature_expected_base64 ;
         //exit;
         if ($signature_received_base64 == $signature_expected_base64) {
             return true;
