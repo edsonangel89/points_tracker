@@ -14,20 +14,28 @@
     function verify_jwt($jwt) {
         //echo 'jwt => ' . $jwt . "\n";
         list($header_base64, $payload_base64, $signature_received_base64) = explode('.', $jwt);
-        echo 'jwt => ' . $header_base64;
-        echo 'jwt => ' . $payload_base64;
-        echo 'jwt => ' . $signature_received_base64;
+        //echo 'jwt => ' . $header_base64;
+        //echo 'jwt => ' . $payload_base64;
+        //echo 'jwt => ' . $signature_received_base64;
         $header = base64_encode($header_base64);
+        echo 'header => ' . $header;
+        
         $header_encoded = base64_decode($header);
+        echo 'header_encoded => ' . $header_encoded;
         $payload = base64_encode($payload_base64);
+        echo '\n payload => ' . $payload;
         $payload_encoded = base64_decode($payload);
+        echo '\n payload_encoded => ' . $payload_encoded;
 
         $header_decoded = base64_decode($header_encoded);
+        echo '\n payload_encoded => ' . $payload_encoded;
         $payload_decoded = base64_decode($payload_encoded);
+        echo '\n payload_encoded => ' . $payload_encoded;
 
         $signature_expected = hash_hmac('sha256', "$header_base64.$payload_base64", "test", true);
+        echo '\n signature_expected => ' . $signature_expected;
         $signature_expected_base64 = base64_encode($signature_expected);
-
+        echo '\n signature_expected_base64 => ' . $signature_expected_base64;
         
 
         //echo $signature_received_base64 . " // " . $signature_expected_base64 ;
