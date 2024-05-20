@@ -38,6 +38,7 @@ nav {
 }
 .footer-social-media-links a {
     color: white;
+    border: solid black 1px;
 }
 .footer-social-media-links a:hover {
     color: lightgray;
