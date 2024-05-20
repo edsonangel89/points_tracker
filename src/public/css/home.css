@@ -42,13 +42,16 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: solid black 1px;
 }
 .instructions-ad {
     padding: 0.8rem;
     text-align: center;
+    border: solid black 1px;
 }
 .instructions-title {
     padding: 0.5rem;
+    border: solid black 1px;
 }
 .footer-social-media-links {
     margin: 0.8rem auto;
