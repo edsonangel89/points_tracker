@@ -21,14 +21,14 @@
         echo '<br><br>header_encoded => ' . $header_encoded;
         $header_decoded = base64_decode($header_base64);
         echo '<br>header_decoded => ' . $header_decoded;
-        //$header_urldecoded = urldecode($header_base64);
+        $header_urldecoded = urldecode($header_base64);
         //echo '<br>header_urldecoded => ' . $header_urldecoded;
 
         $payload_encoded = base64_encode($payload_base64);
         echo ' <br>payload_encoded => ' . $payload_encoded;
         $payload_decoded = base64_decode($payload_base64);
         echo ' <br>payload_decoded => ' . $payload_decoded;
-        //$payload_urldecoded = urldecode($payload_base64);
+        $payload_urldecoded = urldecode($payload_base64);
         //echo ' <br>payload_urldecoded => ' . $payload_urldecoded;
 
         /*$header_decoded = base64_decode($header_encoded);
