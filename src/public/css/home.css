@@ -36,8 +36,11 @@ nav {
     justify-content: center;
 }
 .instructions-ad {
-    padding: 0.3rem;
+    padding: 0.8rem;
     text-align: center;
+}
+.instructions-title {
+    padding: 0.5rem;
 }
 .footer-social-media-links {
     margin: 0.8rem auto;

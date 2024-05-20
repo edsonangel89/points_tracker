@@ -33,10 +33,12 @@
                     <h3>Sigue estos sencillos pasos</h3>
                 </div>
                 <div class="instructions-steps">
-                    <p>1.- Registro</p>
-                    <p>2.- Verificacion de correo</p>
-                    <p>3.- Iniciar sesion</p>
-                    <p>4.- Comienza a generar puntos</p>
+                    <ol>
+                        <li>1.- Registro</li>
+                        <li>2.- Verificacion de correo</li>
+                        <li>3.- Iniciar sesion</li>
+                        <li>4.- Comienza a generar puntos</li>
+                    </ol>
                 </div>
             </div>
         </section>
