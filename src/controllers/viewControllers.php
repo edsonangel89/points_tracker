@@ -143,7 +143,7 @@
         require 'src/utils/jwt.php';
         if(isset($_GET['email'])) {
             $jwt = generate_jwt($email);
-            $jwt_urlencoded = urlencode($jwt);
+            $jwt_urldecoded = urldecode($jwt);
             $jwt_base64 = base64_encode($jwt);
             echo "JWT => " . $jwt  . "<br>";
             echo "JWT_URLDECODE => " . $jwt_urlencoded  . "<br>";
