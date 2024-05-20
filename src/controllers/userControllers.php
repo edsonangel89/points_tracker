@@ -143,8 +143,8 @@
             echo $match . "<br>";
             echo $email . "<br>";
             echo $token . "<br>";
-            exit;
-            User::update_email_verify($email);
+            //exit;
+            User::update_email_verify(urldecode($email));
             http_response_code(200);
             header("Location: /succeed?email=" . $email. "&token=" . $token . "");
         }
