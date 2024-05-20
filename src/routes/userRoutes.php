@@ -105,8 +105,8 @@
     }
     elseif(preg_match_all('/\/update\/confirm/', $sub_path)) {
         if(isset($_GET['token']) && isset($_GET['email'])) {
-            $token = $_GET['token'];
-            $email = $_GET['email'];
+            $token = urlencode($_GET['token']);
+            $email = urlencode($_GET['email']);
             $user_info = [
                 $email,
                 $token
