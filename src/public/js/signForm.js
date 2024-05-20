@@ -42,7 +42,7 @@ signForm.addEventListener('submit', function(e) {
             })
             .then(response => response.json())
             .then(data => {
-                alert(data);
+                //alert(data);
                 switch (data) {
                     case 'email-no-sent':
                         alert('El correo electronico que proporcionaste no es correcto, porfavor vuelve a intentar');
