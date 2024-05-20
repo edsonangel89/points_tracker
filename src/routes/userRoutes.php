@@ -111,9 +111,9 @@
                 $email,
                 $token
             ];
-            echo json_encode($email);
-            echo json_encode($token);
-            exit;
+            //echo json_encode($email);
+            //echo json_encode($token);
+            //exit;
             call_user_func_array($user_routes['/update/confirm'], $user_info);
         }
         else {
