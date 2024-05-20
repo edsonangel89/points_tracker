@@ -38,7 +38,7 @@
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Confirmaci&#243;n de correo electr&#243;nico';
+            $mail->Subject = 'Confirmacion de correo electronico';
             $mail->Body    = "
                 <h2>Hola " . $fname . "</h2>
                 <p>Muchas gracias por registrarte con nosotros</p>
