@@ -81,7 +81,8 @@
             $user = get_user_by_email($email);
             $email_verified = $user['EmailVerified'];
             if(isset($_GET['token']) && $email_verified) {
-                if(verify_jwt(htmlspecialchars($_GET['token']))) {
+                $token = urldecode($_GET['token']);
+                if(verify_jwt($token)) {
                     require 'src/views/succeed.php';
                 }
                 else {
