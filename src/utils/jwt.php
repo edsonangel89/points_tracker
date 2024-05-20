@@ -19,12 +19,12 @@
         //echo 'signature_received_base64 => ' . $signature_received_base64;
         $header_encoded = base64_encode($header_base64);
         echo 'header_encoded => ' . $header_encoded;
-        $header_decoded = base64_decode($header);
+        $header_decoded = base64_decode($header_base64);
         echo 'header_decoded => ' . $header_decoded;
 
         $payload_encoded = base64_encode($payload_base64);
         echo ' payload_encoded => ' . $payload_encoded;
-        $payload_decoded = base64_decode($payload);
+        $payload_decoded = base64_decode($payload_base64);
         echo ' payload_decoded => ' . $payload_decoded;
 
         /*$header_decoded = base64_decode($header_encoded);
