@@ -9,7 +9,7 @@
 <body>
     <main>
         <div class="email-confirm">
-            <p>Verifica en tu bandeja de entrada en el correo electrónico que registraste</p>
+            <p>Verifica la bandeja de entrada o la bandeja de spam en el correo electrónico que registraste</p>
             <a href="https://www.puntoaqua.com">Volver a la página principal</a>
         </div>
     </main>
