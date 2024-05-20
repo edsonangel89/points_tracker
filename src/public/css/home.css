@@ -35,6 +35,12 @@ nav {
     justify-content: start;
     /*border: solid black 1px;*/
 }
+.footer-social-media-links a {
+    color: white;
+}
+.footer-social-media-links a:hover {
+    color: lightgray;
+}
 .footer-rights {
     width: 100%;
     text-align: center;
