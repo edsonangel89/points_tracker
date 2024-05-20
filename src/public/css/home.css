@@ -1,7 +1,8 @@
 @import '../css/main.css';
 
 header {
-    position: absolute;
+    width: 100%;
+    position: fixed;
     top: 0;
 }
 nav {
