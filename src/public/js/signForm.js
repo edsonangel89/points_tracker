@@ -45,10 +45,10 @@ signForm.addEventListener('submit', function(e) {
                 //alert(data);
                 switch (data) {
                     case 'email-no-sent':
-                        alert('El correo electronico que proporcionaste no es correcto, porfavor vuelve a intentar');
+                        alert('El correo electrónico que proporcionaste no es válido, porfavor vuelve a intentar');
                     break;
                     case 'token-no-match':
-                        alert('El correo electronico que proporcionaste no es correcto, porfavor vuelve a intentar');
+                        alert('El correo electrónico que proporcionaste no es válido, porfavor vuelve a intentar');
                     break;
                     default:
                         console.log(data[0]);

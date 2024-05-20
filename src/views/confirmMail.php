@@ -11,7 +11,7 @@
         <div class="email-confirm">
             <p>Te hemos enviado un correo</p>
             <p>Verifica en tu bandeja de entrada en el correo electrónico que registraste</p>
-            <a href="https://www.puntoaqua.com">Volver a la pagina principal</a>
+            <a href="https://www.puntoaqua.com">Volver a la página principal</a>
         </div>
     </main>
 </body>
