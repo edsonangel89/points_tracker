@@ -131,8 +131,8 @@
     }
 
     function confirm_email($email, $token) {
-        //include 'src/utils/jwt.php';
-        //include 'src/models/userModels.php';
+        require 'src/utils/jwt.php';
+        require 'src/models/userModels.php';
         
         $match = verify_jwt($token);
         //echo json_encode($token);
