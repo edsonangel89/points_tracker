@@ -28,9 +28,9 @@
         echo ' payload_encoded => ' . $payload_encoded;
 
         $header_decoded = base64_decode($header_encoded);
-        echo ' payload_encoded => ' . $payload_encoded;
+        echo ' header_decoded => ' . $header_decoded;
         $payload_decoded = base64_decode($payload_encoded);
-        echo ' payload_encoded => ' . $payload_encoded;
+        echo ' payload_decoded => ' . $payload_decoded;
 
         $signature_expected = hash_hmac('sha256', "$header_base64.$payload_base64", "test", true);
         echo ' signature_expected => ' . $signature_expected;
