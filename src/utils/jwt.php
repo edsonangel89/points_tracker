@@ -45,7 +45,7 @@
 
         //echo "<br><br>" . $signature_received_base64_urldec . " // " . $signature_expected_base64 ;
         //exit;
-        if ($signature_received_base64 == $signature_expected_base64) {
+        if ($signature_received_base64_urldec == $signature_expected_base64) {
             return true;
             //echo json_encode('EQUAL');
             //exit;
