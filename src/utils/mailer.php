@@ -14,6 +14,8 @@
         $mail = new PHPMailer(true);
         $token = generate_jwt($user_email);
         $user = get_user_by_email($user_email);
+        echo $user;
+        exit;
 
         try {
             //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
