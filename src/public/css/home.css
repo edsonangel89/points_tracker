@@ -62,6 +62,9 @@ footer {
     .footer-rights p{
         font-size: 1.3rem;
     }
+    .footer-rights a{
+        font-size: 1.3rem;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1280px) {
@@ -79,6 +82,9 @@ footer {
     .footer-rights p{
         font-size: 1.2rem;
     }
+    .footer-rights a{
+        font-size: 1.2rem;
+    }
 }
 
 @media (min-width: 1280px) {
@@ -94,6 +100,9 @@ footer {
         /*visibility: hidden;*/
     }
     .footer-rights p{
+        font-size: 1rem;
+    }
+    .footer-rights a{
         font-size: 1rem;
     }
 }
