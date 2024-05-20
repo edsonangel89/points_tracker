@@ -42,7 +42,8 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: solid black 1px;
+    text-decoration: none;
+    /*border: solid black 1px;*/
 }
 .footer-social-media-links a:hover {
     color: lightgray;
