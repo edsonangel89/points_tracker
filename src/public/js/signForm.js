@@ -46,9 +46,11 @@ signForm.addEventListener('submit', function(e) {
                 switch (data) {
                     case 'email-no-sent':
                         alert('El correo electrónico que proporcionaste no es válido, porfavor vuelve a intentar');
+                        inputEmail.value = '';
                     break;
                     case 'token-no-match':
                         alert('El correo electrónico que proporcionaste no es válido, porfavor vuelve a intentar');
+                        inputEmail.value = '';
                     break;
                     default:
                         console.log(data[0]);
@@ -56,14 +58,14 @@ signForm.addEventListener('submit', function(e) {
                         //alert(data);
                         const email = encodeURI(data[0]);
                         const token = encodeURI(data[1]);
-                        //window.location.href = "/mail?email=" + email + "&token=" + token + "";
+                        window.location.href = "/mail?email=" + email + "&token=" + token + "";
+                        inputFname.value = '';
+                        inputLname.value = '';
+                        inputEmail.value = '';
+                        inputPassword.value = '';
+                        inputConfirmPassword.value = '';
                     break;
                 }
-                inputFname.value = '';
-                inputLname.value = '';
-                inputEmail.value = '';
-                inputPassword.value = '';
-                inputConfirmPassword.value = '';
             })
         }
     }
