@@ -143,9 +143,11 @@
         require 'src/utils/jwt.php';
         if(isset($_GET['email'])) {
             $jwt = generate_jwt($email);
+            $jwt_urlencoded = urlencode($jwt);
             echo $jwt  . "<br>";
-            $verification = verify_jwt($jwt);
-            echo $verification  . "<br>";
+            echo $jwt_urlencoded  . "<br>";
+            /*$verification = verify_jwt($jwt);
+            echo $verification  . "<br>";*/
             exit;
         }
         else {
