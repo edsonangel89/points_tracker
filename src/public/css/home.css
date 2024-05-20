@@ -38,7 +38,10 @@ nav {
 }
 .footer-social-media-links a {
     color: white;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: solid black 1px;
 }
 .footer-social-media-links a:hover {
