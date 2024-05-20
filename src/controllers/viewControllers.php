@@ -85,15 +85,15 @@
                     require 'src/views/succeed.php';
                 }
                 else {
-                    require 'src/views/404.php';
+                    echo json_encode("verify-failed");
                 }
             }
             else {
-                require 'src/views/404.php';
+                echo json_encode("no-token-no-email");
             }
         }
         else {
-            require 'src/views/404.php';
+            echo json_encode("no-email-set");
         }
         
     }
