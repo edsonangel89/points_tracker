@@ -14,7 +14,7 @@
         $mail = new PHPMailer(true);
         $token = generate_jwt($user_email);
         $user = get_user_by_email($user_email);
-        echo $user;
+        echo json_encode($user);
         exit;
 
         try {
