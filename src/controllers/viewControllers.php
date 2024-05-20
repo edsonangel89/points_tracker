@@ -142,12 +142,13 @@
     function get_jwt_verify() {
         require 'src/utils/jwt.php';
         if(isset($_GET['email'])) {
+            $email = $_GET['email'];
             $jwt = generate_jwt($email);
             $jwt_urldecoded = urldecode($jwt);
             $jwt_base64 = base64_encode($jwt);
             echo "JWT => " . $jwt  . "<br>";
-            echo "JWT_URLDECODE => " . $jwt_urlencoded  . "<br>";
-            echo "JWT_64ENCODE => " . $jwt_base64  . "<br>";
+            //echo "JWT_URLDECODE => " . $jwt_urlencoded  . "<br>";
+            //echo "JWT_64ENCODE => " . $jwt_base64  . "<br>";
             /*$verification = verify_jwt($jwt);
             echo $verification  . "<br>";*/
             exit;
