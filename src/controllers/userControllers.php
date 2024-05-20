@@ -135,7 +135,7 @@
         //require 'src/models/userModels.php';
         
         $match = verify_jwt($token);
-        exit;
+        //exit;
         //echo json_encode($token);
         //echo $token;
         //exit;
