@@ -173,8 +173,7 @@
         static public function get_points_prizes($uid) {
             $table = self::$name_users_table;
             $sql_get_points_prizes = "SELECT
-            Points,
-            Prize
+            Points
             FROM $table WHERE UserID='$uid'
             ";
             try {
