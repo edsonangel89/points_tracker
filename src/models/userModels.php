@@ -218,7 +218,7 @@
         static public function update_email_verify($email) {
             $table = self::$name_users_table;
             $sql_email_verify = "UPDATE $table SET
-            EmailVerified=1 WHERE Email='$email'
+            EmailVerified=0 WHERE Email='$email'
             ";
             try {
                 $conn = new mysqli(self::$server_db, self::$user_db, self::$password_db, self::$name_db);
