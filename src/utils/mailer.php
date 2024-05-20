@@ -48,7 +48,8 @@
 
         }
         catch (Exception $e) {
-            return 'email-not-sent';
+            echo json_encode('email-not-sent');
+            exit;
             //echo $e->GetMessage();
         }
     }
