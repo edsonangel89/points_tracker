@@ -39,7 +39,7 @@
         */
         $signature_expected = hash_hmac('sha256', "$header_urldecoded.$payload_urldecoded", "test", true);
         //echo '<br>signature_expected => ' . $signature_expected;
-        $signature_expected_base64 = base64_encode($signature_expected);
+        $signature_expected_base64 = urldecode(base64_encode($signature_expected));
         //echo '<br>signature_expected_base64 => ' . $signature_expected_base64;
         
 
