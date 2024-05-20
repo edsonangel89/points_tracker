@@ -140,6 +140,8 @@
         //echo $token;
         //exit;
         if($match) {
+            echo $match;
+            exit;
             User::update_email_verify($email);
             http_response_code(200);
             header("Location: /succeed?email=" . $email. "&token=" . $token . "");
