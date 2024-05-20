@@ -23,19 +23,19 @@
         $header_encoded = base64_decode($header);
         echo 'header_encoded => ' . $header_encoded;
         $payload = base64_encode($payload_base64);
-        echo '\n payload => ' . $payload;
+        echo ' payload => ' . $payload;
         $payload_encoded = base64_decode($payload);
-        echo '\n payload_encoded => ' . $payload_encoded;
+        echo ' payload_encoded => ' . $payload_encoded;
 
         $header_decoded = base64_decode($header_encoded);
-        echo '\n payload_encoded => ' . $payload_encoded;
+        echo ' payload_encoded => ' . $payload_encoded;
         $payload_decoded = base64_decode($payload_encoded);
-        echo '\n payload_encoded => ' . $payload_encoded;
+        echo ' payload_encoded => ' . $payload_encoded;
 
         $signature_expected = hash_hmac('sha256', "$header_base64.$payload_base64", "test", true);
-        echo '\n signature_expected => ' . $signature_expected;
+        echo ' signature_expected => ' . $signature_expected;
         $signature_expected_base64 = base64_encode($signature_expected);
-        echo '\n signature_expected_base64 => ' . $signature_expected_base64;
+        echo ' signature_expected_base64 => ' . $signature_expected_base64;
         
 
         //echo $signature_received_base64 . " // " . $signature_expected_base64 ;
