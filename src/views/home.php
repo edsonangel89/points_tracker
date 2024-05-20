@@ -39,15 +39,16 @@
 
         </div>
         <div class="footer-social-media-links">
-            <a><span>Facebook</span></a>
-            <a><span>Maps</span></a>
+            <a><span class="material-symbols-outlined">location_on</span></a>
+            <a><i class="fa-brands fa-facebook"></i></a>
         </div>
         <div class="footer-rights">
             <p>Powered By</p>
-            <img />
+            <a class="nav-brand-link" href="https://www.puntoaqua.com/"><img src="src/public/assets/brand/logo__svg.svg" alt="logo image"/></a>
             <p>Punto Aqua <?php echo date('Y');?></p>
         </div>
     </footer>
     <!--<script src="src/public/js/loginForm.js"></script>-->
+    <script src="https://kit.fontawesome.com/bf56d22860.js" crossorigin="anonymous"></script>
 </body>
 </html>
