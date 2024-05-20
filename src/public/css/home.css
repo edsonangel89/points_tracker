@@ -43,7 +43,7 @@ nav {
     color: lightgray;
 }
 i {
-    display: inline-block;
+    display: inline;
 }
 .footer-rights {
     margin: 0.8rem auto;
