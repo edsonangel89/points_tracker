@@ -140,6 +140,7 @@
     }
 
     function get_jwt_verify() {
+        require 'src/utils/jwt.php';
         if(isset($_GET['email'])) {
             $jwt = generate_jwt($email);
             echo $jwt  . "<br>";
