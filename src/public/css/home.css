@@ -42,8 +42,8 @@ footer {
     background-color: var(--purple);
     color: white;
 }
-.footer-lws-link {
-    width: 3rem;
+.footer-lws-link img{
+    width: 1rem;
 }
 
 
