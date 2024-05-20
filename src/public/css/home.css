@@ -86,10 +86,13 @@ footer {
         /*visibility: hidden;*/
     }
     .footer-rights p{
-        font-size: 1rem;
-    }
-    .footer-rights i{
         font-size: 1.2rem;
+    }
+    .footer-social-media-links span{
+        font-size: 2rem;
+    }
+    .footer-social-media-links i{
+        font-size: 1.7rem;
     }
 }
 
@@ -108,7 +111,10 @@ footer {
     .footer-rights p{
         font-size: 1rem;
     }
-    .footer-rights i{
-        font-size: 1rem;
+    .footer-social-media-links span{
+        font-size: 1.5rem;
+    }
+    .footer-social-media-links i{
+        font-size: 1.3rem;
     }
 }
