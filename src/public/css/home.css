@@ -34,6 +34,9 @@ nav {
 .nav-link:hover {
     color: var(--purple);
 }
+main {
+    margin-top: 3rem;
+}
 .instructions-container {
     display: flex;
     flex-direction: column;
