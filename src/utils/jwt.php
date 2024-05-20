@@ -21,6 +21,8 @@
         echo 'header_encoded => ' . $header_encoded;
         $header_decoded = base64_decode($header_base64);
         echo 'header_decoded => ' . $header_decoded;
+        $header_urldecoded = urldecode($header_base64);
+        echo 'header_urldecoded => ' . $header_urldecoded;
 
         $payload_encoded = base64_encode($payload_base64);
         echo ' payload_encoded => ' . $payload_encoded;
