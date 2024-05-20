@@ -59,6 +59,9 @@ footer {
         display: none;
         /*visibility: hidden;*/
     }
+    .footer-rights p{
+        font-size: 2rem;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1280px) {
@@ -73,6 +76,9 @@ footer {
         display: none;
         /*visibility: hidden;*/
     }
+    .footer-rights p{
+        font-size: 1.5rem;
+    }
 }
 
 @media (min-width: 1280px) {
@@ -86,5 +92,8 @@ footer {
     .nav-links-container-mobile-tablet {
         display: none;
         /*visibility: hidden;*/
+    }
+    .footer-rights p{
+        font-size: 1.2rem;
     }
 }
