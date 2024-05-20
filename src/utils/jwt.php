@@ -19,7 +19,7 @@
         echo '<br>signature_received_base64 => ' . $signature_received_base64;
         $header_encoded = base64_encode($header_base64);
         echo '<br><br>header_encoded => ' . $header_encoded;
-        $header_decoded = urldecode(base64_decode($header_base64));
+        $header_decoded = json_encode(urldecode(base64_decode($header_base64)));
         echo '<br>header_decoded => ' . $header_decoded;
         $header_urldecoded = urldecode($header_base64);
         echo '<br>header_urldecoded => ' . $header_urldecoded;
