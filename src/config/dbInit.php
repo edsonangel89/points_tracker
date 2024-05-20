@@ -33,7 +33,7 @@
     ) VALUES (
         'Superadmin',
         'Admin',
-        'edsonangelmc@gmail.com',
+        'puntoaquaoficial@gmail.com',
         '$hashed_password',
         0,
         'superadmin',
