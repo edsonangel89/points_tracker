@@ -108,6 +108,7 @@
                 else {
                     echo json_encode('db-error');
                 }
+                return false;
             }
         }
 

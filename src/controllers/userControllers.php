@@ -38,22 +38,21 @@
     }
 
     function add_user($fname, $lname, $email, $password, $role, $points, $prizes, $verify) {
-        $create = User::add_user($fname, $lname, $email, $password, $role, $points, $prizes, $verify);
-        if($create) {
-            http_response_code(201);
-            $token = generate_jwt($email);
-            //sleep(1);
-            $token_match = verify_jwt($token);
-            $user_info = [
-                $email,
-                $token
-            ];
-            //http_response_code(201);
-                //send_email($email);
-                //header("Location: /mail?email=$email&token=$token");
-                //echo json_encode($user_info);
-            if($token_match) {
-                if(send_email($email) != 'email-not-sent') {    
+        $token = generate_jwt($email);
+        //sleep(1);
+        $token_match = verify_jwt($token);
+        $user_info = [
+            $email,
+            $token
+        ];
+        //http_response_code(201);
+            //send_email($email);
+            //header("Location: /mail?email=$email&token=$token");
+            //echo json_encode($user_info);
+        if($token_match) {
+            if(send_email($email) != 'email-not-sent') {  
+                $create = User::add_user($fname, $lname, $email, $password, $role, $points, $prizes, $verify);
+                if($create) {
                     http_response_code(201);
                     //send_email($email);
                     //header("Location: /mail?email=$email&token=$token");
@@ -61,16 +60,17 @@
                 }
                 else {
                     http_response_code(400);
-                    echo json_encode('email-no-sent');
+                    echo json_encode('user-no-added');
                 }
             }
             else {
                 http_response_code(400);
-                echo json_encode('token-no-match');
+                echo json_encode('email-no-sent');
             }
         }
         else {
             http_response_code(400);
+            echo json_encode('token-no-match');
         }
     }
 
