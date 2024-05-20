@@ -38,6 +38,7 @@ nav {
 }
 .footer-social-media-links a {
     color: white;
+    text-align: center;
     border: solid black 1px;
 }
 .footer-social-media-links a:hover {
