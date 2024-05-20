@@ -62,7 +62,7 @@ footer {
     .footer-rights p{
         font-size: 1.3rem;
     }
-    .footer-rights i{
+    .footer-rights a{
         font-size: 1.3rem;
     }
 }
