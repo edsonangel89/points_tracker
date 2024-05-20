@@ -19,8 +19,8 @@
 }*/
 
 @media (max-width: 768px) {
-    .email-confirm {
-        font-size: 2rem;
+    .email-confirm p{
+        font-size: 3rem;
     }
 }
 
