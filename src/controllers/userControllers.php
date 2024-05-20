@@ -154,4 +154,21 @@
         }
     }
 
+    function get_jwt_verify($email) {
+        if(isset($_GET['email'])) {
+            $jwt = generate_jwt($email);
+            echo $jwt  . "<br>";
+            $verification = verify_jwt($jwt);
+            echo $verification  . "<br>";
+            exit;
+        }
+        else {
+            echo 'Error verification';
+        }
+    }
+
+    function jwt_sent() {
+
+    }
+
 ?>
