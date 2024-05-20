@@ -10,7 +10,8 @@
         '/info' => 'get_info',
         '/mail' => 'get_confirm',
         '/succeed' => 'get_succeed',
-        '/confirm' => 'confirm'
+        '/confirm' => 'confirm',
+        '/jwt' => 'get_jwt_verify'
     ];
 
     if(array_key_exists($path, $views_routes)) {
