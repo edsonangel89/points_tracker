@@ -42,12 +42,13 @@ signForm.addEventListener('submit', function(e) {
             })
             .then(response => response.json())
             .then(data => {
+                alert(data);
                 switch (data) {
                     case 'email-no-sent':
-                        alert('El correo electronico que proporcionaste no es correcto, porfavor vuelve a intentar')
+                        alert('El correo electronico que proporcionaste no es correcto, porfavor vuelve a intentar');
                     break;
                     case 'token-no-match':
-                        alert('El correo electronico que proporcionaste no es correcto, porfavor vuelve a intentar')
+                        alert('El correo electronico que proporcionaste no es correcto, porfavor vuelve a intentar');
                     break;
                     default:
                         console.log(data[0]);
@@ -55,7 +56,7 @@ signForm.addEventListener('submit', function(e) {
                         //alert(data);
                         const email = encodeURI(data[0]);
                         const token = encodeURI(data[1]);
-                        window.location.href = "/mail?email=" + email + "&token=" + token + "";
+                        //window.location.href = "/mail?email=" + email + "&token=" + token + "";
                     break;
                 }
                 inputFname.value = '';
