@@ -2,17 +2,17 @@
 
     require 'src/utils/crypt.php';
 
-    $server_db = 'localhost';
+    /*$server_db = 'localhost';
     $user_db = 'root';  
     $password_db = '';  
     $name_db = 'libertyw_pointstrackerdb';
-    $name_users_table = 'users';
+    $name_users_table = 'users';*/
 
-    /*$server_db = 'localhost';
+    $server_db = 'localhost';
     $user_db = 'libertyw_puntoaqua';
     $password_db = 'puntoaquafortheworld';
     $name_db = 'libertyw_pointstrackerdb';
-    $name_users_table = 'users';*/
+    $name_users_table = 'users';
     
     $sql_create_db = "CREATE DATABASE $name_db";
     $sql_create_users_table = "CREATE TABLE $name_users_table (
