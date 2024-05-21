@@ -37,27 +37,27 @@
                         <li>Regístrate</li>
                         <p>Ingresa al botón de inicio de sesión que se encuentra en la parte superior derecha</p>
                         <p>En el formulario presiona el link con la leyenda "Regístrate"</p>
-                        <img class="img-desktop" src="src/public/assets/images/signup_form_desktop.png"/>
-                        <img class="img-mobile" src="src/public/assets/images/signup_form_mobile.png"/>
+                        <img class="img-desktop" src="src/public/assets/images/signup_form_desktop.jpg"/>
+                        <img class="img-mobile" src="src/public/assets/images/signup_form_mobile.jpg"/>
                         <p>Llena el formulario con tus datos y un correo electrónico válido</p>
                         <li>Verifica tu correo</li>
                         <p>Abre la bandeja de entrada del correo electrónico que registraste</p>
-                        <img class="img-desktop" src="src/public/assets/images/mail_desktop.png"/>
-                        <img class="img-mobile" src="src/public/assets/images/mail_mobile.png"/>
+                        <img class="img-desktop" src="src/public/assets/images/mail_desktop.jpg"/>
+                        <img class="img-mobile" src="src/public/assets/images/mail_mobile.jpg"/>
                         <p><span class="alert">NOTA:</span> Si el correo no esta en la bandeja de entrada verifica tu bandeja de spam</p>
                         <p>Presiona en la liga con la leyenda "Confirmar correo"</p>
                         <p>Te enviará a la siguiente pantalla y significa que has confirmado tu correo correctamente</p>
-                        <img class="img-desktop" src="src/public/assets/images/email_verified_desktop.png"/>
-                        <img class="img-mobile" src="src/public/assets/images/email_verified_mobile.png"/>
+                        <img class="img-desktop" src="src/public/assets/images/email_verified_desktop.jpg"/>
+                        <img class="img-mobile" src="src/public/assets/images/email_verified_mobile.jpg"/>
                         <li>Inicia sesión</li>
                         <p>Ingresa al botón de inicio de sesión que se encuentra en la parte superior derecha</p>
                         <p>Ingresa el correo con el que te registraste y tu contraseña</p>
-                        <img class="img-desktop" src="src/public/assets/images/login_form_desktop.png"/>
-                        <img class="img-mobile" src="src/public/assets/images/login_form_mobile.png"/>
+                        <img class="img-desktop" src="src/public/assets/images/login_form_desktop.jpg"/>
+                        <img class="img-mobile" src="src/public/assets/images/login_form_mobile.jpg"/>
                         <li>Comienza a generar puntos</li>
                         <p>En la pantalla verás tu número de cliente, tus datos y los puntos que tienes en ese momento</p>
-                        <img class="img-desktop" src="src/public/assets/images/profile_screen_desktop.png"/>
-                        <img class="img-mobile" src="src/public/assets/images/profile_screen_mobile.png"/>
+                        <img class="img-desktop" src="src/public/assets/images/profile_screen_desktop.jpg"/>
+                        <img class="img-mobile" src="src/public/assets/images/profile_screen_mobile.jpg"/>
                         <p>Recuerda dar al vendedor tu número de cliente cuando realices compras para que aumente tus puntos</p>
                     </ol>
                 </div>
