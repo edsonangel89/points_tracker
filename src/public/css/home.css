@@ -59,7 +59,6 @@ ol li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: solid black;
 }
 .img-desktop {
     display: none;
