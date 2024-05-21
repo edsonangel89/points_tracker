@@ -25,7 +25,7 @@
     </header>
     <main>
         <section>
-            <div class="intructions-container">
+            <div class="instructions-container">
                 <div class="instructions-ad">
                     <h2>Ya puedes verificar tus puntos en línea!!!</h2>
                 </div>
