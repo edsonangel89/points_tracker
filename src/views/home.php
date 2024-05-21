@@ -44,7 +44,7 @@
                         <p>Abre la bandeja de entrada del correo electrónico que registraste</p>
                         <img class="img-desktop" src="src/public/assets/images/mail_desktop.jpg"/>
                         <img class="img-mobile" src="src/public/assets/images/mail_mobile.jpg"/>
-                        <p><span class="alert">NOTA:</span> Si el correo no esta en la bandeja de entrada verifica tu bandeja de spam</p>
+                        <p><span class="alert"><strong>NOTA:</strong></span> Si el correo no esta en la bandeja de entrada verifica tu bandeja de spam</p>
                         <p>Presiona en la liga con la leyenda "Confirmar correo"</p>
                         <p>Te enviará a la siguiente pantalla y significa que has confirmado tu correo correctamente</p>
                         <img class="img-desktop" src="src/public/assets/images/email_verified_desktop.jpg"/>
