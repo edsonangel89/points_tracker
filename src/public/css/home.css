@@ -61,9 +61,7 @@ ol p {
     padding: 0.5rem;
     /*border: solid black 1px;*/
 }
-.instructions-steps {
-    width: 85%;
-}
+
 /*.instructions-steps p{
     border: solid black 1px;
 }*/
@@ -125,6 +123,9 @@ footer {
         display: none;
         /*visibility: hidden;*/
     }
+    .instructions-steps {
+        width: 95%;
+    }
     .footer-rights p{
         font-size: 1.1rem;
     }
@@ -147,6 +148,9 @@ footer {
     .nav-links-container-desktop {
         display: none;
         /*visibility: hidden;*/
+    }
+    .instructions-steps {
+        width: 80%;
     }
     .footer-rights p{
         font-size: 1.2rem;
@@ -182,6 +186,9 @@ footer {
     }
     .instructions-title {
         font-size: 2.3rem;
+    }
+    .instructions-steps {
+        width: 70%;
     }
     .instructions-steps li{
         font-size: 2rem;
