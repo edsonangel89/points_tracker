@@ -109,7 +109,6 @@ footer {
 @media (max-width: 310px) {
     .img-mobile-small {
         display: block;
-        /*border: solid black 1px;*/
     }
     .img-mobile {
         display: none;
@@ -128,6 +127,9 @@ footer {
         justify-content: end;
     }
     .nav-links-container-desktop {
+        display: none;
+    }
+    .img-mobile-small {
         display: none;
     }
     .instructions-steps {
@@ -152,6 +154,9 @@ footer {
         justify-content: end;
     }
     .nav-links-container-desktop {
+        display: none;
+    }
+    .img-mobile-small {
         display: none;
     }
     .instructions-steps {
