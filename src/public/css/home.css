@@ -72,10 +72,10 @@ ol li {
     display: block;
     margin: 1.2rem auto;
 }
-/*.img-mobile {
-    display: block;
+.img-mobile {
+    display: none;
     margin: 1.2rem auto;
-}*/
+}
 .footer-social-media-links {
     margin: 0.8rem auto;
     display: flex;
