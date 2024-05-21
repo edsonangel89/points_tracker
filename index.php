@@ -1,6 +1,13 @@
 <?php
     session_start();
 
+    if((isset($_COOKIE['Authorization']) && isset($_SESSION['ID'])) || (isset($_COOKIE['User']) && isset($_SESSION['ID']))) {
+        
+    }
+    else {
+        session_destroy();
+    }
+
     /*require 'src/utils/jwt.php';
     $test = generate_jwt('eascenciog65@gmail.com');
     echo "JWT => " . $test . "\n";

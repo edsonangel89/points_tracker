@@ -20,11 +20,11 @@
                         $_SESSION['PRIZE'] = $user['Prize'];
                         if($_SESSION['ROLE'] == 'superadmin') {
                             $jwt = generate_jwt($user_db_email);
-                            setcookie('Authorization', "$jwt", time() + 3600,"/",false, true);
+                            setcookie('Authorization', "$jwt", time() + 60,"/",false, true);
                             echo json_encode('superadmin-logged');
                         }
                         elseif ($_SESSION['ROLE'] == 'user'){
-                            setcookie('User', $_SESSION['ID'], time() + 3600,"/",false, true);
+                            setcookie('User', $_SESSION['ID'], time() + 60,"/",false, true);
                             echo json_encode('user-logged');
                         }
                     }
