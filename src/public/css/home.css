@@ -45,9 +45,6 @@ main {
     justify-content: center;
     /*border: solid black 1px;*/
 }
-ol p {
-    /*text-align: center;*/
-}
 ol li {
     font-weight: 700;
     /*border: solid black 1px;*/
