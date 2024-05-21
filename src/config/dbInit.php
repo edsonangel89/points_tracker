@@ -3,10 +3,16 @@
     require 'src/utils/crypt.php';
 
     $server_db = 'localhost';
-    $user_db = 'root';  //
-    $password_db = '';  //
+    $user_db = 'root';  
+    $password_db = '';  
     $name_db = 'libertyw_pointstrackerdb';
     $name_users_table = 'users';
+
+    /*static public $server_db = 'localhost';
+    static public $user_db = 'libertyw_puntoaqua';
+    static public $password_db = 'puntoaquafortheworld';
+    static public $name_db = 'libertyw_pointstrackerdb';
+    static public $name_users_table = 'users';*/
     
     $sql_create_db = "CREATE DATABASE $name_db";
     $sql_create_users_table = "CREATE TABLE $name_users_table (
