@@ -47,7 +47,7 @@ main {
 }
 .instructions-container p {
     line-height: 2rem;
-    border: solid black 1px;
+    /*border: solid black 1px;*/
 }
 .instructions-ad {
     padding: 0.8rem;
