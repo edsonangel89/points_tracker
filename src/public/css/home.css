@@ -174,7 +174,7 @@ footer {
     .img-mobile {
         display: none;
     }
-    .instructions-steps i{
+    .instructions-steps li{
         font-size: 2rem;
     }
     .instructions-steps p{
