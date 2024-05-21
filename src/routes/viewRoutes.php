@@ -26,9 +26,9 @@
             call_user_func($views_routes[$path], 'nouser');
         }
     }
-    elseif (preg_match_all('/mail', $path)) {
+    /*elseif (preg_match_all('/mail', $path)) {
         call_user_func($views_routes['/mail']);
-    }
+    }*/
     elseif(array_key_exists($path, $views_routes)) {
         call_user_func($views_routes[$path]);
     }
