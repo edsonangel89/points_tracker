@@ -71,7 +71,6 @@
             </form>
         </section>
     </main>
-    
     <script src="src/public/js/signForm.js"></script>
 </body>
 </html>
