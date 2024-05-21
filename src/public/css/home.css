@@ -69,11 +69,11 @@ ol li {
     border: solid black 1px;
 }*/
 .img-desktop {
-    display: block;
+    display: none;
     margin: 1.2rem auto;
 }
 .img-mobile {
-    display: none;
+    display: block;
     margin: 1.2rem auto;
 }
 .footer-social-media-links {
