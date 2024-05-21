@@ -3,8 +3,8 @@
     require 'src/utils/crypt.php';
 
     $server_db = 'localhost';
-    $user_db = 'libertyw_puntoaqua';
-    $password_db = 'puntoaquafortheworld';
+    $user_db = 'root';
+    $password_db = '';
     $name_db = 'libertyw_pointstrackerdb';
     $name_users_table = 'users';
     

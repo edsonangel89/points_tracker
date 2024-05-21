@@ -3,8 +3,8 @@
     class User {
 
         static public $server_db = 'localhost';
-        static public $user_db = 'libertyw_puntoaqua';
-        static public $password_db = 'puntoaquafortheworld';
+        static public $user_db = 'root';
+        static public $password_db = '';
         static public $name_db = 'libertyw_pointstrackerdb';
         static public $name_users_table = 'users';
 
