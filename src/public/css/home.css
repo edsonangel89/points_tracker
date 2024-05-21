@@ -54,7 +54,7 @@ ol p {
 }
 .instructions-ad {
     padding: 0.8rem;
-    text-align: center;
+    /*text-align: center;*/
     /*border: solid black 1px;*/
 }
 .instructions-title {
