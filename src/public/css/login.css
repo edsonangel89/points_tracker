@@ -40,7 +40,7 @@ input[type='submit'] {
 }
 .contrasena-alert {
     display: none;
-    color: #F08080;
+    color: #FF1493;
     margin-left: 1.2rem;
 }
 .checkbox {
