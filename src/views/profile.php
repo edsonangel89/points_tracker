@@ -75,7 +75,15 @@
             </section>
     </main>
     <footer>
-
+        <div class="footer-social-media-links">
+            <a href="https://www.google.com/maps/place/Punto+Aqua/@20.6551974,-103.2928797,19z/data=!4m6!3m5!1s0x8428b3f170b144a7:0xd3d21c426e3cd34d!8m2!3d20.6551973!4d-103.292236!16s%2Fg%2F11jt5d7d45?entry=ttu"><span class="material-symbols-outlined">location_on</span></a>
+            <a href="https://www.facebook.com/profile.php?id=100087263527212"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <div class="footer-rights">
+            <p>Powered By</p>
+            <a class="footer-lws-link" href="https://www.libertyws.com.mx/"><img src="src/public/assets/Logo-lws.png" alt="lws image"/></a>
+            <p>Punto Aqua <?php echo date('Y');?></p>
+        </div>
     </footer>
     <!--<script src="src/public/js/testForm.js"></script>-->
 </body>
