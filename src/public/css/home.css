@@ -36,7 +36,6 @@ nav {
 }
 main {
     margin: 3rem auto;
-    width: 85%;
 }
 .instructions-container {
     display: flex;
@@ -56,6 +55,9 @@ main {
 .instructions-title {
     padding: 0.5rem;
     border: solid black 1px;
+}
+.instructions-steps {
+    width: 85%;
 }
 .instructions-steps p{
     border: solid black 1px;
