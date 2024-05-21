@@ -36,6 +36,7 @@ nav {
 }
 main {
     margin: 3rem auto;
+    width: 85%;
 }
 .instructions-container {
     display: flex;

@@ -34,14 +34,14 @@
                 </div>
                 <div class="instructions-steps">
                     <ol>
-                        <li>Registro</li>
+                        <li>Regístrate</li>
                         <p>Ingresa al botón de inicio de sesión que se encuentra en la parte superior derecha</p>
                         <img />
                         <p>Oprime el link que dice "Regístrate"</p>
                         <img />
                         <p>Llena el formulario con tus datos y un correo electrónico válido</p>
                         <img />
-                        <li>Verificación de correo</li>
+                        <li>Verifica tu correo</li>
                         <p>Abre la bandeja de entrada del correo electrónico que registraste</p>
                         <img />
                         <p><span class="alert">NOTA:</span> Si el correo no esta en la bandeja de entrada verifica tu bandeja de spam</p>
@@ -49,7 +49,7 @@
                         <img />
                         <p>Te enviará a la siguiente pantalla y significa que has confirmado tu correo correctamente</p>
                         <img />
-                        <li>Iniciar sesión</li>
+                        <li>Inicia sesión</li>
                         <p>Ingresa al botón de inicio de sesión que se encuentra en la parte superior derecha</p>
                         <img />
                         <p>Ingresa el correo con el que te registraste y tu contraseña</p>
@@ -57,7 +57,7 @@
                         <li>Comienza a generar puntos</li>
                         <p>En la pantalla verás tu número de cliente, tus datos y los puntos que tienes en ese momento</p>
                         <img />
-                        <p>Recuerda dar al vendedor tu número de cliente cuando realices comprar para que aumente tus puntos</p>
+                        <p>Recuerda dar al vendedor tu número de cliente cuando realices compras para que aumente tus puntos</p>
                     </ol>
                 </div>
             </div>
