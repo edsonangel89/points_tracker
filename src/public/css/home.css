@@ -52,7 +52,7 @@ ol li {
     font-weight: 700;
 }
 .instructions-container p {
-    line-height: 2rem;
+    line-height: 1.8rem;
     /*border: solid black 1px;*/
 }
 .instructions-ad {
@@ -135,6 +135,7 @@ footer {
     }
     .instructions-steps {
         width: 95%;
+        border: solid black 1px;
     }
     .footer-rights p{
         font-size: 1.1rem;
