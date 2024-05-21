@@ -27,7 +27,7 @@
         <section>
             <div class="intructions-container">
                 <div class="instructions-ad">
-                    <h2>Ya puedes verificar tus puntos en linea!!!</h2>
+                    <h2>Ya puedes verificar tus puntos en línea!!!</h2>
                 </div>
                 <div class="instructions-title">
                     <h3>Sigue estos sencillos pasos</h3>
@@ -36,27 +36,28 @@
                     <ol>
                         <li>Regístrate</li>
                         <p>Ingresa al botón de inicio de sesión que se encuentra en la parte superior derecha</p>
-                        <img />
-                        <p>Oprime el link que dice "Regístrate"</p>
-                        <img />
+                        <p>En el formulario presiona el link con la leyenda "Regístrate"</p>
+                        <img class="img-desktop" src="src/public/assets/images/signup_form_desktop.png"/>
+                        <img class="img-mobile" src="src/public/assets/images/signup_form_mobile.png"/>
                         <p>Llena el formulario con tus datos y un correo electrónico válido</p>
-                        <img />
                         <li>Verifica tu correo</li>
                         <p>Abre la bandeja de entrada del correo electrónico que registraste</p>
-                        <img />
+                        <img class="img-desktop" src="src/public/assets/images/mail_desktop.png"/>
+                        <img class="img-mobile" src="src/public/assets/images/mail_mobile.png"/>
                         <p><span class="alert">NOTA:</span> Si el correo no esta en la bandeja de entrada verifica tu bandeja de spam</p>
-                        <p>Oprime la liga con la leyenda "Confirmar correo"</p>
-                        <img />
+                        <p>Presiona en la liga con la leyenda "Confirmar correo"</p>
                         <p>Te enviará a la siguiente pantalla y significa que has confirmado tu correo correctamente</p>
-                        <img />
+                        <img class="img-desktop" src="src/public/assets/images/email_verified_desktop.png"/>
+                        <img class="img-mobile" src="src/public/assets/images/email_verified_mobile.png"/>
                         <li>Inicia sesión</li>
                         <p>Ingresa al botón de inicio de sesión que se encuentra en la parte superior derecha</p>
-                        <img />
                         <p>Ingresa el correo con el que te registraste y tu contraseña</p>
-                        <img />
+                        <img class="img-desktop" src="src/public/assets/images/login_form_desktop.png"/>
+                        <img class="img-mobile" src="src/public/assets/images/login_form_mobile.png"/>
                         <li>Comienza a generar puntos</li>
                         <p>En la pantalla verás tu número de cliente, tus datos y los puntos que tienes en ese momento</p>
-                        <img />
+                        <img class="img-desktop" src="src/public/assets/images/profile_screen_desktop.png"/>
+                        <img class="img-mobile" src="src/public/assets/images/profile_screen_mobile.png"/>
                         <p>Recuerda dar al vendedor tu número de cliente cuando realices compras para que aumente tus puntos</p>
                     </ol>
                 </div>

@@ -62,6 +62,12 @@ main {
 .instructions-steps p{
     border: solid black 1px;
 }
+.img-desktop {
+    display: none;
+}
+.img-mobile {
+    display: block;
+}
 .footer-social-media-links {
     margin: 0.8rem auto;
     display: flex;
@@ -157,6 +163,12 @@ footer {
     .nav-links-container-mobile-tablet {
         display: none;
         /*visibility: hidden;*/
+    }
+    .img-desktop {
+        display: block;
+    }
+    .img-mobile {
+        display: none;
     }
     .footer-rights p{
         font-size: 1rem;
