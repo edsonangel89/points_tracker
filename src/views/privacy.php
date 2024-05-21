@@ -14,11 +14,9 @@
                 <a class="nav-brand-link" href="https://www.puntoaqua.com/"><img src="src/public/assets/brand/logo__svg.svg" alt="logo image"/></a>
             </div>
             <div class="nav-links-container-desktop">
-                <!--<a class="nav-link" href="#">Soporte</a>-->
                 <a class="nav-link" href="/home">Inicio</a>
             </div>
             <div class="nav-links-container-mobile-tablet">
-                <!--<a class="nav-link" href="#"><span class="material-symbols-outlined">support_agent</span></a>-->
                 <a class="nav-link" href="/home"><span class="material-symbols-outlined">home</span></a>
             </div>
         </nav>

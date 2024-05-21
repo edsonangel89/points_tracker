@@ -36,7 +36,6 @@ tr {
     }
     .user-info tbody{
         width: 80%;
-        /*border: solid gray 1px;*/
     }
     tr {
         display: grid;
@@ -44,7 +43,6 @@ tr {
     }
     th {
         font-size: 1.4rem;
-        /*border: solid gray 1px;*/
     }
     td {
         font-size: 1.4rem;
@@ -52,82 +50,11 @@ tr {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        /*border: solid lightgray 1px;*/
     }
-    #tid {
+    #tid, #tfn, #tln, #tem, #tpo, #uid, #ufn, #uln, #uem, #upo {
         grid-column: 1 / 7;
-        
-    }
-    #tfn {
-        grid-column: 1 / 7;
-        
-    }
-    #tln {
-        grid-column: 1 / 7;
-        
-    }
-    #tem {
-        grid-column: 1 / 7;
-       
-    }
-    #tpo {
-        grid-column: 1 / 7;
-        
-    }
-    #uid {
-        grid-column: 1 / 7 ;
-        
-    }
-    #ufn {
-        grid-column: 1 / 7;
-        
-    }
-    #uln {
-        grid-column: 1 / 7;
-        
-    }
-    #uem {
-        grid-column: 1 / 7;
-        
-    }
-    #upo {
-        grid-column: 1 / 7;
-        
     }
 }
-
-/*@media (min-width: 300px) and (max-width: 400px) {
-    .form-container {
-        width: 95%;
-    }
-    .input input, .input-submit-login input {
-        height: 2.2rem;
-    }
-}
-
-@media (min-width: 400px) and (max-width: 500px) {
-    th, td {
-        font-size: 0.6rem;
-    }
-}
-
-@media (min-width: 500px) and (max-width: 600px) {
-    th, td {
-        font-size: 0.7rem;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 700px) {
-    th, td {
-        font-size: 0.8rem;
-    }
-}
-
-@media (min-width: 700px) and (max-width: 768px) {
-    th, td {
-        font-size: 0.9rem;
-    }
-}*/
 
 @media (min-width: 768px) and (max-width: 1280px) {
     table {
@@ -144,7 +71,6 @@ tr {
     }
     .user-info tbody{
         width: 80%;
-        /*border: solid gray 1px;*/
     }
     tr {
         display: grid;
@@ -152,7 +78,6 @@ tr {
     }
     th {
         font-size: 1rem;
-        /*border: solid gray 1px;*/
     }
     td {
         font-size: 1rem;
@@ -160,50 +85,9 @@ tr {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        /*border: solid lightgray 1px;*/
     }
-    #tid {
+    #tid, #tfn, #tln, #tem, #tpo, #uid, #ufn, #uln, #uem, #upo {
         grid-column: 1 / 7;
         
     }
-    #tfn {
-        grid-column: 1 / 7;
-        
-    }
-    #tln {
-        grid-column: 1 / 7;
-        
-    }
-    #tem {
-        grid-column: 1 / 7;
-       
-    }
-    #tpo {
-        grid-column: 1 / 7;
-        
-    }
-    #uid {
-        grid-column: 1 / 7 ;
-        
-    }
-    #ufn {
-        grid-column: 1 / 7;
-        
-    }
-    #uln {
-        grid-column: 1 / 7;
-        
-    }
-    #uem {
-        grid-column: 1 / 7;
-        
-    }
-    #upo {
-        grid-column: 1 / 7;
-        
-    }
-}
-
-@media (min-width: 1280px) {
-    
 }

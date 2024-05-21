@@ -40,7 +40,7 @@ input[type='submit'] {
 }
 .contrasena-alert {
     display: none;
-    color: red;
+    color: #FA8072;
     margin-left: 1.2rem;
 }
 .checkbox {
@@ -54,7 +54,6 @@ input[type='submit'] {
     justify-content: end;
     font-size: 0.7rem;
     color: white;
-    /*border: solid black 1px;*/
 }
 .link-sign span {
     padding-right: 0.4rem;
@@ -73,7 +72,6 @@ input[type='submit'] {
     width: 100%;
     height: 2.2rem;
     padding: 0.5rem;
-    /*font-size: 1rem;*/
     border-radius: 0.3rem;
     border: none;
 }
@@ -82,7 +80,6 @@ input[type='submit'] {
 }
 .input-submit-login input {
     width: 100%;
-    /*height: 2.2rem;*/
     margin-top: 1.5rem;
     padding: 0.5rem;
     border-radius: 0.3rem;
@@ -96,64 +93,6 @@ input[type='submit'] {
     color: white;
     font-size: 1rem;
 }
-/*@media (min-width: 220px) and (max-width: 310px) {
-    .input input, .input select {
-        font-size: 0.4rem;
-        height: 1.6rem
-    }
-    .input-submit-login input {
-        height: 1.3rem;
-        font-size: 1rem;
-    }
-    .link-sign span {
-        font-size: 0.4rem;
-    }
-    .link-sign a{
-        font-size: 0.4rem;
-    }
-    .label label {
-        font-size: 1rem;
-    }
-}
-@media (min-width: 220px) and (max-width: 310px) {
-    .input input, .input select {
-        font-size: 0.8rem;
-        height: 1.8rem
-    }
-    .link-sign span {
-        font-size: 0.6rem;
-    }
-    .link-sign a{
-        font-size: 0.6rem;
-    }
-    .label label {
-        font-size: 0.9rem;
-    }
-    .input-submit-login input {
-        height: 1.8rem;
-        font-size: 1rem;
-    }
-}
-@media (min-width: 310px) and (max-width: 430px) {
-    .input input, .input select {
-        height: 2.3rem;
-        font-size: 0.8rem;
-    }
-    .input-submit-login input {
-        height: 2.3rem;
-        font-size: 1rem;
-    }
-    .link-sign span {
-        font-size: 0.7rem;
-    }
-    .link-sign a{
-        font-size: 0.7rem;
-    }
-    .label label {
-        font-size: 1rem;
-    }
-    
-} (min-width: 430px) and*/
 
 @media  (max-width: 768px) {
     .form-container {

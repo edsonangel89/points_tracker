@@ -20,16 +20,12 @@
                 <a class="nav-brand-link" href="https://www.puntoaqua.com"><img src="src/public/assets/brand/logo__svg.svg" alt="logo image"/></a>
             </div>
             <div class="nav-links-container-desktop">
-                <!--<a class="nav-link" href="#">Soporte</a>--> 
-                <!--<a class="nav-link" href="#">Iniciar sesion</a>-->
                 <a id="customer-link-desktop" class="nav-link" href="https://www.puntoaqua.com/info">Clientes</a>
                 <a id="logout-link-desktop" class="nav-link" href="https://www.puntoaqua.com/api/sessions/logout?uid=<?php echo $user_id ?>">Cerrar sesión</a>
             </div>
             <div class="nav-links-container-mobile-tablet">
-                <!--<a class="nav-link" href="#"><span class="material-symbols-outlined">support_agent</span></a>-->
                 <a id="customer-link-mobile" class="nav-link" href="https://www.puntoaqua.com/info">Clientes</a>
                 <a id="logout-link-mobile" class="nav-link" href="https://www.puntoaqua.com/api/sessions/logout?uid=<?php echo $user_id ?>"><span class="material-symbols-outlined">logout</span></a>
-                <!--<a class="nav-link" href="#"><span class="material-symbols-outlined">login</span></a>-->
             </div>
         </nav>
     </header>

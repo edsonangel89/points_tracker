@@ -42,7 +42,6 @@ signForm.addEventListener('submit', function(e) {
             })
             .then(response => response.json())
             .then(data => {
-                //alert(data);
                 switch (data) {
                     case 'email-no-sent':
                         alert('El correo electrónico que proporcionaste no es válido, porfavor vuelve a intentar');
@@ -53,9 +52,6 @@ signForm.addEventListener('submit', function(e) {
                         inputEmail.value = '';
                     break;
                     default:
-                        console.log(data[0]);
-                        console.log(data[1]);
-                        //alert(data);
                         const email = encodeURI(data[0]);
                         const token = encodeURI(data[1]);
                         window.location.href = "/mail?email=" + email + "&token=" + token + "";

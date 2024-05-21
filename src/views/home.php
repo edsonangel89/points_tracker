@@ -14,11 +14,9 @@
                 <a class="nav-brand-link" href="https://www.puntoaqua.com/"><img src="src/public/assets/brand/logo__svg.svg" alt="logo image"/></a>
             </div>
             <div class="nav-links-container-desktop">
-                <!--<a class="nav-link" href="#">Soporte</a>-->
                 <a class="nav-link" href="/login">Iniciar sesión</a>
             </div>
             <div class="nav-links-container-mobile-tablet">
-                <!--<a class="nav-link" href="#"><span class="material-symbols-outlined">support_agent</span></a>-->
                 <a class="nav-link" href="/login"><span class="material-symbols-outlined">login</span></a>
             </div>
         </nav>
@@ -85,7 +83,6 @@
             <p>Punto Aqua <?php echo date('Y');?></p>
         </div>
     </footer>
-    <!--<script src="src/public/js/loginForm.js"></script>-->
     <script src="https://kit.fontawesome.com/bf56d22860.js" crossorigin="anonymous"></script>
 </body>
 </html>

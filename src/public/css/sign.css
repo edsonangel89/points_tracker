@@ -3,11 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*border: solid black 1px;*/
 }
 .password-advice p {
     text-align: center;
     font-size: 0.9rem;
     color: white;
-    /*border: solid black 1px;*/
 }

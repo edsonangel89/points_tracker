@@ -20,12 +20,10 @@
                 <a class="nav-brand-link" href="/home"><img src="src/public/assets/brand/logo__svg.svg" alt="logo image"/></a>
             </div>
             <div class="nav-links-container-desktop">
-                <!--<a class="nav-link" href="#">Soporte</a>-->
-                <!--<a class="nav-link" href="#">Iniciar sesion</a>-->
+    
             </div>
             <div class="nav-links-container-mobile-tablet">
-                <!--<a class="nav-link" href="#"><span class="material-symbols-outlined">support_agent</span></a>-->
-                <!--<a class="nav-link" href="#"><span class="material-symbols-outlined">login</span></a>-->
+                
             </div>
         </nav>
     </header>

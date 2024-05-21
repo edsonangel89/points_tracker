@@ -39,23 +39,16 @@
 
     function add_user($fname, $lname, $email, $password, $role, $points, $prizes, $verify) {
         $token = generate_jwt($email);
-        //sleep(1);
         $token_match = verify_jwt($token);
         $user_info = [
             $email,
             $token
         ];
-        //http_response_code(201);
-            //send_email($email);
-            //header("Location: /mail?email=$email&token=$token");
-            //echo json_encode($user_info);
         if($token_match) {
             if(send_email($fname, $email) != 'email-no-sent') {  
                 $create = User::add_user($fname, $lname, $email, $password, $role, $points, $prizes, $verify);
                 if($create) {
                     http_response_code(201);
-                    //send_email($email);
-                    //header("Location: /mail?email=$email&token=$token");
                     header("Cache-Control: no-cache");
                     header("Pragma: no-cache");
                     header("Expires: 0");
@@ -144,19 +137,8 @@
     }
 
     function confirm_email($email, $token) {
-        //require 'src/utils/jwt.php';
-        //require 'src/models/userModels.php';
-        
         $match = verify_jwt($token);
-        //exit;
-        //echo json_encode($token);
-        //echo $token;
-        //exit;
         if($match) {
-            //echo $match . "<br>";
-            //echo $email . "<br>";
-            //echo $token . "<br>";
-            //exit;
             User::update_email_verify(urldecode($email));
             http_response_code(200);
             header("Location: /succeed?email=" . $email. "&token=" . $token . "");
@@ -166,9 +148,4 @@
             echo json_encode('email-no-verified');
         }
     }
-
-    function jwt_sent() {
-
-    }
-
 ?>

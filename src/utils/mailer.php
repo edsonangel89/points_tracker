@@ -6,8 +6,6 @@
     require 'src/libs/PHPMailer/src/Exception.php';
     require 'src/libs/PHPMailer/src/PHPMailer.php';
     require 'src/libs/PHPMailer/src/SMTP.php';
-    //require 'src/controllers/userControllers.php';
-    //require 'src/utils/jwt.php';
 
     function send_email($fname, $user_email) {
 
@@ -15,29 +13,18 @@
         $token = generate_jwt($user_email);
 
         try {
-            //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-            $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'puntoaquaoficial@gmail.com';                     //SMTP username
-            $mail->Password   = 'vbkysnwrtngkczzx';                               //SMTP password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+            $mail->isSMTP();                                            
+            $mail->Host       = 'smtp.gmail.com';                     
+            $mail->SMTPAuth   = true;                                   
+            $mail->Username   = 'puntoaquaoficial@gmail.com';                     
+            $mail->Password   = 'vbkysnwrtngkczzx';                               
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
             $mail->Port       = 465; 
 
-            //Recipients
             $mail->setFrom('puntoaquaoficial@gmail.com', 'Punto Aqua');
-            //$mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient
-            $mail->addAddress($user_email);               //Name is optional
-            //$mail->addReplyTo('info@example.com', 'Information');
-            //$mail->addCC('cc@example.com');
-            //$mail->addBCC('bcc@example.com');
-
-            //Attachments
-            //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-            //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
-
-            //Content
-            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->addAddress($user_email);               
+            
+            $mail->isHTML(true);                                  
             $mail->Subject = 'Confirmacion de correo electronico';
             $mail->Body    = "
                 <h2>Hola " . $fname . "</h2>
@@ -47,7 +34,6 @@
                 <p>Para soporte técnico manda un mensaje al siguiente correo:</p>
                 <a href='mailto:support@libertyws.com.mx'>support@libertyws.com.mx</a>
             ";
-            //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
 
@@ -55,7 +41,6 @@
         catch (Exception $e) {
             echo json_encode('email-no-sent');
             exit;
-            //echo $e->GetMessage();
         }
     }
 ?>

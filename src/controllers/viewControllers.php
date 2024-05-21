@@ -1,7 +1,5 @@
 <?php
 
-    //require 'src/utils/jwt.php';
-
     function get_home($current_role) {
         $roles = [
             'admin' => 'src/views/admin.php',
@@ -49,16 +47,11 @@
         require 'src/utils/jwt.php';
         require 'src/controllers/userControllers.php';
         $user = get_user_by_email($_GET['email']);
-        //echo json_encode($user);
-        //exit;
         $email_verified = $user['EmailVerified'];
         if(isset($_GET['token']) && !$email_verified) {
             $token = urldecode(htmlspecialchars($_GET['token']));
             $token_gen = urldecode(generate_jwt(htmlspecialchars($_GET['email']))); 
             $token_match = verify_jwt($token); 
-            //echo $token;
-            //echo $token_gen;
-            //exit;
             if($token == $token_gen) {
                 require 'src/views/confirmMail.php';
             }
@@ -101,41 +94,12 @@
         
     }
 
-    function confirm() {
-        require 'src/controllers/userControllers.php';
-        //require 'src/utils/jwt.php';
-        //require 'src/models/userModels.php';
-        if(isset($_GET['email']) && isset($_GET['token'])) {
-            $email = $_GET['email'];
-            $token = $_GET['token'];
-           /* $match = verify_jwt($token);
-            //$is_email_verify = User::update_email_verify($email);
-            if($match && $is_email_verify) {
-                http_response_code(200);
-                header("Location: /succeed?email=$email&token=$token");
-            }
-            else {
-                http_response_code(400);
-                echo json_encode('email-no-verified');
-            }*/
-            //echo json_encode($email);
-            //echo json_encode($token);
-            //exit;
-            confirm_email($email, $token);
-            exit;
-
-        }
-        else {
-            require 'src/views/404.php';
-        }
-    }
-
     function get_info($current_role) {
         if($current_role == 'admin') {
             require 'src/views/info.php';
         }
         else {
-            header('Location: /checker/');
+            header('Location: /');
         }
     }
 
@@ -149,8 +113,6 @@
             echo "JWT => " . $jwt  . "<br>";
             echo "JWT_URLDECODE => " . $jwt_urlencoded  . "<br>";
             echo "JWT_64ENCODE => " . $jwt_base64  . "<br>";
-            /*$verification = verify_jwt($jwt);
-            echo $verification  . "<br>";*/
             exit;
         }
         else {

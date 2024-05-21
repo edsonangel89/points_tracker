@@ -25,7 +25,7 @@ infoForm.addEventListener('submit', function(e) {
                 
                 <td id='upo'>${user.Points}</td>
             `;
-            userTable.appendChild(newRow);  //<td id='uem'>${user.Email}</td>
+            userTable.appendChild(newRow);
             inputId.value = '';
         }
         else {

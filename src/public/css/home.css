@@ -10,21 +10,18 @@ nav {
     background-color: white;
     display: flex;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    /*border: solid black 1px;*/
 }
 .nav-brand-container a {
     margin-left: 0.8rem;
 }
 .nav-brand-link img {
     width: 9rem;
-    /*margin-left: 0.8rem;*/
 }
 .nav-brand-container {
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: start;
-    /*border: solid black 1px;*/
 }
 .nav-link {
     margin-right: 1rem;
@@ -43,24 +40,19 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /*border: solid black 1px;*/
 }
 ol li {
     font-weight: 700;
-    /*border: solid black 1px;*/
 }
 .instructions-container p {
     line-height: 1.8rem;
-    /*border: solid black 1px;*/
 }
 .instructions-ad {
     padding: 0.8rem;
     text-align: center;
-    /*border: solid black 1px;*/
 }
 .instructions-title {
     padding: 0.5rem;
-    /*border: solid black 1px;*/
 }
 .instructions-steps {
     display: flex;
@@ -69,10 +61,6 @@ ol li {
     justify-content: center;
     border: solid black;
 }
-
-/*.instructions-steps p{
-    border: solid black 1px;
-}*/
 .img-desktop {
     display: none;
     margin: 1.2rem auto;
@@ -80,17 +68,12 @@ ol li {
 .img-mobile {
     display: block;
     margin: auto;
-    /*border: solid black 1px;*/
 }
-/*.images-container {
-    border: solid black 1px;
-}*/
 .footer-social-media-links {
     margin: 0.8rem auto;
     display: flex;
     align-items: center;
     justify-content: start;
-    /*border: solid black 1px;*/
 }
 .footer-social-media-links a {
     color: white;
@@ -99,7 +82,6 @@ ol li {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    /*border: solid black 1px;*/
 }
 .footer-social-media-links a:hover {
     color: lightgray;
@@ -111,7 +93,6 @@ i {
     margin: 0.8rem auto;
     width: 100%;
     text-align: center;
-    /*border: solid black 1px;*/
 }
 footer {
     padding: 0.8rem;
@@ -132,11 +113,9 @@ footer {
         display: flex;
         align-items: center;
         justify-content: end;
-        /*border: solid black 1px;*/
     }
     .nav-links-container-desktop {
         display: none;
-        /*visibility: hidden;*/
     }
     .instructions-steps {
         width: 95%;
@@ -158,11 +137,9 @@ footer {
         display: flex;
         align-items: center;
         justify-content: end;
-        /*border: solid black 1px;*/
     }
     .nav-links-container-desktop {
         display: none;
-        /*visibility: hidden;*/
     }
     .instructions-steps {
         width: 80%;
@@ -184,11 +161,9 @@ footer {
         display: flex;
         align-items: center;
         justify-content: end;
-        /*border: solid black 1px;*/
     }
     .nav-links-container-mobile-tablet {
         display: none;
-        /*visibility: hidden;*/
     }
     .img-desktop {
         display: block;
@@ -210,7 +185,6 @@ footer {
     }
     .instructions-steps p{
         font-size: 1.5rem;
-        /*border: solid black 1px;*/
     }
     .footer-rights p{
         font-size: 1rem;
