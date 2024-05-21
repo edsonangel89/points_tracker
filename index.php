@@ -8,10 +8,10 @@
         }
         else {
             if(isset($_COOKIE['Authorization'])) {
-                setcookie('Authorization', $_COOKIE['Authorization'], time() + 60,"/",false, true);
+                setcookie('Authorization', $_COOKIE['Authorization'], time() + (3600 + 12),"/",false, true);
             }
             elseif(isset($_COOKIE['User'])) {
-                setcookie('User', $_SESSION['ID'], time() + 60,"/",false, true);
+                setcookie('User', $_SESSION['ID'], time() + (86400 * 7),"/",false, true);
             }
         }
     }
