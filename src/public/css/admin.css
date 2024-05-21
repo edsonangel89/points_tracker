@@ -2,6 +2,9 @@
 @import './home.css';
 @import './login.css';
 
+form {
+    margin: 3rem auto;
+}
 input {
     text-align: center;
 }
