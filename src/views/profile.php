@@ -86,5 +86,6 @@
         </div>
     </footer>
     <!--<script src="src/public/js/testForm.js"></script>-->
+    <script src="https://kit.fontawesome.com/bf56d22860.js" crossorigin="anonymous"></script>
 </body>
 </html>
