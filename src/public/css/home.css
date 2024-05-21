@@ -45,6 +45,9 @@ main {
     justify-content: center;
     /*border: solid black 1px;*/
 }
+ol p {
+    margin: 1.5rem auto;
+}
 .instructions-container p {
     line-height: 2rem;
     /*border: solid black 1px;*/
