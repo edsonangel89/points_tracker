@@ -181,12 +181,12 @@ footer {
         display: none;
         /*visibility: hidden;*/
     }
-    /*.img-desktop {
+    .img-desktop {
         display: block;
     }
     .img-mobile {
         display: none;
-    }*/
+    }
     .instructions-ad {
         font-size: 2.5rem;
     }
