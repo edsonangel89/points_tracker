@@ -46,7 +46,7 @@ main {
     /*border: solid black 1px;*/
 }
 ol p {
-    margin: 1.5rem auto;
+    text-align: center;
 }
 .instructions-container p {
     line-height: 2rem;
