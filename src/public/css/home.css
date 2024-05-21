@@ -48,6 +48,9 @@ main {
 ol p {
     text-align: center;
 }
+ol li {
+    font-weight: 700;
+}
 .instructions-container p {
     line-height: 2rem;
     /*border: solid black 1px;*/
