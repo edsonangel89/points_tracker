@@ -4,6 +4,7 @@
     if(isset($_SESSION['ID'])) {
         if(!isset($_COOKIE['Authorization']) && !isset($_COOKIE['User'])) {
             session_destroy();
+            header('Location: /');
         }
         else {
             if(isset($_COOKIE['Authorization'])) {
