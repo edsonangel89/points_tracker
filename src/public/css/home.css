@@ -43,11 +43,12 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /*border: solid black 1px;*/
+}
+.instructions-container p {
+    line-height: 0.5rem;
     border: solid black 1px;
 }
-/*.instructions-container p {
-    border: solid black 1px;
-}*/
 .instructions-ad {
     padding: 0.8rem;
     text-align: center;
