@@ -48,6 +48,7 @@
             if(send_email($fname, $email) != 'email-no-sent') {  
                 $create = User::add_user($fname, $lname, $email, $password, $role, $points, $prizes, $verify);
                 if($create) {
+                    notification();
                     http_response_code(201);
                     header("Cache-Control: no-cache");
                     header("Pragma: no-cache");

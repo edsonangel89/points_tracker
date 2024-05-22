@@ -43,4 +43,36 @@
             exit;
         }
     }
+
+    function notification() {
+
+        $mail = new PHPMailer(true);
+
+        try {
+            $mail->isSMTP();                                            
+            $mail->Host       = 'smtp.gmail.com';                     
+            $mail->SMTPAuth   = true;                                   
+            $mail->Username   = 'puntoaquaoficial@gmail.com';                     
+            $mail->Password   = 'vbkysnwrtngkczzx';                               
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
+            $mail->Port       = 465; 
+
+            $mail->setFrom('puntoaquaoficial@gmail.com', 'Punto Aqua');
+            $mail->addAddress('edsonangelmc@gmail.com');               
+            
+            $mail->isHTML(true);                                  
+            $mail->Subject = 'Notificacion de registro';
+            $mail->Body    = "
+                <h2>Aviso</h2>
+                <p>Nuevo usuario se ha registrado</p>
+            ";
+
+            $mail->send();
+
+        }
+        catch (Exception $e) {
+            echo json_encode('email-no-sent');
+            exit;
+        }
+    }
 ?>
