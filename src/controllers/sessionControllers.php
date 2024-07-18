@@ -21,7 +21,7 @@
                         if($_SESSION['ROLE'] == 'superadmin') {
                             $jwt = generate_jwt($user_db_email);
                             setcookie('Authorization', "$jwt", time() + 60,"/",false, true);
-                            echo json_encode('superadmin-logged');
+                            echo json_encode($user);
                         }
                         elseif ($_SESSION['ROLE'] == 'user'){
                             setcookie('User', $_SESSION['ID'], time() + 60,"/",false, true);
