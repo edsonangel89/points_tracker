@@ -27,8 +27,8 @@ form.addEventListener('submit', function(e) {
                 window.location.href = '/';
             break;
         }
-        inputEmail.value = '';
-        inputPassword.value = '';
     });
+    inputEmail.value = '';
+    inputPassword.value = '';
 })
 
