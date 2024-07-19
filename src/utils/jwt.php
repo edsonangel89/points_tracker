@@ -17,7 +17,7 @@
         $info_decoded = base64_decode($payload_base64);
         $role = $info_decoded['role'];
 
-        return json_encode($role);
+        return json_encode($info_decoded);
 
         $header_urldecoded = urldecode($header_base64);
         $payload_urldecoded = urldecode($payload_base64);
