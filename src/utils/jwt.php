@@ -14,7 +14,7 @@
         list($header_base64, $payload_base64, $signature_received_base64) = explode('.', $jwt);
         $signature_received_base64_urldec = urldecode($signature_received_base64);
 
-        $info_decoded = base64_decode($payload_base64);
+        $info_decoded = json_decode(base64_decode($payload_base64));
         $role = $info_decoded['role'];
 
         return $role;
