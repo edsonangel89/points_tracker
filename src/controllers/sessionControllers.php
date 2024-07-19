@@ -36,8 +36,15 @@
                         }
                     }
                     else {
-                        http_response_code(400);
-                        echo json_encode('user-already-logged');
+                        if($_SESSION['ID'] != $user_db_id) {
+                            http_response_code(200);
+                            echo json_encode($user);
+                        }
+                        else {
+                            http_response_code(400);
+                            echo json_encode('Login error');    
+                        }
+                        
                     }
                 }
                 else {
