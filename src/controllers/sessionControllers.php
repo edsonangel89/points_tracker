@@ -36,7 +36,7 @@
                         }
                     }
                     else {
-                        if($_SESSION['ID'] != $user_db_id) {
+                        if($_SESSION['ID'] == $user_db_id) {
                             http_response_code(200);
                             echo json_encode($user);
                         }
