@@ -15,8 +15,8 @@
         $signature_received_base64_urldec = urldecode($signature_received_base64);
         
         $test = base64_decode($payload_base64);
-
-        return json_encode($test);
+        
+        return json_encode($test->role);
         
         $header_urldecoded = urldecode($header_base64);
         $payload_urldecoded = urldecode($payload_base64);
