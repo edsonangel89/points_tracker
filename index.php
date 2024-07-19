@@ -9,7 +9,7 @@
         else {
             include 'src/utils/jwt.php';
             $user_token = $_COOKIE['auth_token'];
-            $decrypted_info = verify_jwt($user_token);
+            $is_token_correct = verify_jwt($user_token);
             echo $decrypted_info;
 
             /*if(isset($_COOKIE['auth_token'])) {
@@ -23,4 +23,5 @@
     
     require 'src/config/dbInit.php';
     require 'src/routes/index.php';
+
 ?>
