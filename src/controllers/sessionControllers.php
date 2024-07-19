@@ -6,33 +6,39 @@
     function login($username, $password) {
         $user = get_user_by_email($username);
         if($user) {
+            $user_db_id = $user['UserID'];
+            $user_db_fname = $user['FirstName'];
+            $user_db_lname = $user['LastName'];
             $user_db_password = $user['Password'];
             $user_db_email = $user['Email'];
+            $user_db_role = $user['Role'];
+            $user_db_points = $user['Points'];
+            $user_db_prize = $user['Prize'];
             if(decrypt_password($password, $user_db_password)) {
                 if($user['EmailVerified']) {
                     if(!isset($_SESSION['ID'])) {
-                        $_SESSION['ID'] = $user['UserID'];
-                        $_SESSION['FNAME'] = $user['FirstName'];
-                        $_SESSION['LNAME'] = $user['LastName'];
-                        $_SESSION['EMAIL'] = $user['Email'];
-                        $_SESSION['ROLE'] = $user['Role'];
-                        $_SESSION['POINTS'] = $user['Points'];
-                        $_SESSION['PRIZE'] = $user['Prize'];
+                        $_SESSION['ID'] = $user_db_id;
+                        $_SESSION['FNAME'] = $user_db_fname;
+                        $_SESSION['LNAME'] = $user_db_lname;
+                        $_SESSION['EMAIL'] = $user_db_email;
+                        $_SESSION['ROLE'] = $user_db_role;
+                        $_SESSION['POINTS'] = $user_db_points;
+                        $_SESSION['PRIZE'] = $user_db_prize;
                         if($_SESSION['ROLE'] == 'superadmin') {
-                            $jwt = generate_jwt($user_db_email);
-                            setcookie('Authorization', "$jwt", time() + 60,"/",false, true);
+                            $jwt = generate_jwt($user_db_email, $user);
+                            setcookie('auth_token', "$jwt", time() + 43200,"/","",true, true, ['SameSite' => 'Strict']);
                             echo json_encode($user);
                         }
                         elseif ($_SESSION['ROLE'] == 'user'){
-                            setcookie('User', $_SESSION['ID'], time() + 60,"/",false, true);
-                            echo json_encode('user-logged');
+                            $jwt = generate_jwt($user_db_email);
+                            setcookie('auth_token', "$jwt", time() + 604800,"/","",true, true, ['SameSite' => 'Strict']);
+                            echo json_encode($user);
                         }
                     }
                     else {
                         http_response_code(400);
                         echo json_encode('user-already-logged');
                     }
-                    
                 }
                 else {
                     echo json_encode('Non-verified');
