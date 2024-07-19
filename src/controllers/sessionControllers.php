@@ -26,8 +26,8 @@
                         $_SESSION['PRIZE'] = $user_db_prize;
                         if($_SESSION['ROLE'] == 'superadmin') {
                             $user_info = [
-                                "email" => $user_db_email,
-                                "role" => $user_db_role
+                                'email' => "$user_db_email",
+                                'role' => "$user_db_role"
                             ];
                             $jwt = generate_jwt($user_info);
                             setcookie('auth_token', "$jwt", time() + 43200,"/","",true, true);
@@ -35,8 +35,8 @@
                         }
                         elseif ($_SESSION['ROLE'] == 'user'){
                             $user_info = [
-                                "email" => $user_db_email,
-                                "role" => $user_db_role
+                                'email' => "$user_db_email",
+                                'role' => "$user_db_role"
                             ];
                             $jwt = generate_jwt($user_info);
                             setcookie('auth_token', "$jwt", time() + 604800,"/","",true, true);
