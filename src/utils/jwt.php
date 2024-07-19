@@ -16,8 +16,8 @@
         
         $test = base64_decode($payload_base64);
 
-        echo json_encode(test);
-        exit;
+        return json_encode($test);
+        
         $header_urldecoded = urldecode($header_base64);
         $payload_urldecoded = urldecode($payload_base64);
         $signature_expected = hash_hmac('sha256', "$header_urldecoded.$payload_urldecoded", "test", true);
