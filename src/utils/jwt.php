@@ -1,6 +1,6 @@
 <?php
 
-    function generate_jwt($user_email, $user_role) {
+    function generate_jwt($user_info) {
         $header = json_encode(['type' => 'JWT', 'alg' => 'HS256']);
         $header_base64 = base64_encode($header);
         $payload = json_encode($user_info);
