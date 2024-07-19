@@ -13,9 +13,6 @@ form.addEventListener('submit', function(e) {
     })
     .then(response => response.json())
     .then(data => {
-        inputEmail.value = '';
-        inputPassword.value = '';
-        console.log(data)
         switch(data) {
             case 'Non-user':
                 alert('No existe usuario');
