@@ -16,7 +16,7 @@
         
         $test = base64_decode($payload_base64);
 
-        echo test;
+        echo json_encode(test);
         exit;
         $header_urldecoded = urldecode($header_base64);
         $payload_urldecoded = urldecode($payload_base64);
