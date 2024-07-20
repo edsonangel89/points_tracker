@@ -10,7 +10,7 @@
             include 'src/utils/jwt.php';
             $user_token = $_COOKIE['auth_token'];
             $is_token_correct = get_jwt_info($user_token);
-            echo $is_token_correct['role'];
+            echo $is_token_correct;
             exit;
             /*if(isset($_COOKIE['auth_token'])) {
                 setcookie('auth_token', $_COOKIE['auth_token'], time() + (3600 + 12),"/","",true, true);
