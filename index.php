@@ -12,13 +12,15 @@
             $user_role = get_jwt_info($user_token);
             if($user_role == 'admin' || $user_role == 'superadmin') {
                 setcookie('auth_token', "$user_token", time() + (3600 * 12),"/","",true, true);
+                header('Location: /');
                 /*echo "admin";
             exit;*/
             }
             elseif ($user_role == 'user') {
                 setcookie('auth_token', "$user_token", time() + (86400 * 7),"/","",true, true);
-                echo "user";
-            exit;
+                header('Location: /');
+                /*echo "user";
+            exit;*/
             }
 
             /*
@@ -32,8 +34,9 @@
                 setcookie('User', $_SESSION['ID'], time() + (86400 * 7),"/",false, true);
             }*/
         }
-        /*require 'src/config/dbInit.php';*/
-        require 'src/routes/index.php';
+        
     }
+    require 'src/config/dbInit.php';
+    require 'src/routes/index.php';
 
 ?>
