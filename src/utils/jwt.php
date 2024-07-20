@@ -27,7 +27,7 @@
     function get_jwt_info($jwt) {
         list($header_base64, $payload_base64, $signature_received_base64) = explode('.', $jwt);
         $payload_decoded = base64_decode($payload_base64); 
-        $role = $payload_decoded;
+        $role = $payload_decoded->role;
         return $role;
     }
 
