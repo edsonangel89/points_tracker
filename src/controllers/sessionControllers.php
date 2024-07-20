@@ -76,10 +76,10 @@
         session_start();
         if($user && isset($_SESSION['ID'])) {
             if($_SESSION['ID'] == 1) {
-                setcookie('auth_token', "", time() - 3600,"/",false, true);
+                setcookie('auth_token', "", time() - 3600,"/","",true, true);
             }
             elseif($_SESSION['ID'] > 1) {
-                setcookie('auth_token', "", time() - 3600,"/",false, true);
+                setcookie('auth_token', "", time() - 3600,"/","",true, true);
             }
             session_destroy();
             header('Location: /');
