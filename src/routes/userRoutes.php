@@ -25,8 +25,12 @@
         $user_id = substr($sub_path, 5);
         $headers = getallheaders();
         if(!$user_id) {
-            if(isset($_SESSION['ID']) && isset($_COOKIE['Authorization'])) {
-                call_user_func($user_routes['/get/']);
+            if(isset($_SESSION['ROLE']) && isset($_COOKIE['auth_token'])) {
+                if($_SESSION['ROLE'] == 'admin' || $_SESSION['ROLE'] == 'superadmin') {
+                    call_user_func($user_routes['/get/']);
+                } 
+                http_response_code(401);
+                echo json_encode('Non-Authorized');
             }
             else {
                 call_user_func($user_routes['404']);
@@ -34,7 +38,7 @@
         }
         else {
             if(isset($_SESSION['ID'])) {
-                if($_SESSION['ID'] == $user_id || isset($_COOKIE['Authorization'])) {
+                if($_SESSION['ID'] == $user_id || isset($_COOKIE['auth_token'])) {
                     call_user_func($user_routes['/get/id'], $user_id);
                 }
                 else {
