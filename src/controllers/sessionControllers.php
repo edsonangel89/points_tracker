@@ -24,7 +24,7 @@
                         $_SESSION['ROLE'] = $user_db_role;
                         $_SESSION['POINTS'] = $user_db_points;
                         $_SESSION['PRIZE'] = $user_db_prize;
-                        if($_SESSION['ROLE'] == 'superadmin') {
+                        if($_SESSION['ROLE'] == 'admin') {
                             $user_info = [
                                 'email' => "$user_db_email",
                                 'role' => "$user_db_role"

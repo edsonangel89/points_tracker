@@ -23,7 +23,7 @@
         Password VARCHAR(255) NOT NULL,
         Points INT,
         Prize BOOLEAN NOT NULL,
-        Role ENUM('superadmin', 'admin', 'user') NOT NULL,
+        Role ENUM('admin', 'user') NOT NULL,
         EmailVerified BOOLEAN NOT NULL 
     )";
 
@@ -42,7 +42,7 @@
         'puntoaquaoficial@gmail.com',
         '$hashed_password',
         0,
-        'superadmin',
+        'admin',
         1
     )";
 
