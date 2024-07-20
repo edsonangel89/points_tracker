@@ -26,13 +26,13 @@
         $headers = getallheaders();
         if(!$user_id) {
             if(isset($_SESSION['ID']) && isset($_COOKIE['auth_token'])) {
-                if(isset($_SESSION['ROLE'])) {
-                    if($_SESSION['ROLE'] == 'admin' || $_SESSION['ROLE'] == 'superadmin') {
+                /*if(isset($_SESSION['ROLE'])) {
+                    if($_SESSION['ROLE'] == 'admin' || $_SESSION['ROLE'] == 'superadmin') {*/
                         call_user_func($user_routes['/get/']);
-                    }
-                } 
-                http_response_code(401);
-                echo json_encode('Non-Authorized');
+                    /*}*/
+                /*} */
+                /*http_response_code(401);
+                echo json_encode('Non-Authorized');*/
             }
             else {
                 call_user_func($user_routes['404']);
