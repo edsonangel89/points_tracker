@@ -74,6 +74,8 @@
     function logout($uid) {
         $user = User::get_user_by_id($uid);
         session_start();
+        session_destroy();
+        header('Location: /');
         if($user && isset($_SESSION['ID'])) {
             if($_SESSION['ID'] == 1) {
                 setcookie('auth_token', "", time() - 3600,"/","",true, true);
