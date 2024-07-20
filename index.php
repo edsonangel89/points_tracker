@@ -1,4 +1,6 @@
 <?php
+    require 'src/utils/jwt.php';
+
     session_start();
 
     if(isset($_SESSION['ID'])) {
@@ -7,18 +9,16 @@
             header('Location: /');
         }
         else {
-            include 'src/utils/jwt.php';
+            
             $user_token = $_COOKIE['auth_token'];
             $user_role = get_jwt_info($user_token);
             if($user_role == 'admin' || $user_role == 'superadmin') {
                 setcookie('auth_token', "$user_token", time() + (3600 * 12),"/","",true, true);
-                header('Location: /');
                 /*echo "admin";
             exit;*/
             }
             elseif ($user_role == 'user') {
                 setcookie('auth_token', "$user_token", time() + (86400 * 7),"/","",true, true);
-                header('Location: /');
                 /*echo "user";
             exit;*/
             }
