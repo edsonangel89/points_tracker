@@ -32,9 +32,8 @@
                 setcookie('User', $_SESSION['ID'], time() + (86400 * 7),"/",false, true);
             }*/
         }
+        require 'src/config/dbInit.php';
+        require 'src/routes/index.php';
     }
-    
-    require 'src/config/dbInit.php';
-    require 'src/routes/index.php';
 
 ?>
