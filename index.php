@@ -12,8 +12,8 @@
             $user_role = get_jwt_info($user_token);
             if($user_role == 'admin' || $user_role == 'superadmin') {
                 setcookie('auth_token', "$user_token", time() + (3600 * 12),"/","",true, true);
-                echo "admin";
-            exit;
+                /*echo "admin";
+            exit;*/
             }
             elseif ($user_role == 'user') {
                 setcookie('auth_token', "$user_token", time() + (86400 * 7),"/","",true, true);
