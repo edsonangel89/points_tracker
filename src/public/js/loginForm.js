@@ -11,17 +11,22 @@ form.addEventListener('submit', function(e) {
         method: 'POST',
         body: formData
     })
-    .then(response => response.json())
+    .then(response => {
+        const authorizationHeader = response.headers.get('Authorization');
+        const token = authorizationHeader.split(' ')[1];
+        document.cookie = `auth_token=${token}; path=/; expires=43200; HttpOnly; Secure; SameSite=Strict`;
+        return response.json()
+    })
     .then(data => {
         switch(data) {
             case 'Non-user':
                 alert('No existe usuario');
             break;
             case 'Wrong-password':
-                alert('Contrasena incorrecta');
+                alert('Contraseña incorrecta');
             break;
             case 'Non-verified':
-                alert('Correo no verificado, confirma tu correo electronico en bandeja de entrada y vuelve a intentar');
+                alert('Correo no verificado, confirma tu correo electrónico en bandeja de entrada y vuelve a intentar');
             break;
             default:
                 window.location.href = '/';

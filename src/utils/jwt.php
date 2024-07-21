@@ -31,4 +31,14 @@
         return $role;
     }
 
+    function encrypt_jwt($jwt) {
+        $crypted_token = base64_encode($jwt);
+        return "$crypted_token";
+    }
+
+    function decrypt_jwt($crypted_jwt) {
+        $decrypted_token = base64_decode($crypted_jwt);
+        return "$decrypted_token";
+    }
+
 ?>
