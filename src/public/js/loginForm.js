@@ -12,11 +12,11 @@ form.addEventListener('submit', function(e) {
         body: formData
     })
     .then(response => {
-        const authorizationHeader = response.headers.get('Authorization');
-        /*console.log(response.headers)*/
+        /*const authorizationHeader = response.headers.get('Authorization');
+        /*console.log(response.headers)
         const token = authorizationHeader.split(' ')[1];
-        console.log(token);
-        document.cookie = `auth_token=${token}; path=/; expires=43200; HttpOnly; Secure;`;
+        console.log(token);*/
+        
         response.json()
     })
     .then(data => {
