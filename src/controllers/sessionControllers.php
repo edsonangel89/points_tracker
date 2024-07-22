@@ -32,7 +32,7 @@
                             $jwt = generate_jwt($user_info);
                             $crypted_jwt = encrypt_jwt($jwt);
                             /*header("Authorization: Bearer $crypted_jwt");*/
-                            setcookie('auth_token', "$crypted_jwt", time() + 43200,"/","",true, true);
+                            /*setcookie('auth_token', "$crypted_jwt", time() + 43200,"/","",true, true);*/
                             echo json_encode($user);
                         }
                         elseif ($_SESSION['ROLE'] == 'user'){
@@ -43,7 +43,7 @@
                             $jwt = generate_jwt($user_info);
                             $crypted_jwt = encrypt_jwt($jwt);
                             /*header("Authorization: Bearer $crypted_jwt");*/
-                            setcookie('auth_token', "$crypted_jwt", time() + 604800,"/","",true, true);
+                            /*setcookie('auth_token', "$crypted_jwt", time() + 604800,"/","",true, true);*/
                             echo json_encode($user);
                         }
                     }
