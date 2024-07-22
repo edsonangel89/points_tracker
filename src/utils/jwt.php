@@ -37,7 +37,7 @@
     }
 
     function decrypt_jwt($crypted_jwt) {
-        $decrypted_token = base64_decode($crypted_jwt);
+        $decrypted_token = base64_decode($crypted_jwt, true);
         return $decrypted_token;
     }
 
