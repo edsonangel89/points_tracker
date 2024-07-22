@@ -1,7 +1,7 @@
 <?php
 
     require 'src/controllers/userControllers.php';
-    /*require 'src/utils/jwt.php';*/
+    require 'src/utils/jwt.php';
 
     function login($username, $password) {
         $user = get_user_by_email($username);
