@@ -16,8 +16,8 @@
             $user_token = $_COOKIE['auth_token'];
             $user_role = get_jwt_info($user_token);
             if($user_role == 'admin' || $user_role == 'superadmin') {
-                /*header("Authorization: Bearer $user_token");
-                setcookie('auth_token', "$user_token", time() + (3600 * 12),"/","",true, true);
+                header("Authorization: Bearer $user_token");
+                /*setcookie('auth_token', "$user_token", time() + (3600 * 12),"/","",true, true);
                 /*echo "admin";
             exit;*/
             }
