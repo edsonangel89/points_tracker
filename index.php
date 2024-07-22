@@ -23,7 +23,7 @@
             }
             elseif ($user_role == 'user') {
                 header("Authorization: Bearer $user_token");
-                setcookie('auth_token', "$user_token", time() + (86400 * 7),"/","",true, true);
+                /*setcookie('auth_token', "$user_token", time() + (86400 * 7),"/","",true, true);*/
                 /*echo "user";
                 exit;*/
             }
