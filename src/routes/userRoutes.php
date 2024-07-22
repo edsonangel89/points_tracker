@@ -156,6 +156,7 @@
                 }
                 else {
                     http_response_code(404);
+                    echo "test";
                     call_user_func($user_routes['404']);
                 }
             }
