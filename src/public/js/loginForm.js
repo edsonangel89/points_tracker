@@ -17,7 +17,7 @@ form.addEventListener('submit', function(e) {
         console.log(authorizationHeader);
         /*const token = authorizationHeader.split(' ')[1];*/
         /*document.cookie = `auth_token=${token}; path=/; expires=43200; HttpOnly; Secure;`;*/
-        return response.json()
+        response.json()
     })
     .then(data => {
         switch(data) {
