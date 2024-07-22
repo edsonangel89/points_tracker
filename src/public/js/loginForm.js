@@ -11,14 +11,7 @@ form.addEventListener('submit', function(e) {
         method: 'POST',
         body: formData
     })
-    .then(response => {
-        /*const authorizationHeader = response.headers.get('Authorization');
-        /*console.log(response.headers)
-        const token = authorizationHeader.split(' ')[1];
-        console.log(token);*/
-        
-        response.json()
-    })
+    .then(response => response.json())
     .then(data => {
         console.log(data);
         switch(data) {
