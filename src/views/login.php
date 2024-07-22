@@ -35,7 +35,7 @@
                     <label>Correo electrónico</label><br>
                 </div>
                 <div class="input">
-                    <input id="email" type="text" class="input-submit-login" maxlength=60 required/><br>
+                    <input id="email" type="email" class="input-submit-login" maxlength=60 required/><br>
                 </div>
                 <div class="label">
                     <label>Contraseña</label><br>
