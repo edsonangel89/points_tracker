@@ -40,10 +40,8 @@
         }
         else {
             if(isset($_SESSION['ID']) && isset($_SESSION['ROLE'])) {
-                if($_SESSION['ROLE'] == 'user') {
-                    if($_SESSION['ID'] == $user_id && isset($_COOKIE['auth_token'])) {
-                        call_user_func($user_routes['/get/id'], $user_id);
-                    }
+                if($_SESSION['ID'] == $user_id || $_SESSION['ROLE'] == 'admin') {
+                    call_user_func($user_routes['/get/id'], $user_id);
                 }
                 http_response_code(401);
                 echo json_encode('Non-Authorized');
