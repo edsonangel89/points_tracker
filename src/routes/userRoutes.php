@@ -39,13 +39,14 @@
             }
         }
         else {
-            if(isset($_SESSION['ID'])) {
-                if($_SESSION['ID'] == $user_id || isset($_COOKIE['auth_token'])) {
-                    call_user_func($user_routes['/get/id'], $user_id);
+            if(isset($_SESSION['ID']) && isset($_SESSION['ROLE'])) {
+                if($_SESSION['ROLE'] == 'user') {
+                    if($_SESSION['ID'] == $user_id && isset($_COOKIE['auth_token'])) {
+                        call_user_func($user_routes['/get/id'], $user_id);
+                    }
                 }
-                else {
-                    call_user_func($user_routes['404']);
-                }
+                http_response_code(401);
+                echo json_encode('Non-Authorized');
             }
             else {
                 if($user_id == 'email') {
