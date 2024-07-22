@@ -30,8 +30,8 @@
                                 'role' => "$user_db_role"
                             ];
                             $jwt = generate_jwt($user_info);
-                            $crypted_jwt = encrypt_jwt($jwt);
-                            /*header("Authorization: Bearer $crypted_jwt");*/
+                            /*$crypted_jwt = encrypt_jwt($jwt);*/
+                            header("Authorization: Bearer $jwt");
                             /*setcookie('auth_token', "$crypted_jwt", time() + 43200,"/","",true, true);*/
                             echo json_encode($user);
                         }
@@ -41,8 +41,8 @@
                                 'role' => "$user_db_role"
                             ];
                             $jwt = generate_jwt($user_info);
-                            $crypted_jwt = encrypt_jwt($jwt);
-                            /*header("Authorization: Bearer $crypted_jwt");*/
+                            /*$crypted_jwt = encrypt_jwt($jwt);*/
+                            header("Authorization: Bearer $jwt");
                             /*setcookie('auth_token', "$crypted_jwt", time() + 604800,"/","",true, true);*/
                             echo json_encode($user);
                         }
