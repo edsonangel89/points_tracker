@@ -43,8 +43,10 @@
                 if($_SESSION['ID'] == $user_id || $_SESSION['ROLE'] == 'admin' || $_SESSION['ROLE'] == 'superadmin') {
                     call_user_func($user_routes['/get/id'], $user_id);
                 }
-                http_response_code(401);
-                echo json_encode('Non-Authorized');
+                else {
+                    http_response_code(401);
+                    echo json_encode('Non-Authorized');
+                }
             }
             else {
                 if($user_id == 'email') {
