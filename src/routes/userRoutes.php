@@ -131,8 +131,8 @@
         $current_prize = $user_info['Prize'];
         $incoming_points = $_POST['points'];
         $total_points = $current_points + $incoming_points;
-        if(isset($_COOKIE['Authorization'])) {   
-            $jwt_match = verify_jwt($_COOKIE['Authorization']);
+        if(isset($_COOKIE['auth_token'])) {   
+            $jwt_match = verify_jwt($_COOKIE['auth_token']);
             if($jwt_match) {
                 if($total_points > 10) {
                     $new_points = $total_points - 11;
@@ -174,8 +174,8 @@
         $user_id = substr($sub_path, 14);
         $user_info = get_points_prizes($user_id);
         $current_prize = $user_info['Prize'];
-        if(isset($_COOKIE['Authorization'])) {   
-            $jwt_match = verify_jwt($_COOKIE['Authorization']);
+        if(isset($_COOKIE['auth_token'])) {   
+            $jwt_match = verify_jwt($_COOKIE['auth_token']);
             if($jwt_match) {
                 if($current_prize) {
                     $current_prize = false;
