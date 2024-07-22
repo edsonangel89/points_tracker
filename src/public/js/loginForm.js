@@ -20,6 +20,7 @@ form.addEventListener('submit', function(e) {
         response.json()
     })
     .then(data => {
+        console.log(data);
         switch(data) {
             case 'Non-user':
                 alert('No existe usuario');
