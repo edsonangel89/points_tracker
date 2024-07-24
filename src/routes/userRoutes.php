@@ -134,7 +134,8 @@
         $total_points = $current_points + $incoming_points;
         if(isset($_COOKIE['auth_token'])) {   
             $jwt_match = verify_jwt($_COOKIE['auth_token']);
-            if($jwt_match) {
+            $user_role = get_jwt_info($_COOKIE['auth_token']);
+            if($jwt_match && ($user_role == 'admin' || $user_role == 'superadmin')) {
                 if($total_points > 10) {
                     $new_points = $total_points - 11;
                     $current_prize = true;
