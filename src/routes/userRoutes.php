@@ -133,9 +133,21 @@
         $incoming_points = $_POST['points'];
         $total_points = $current_points + $incoming_points;
         if(isset($_COOKIE['auth_token'])) {   
+            $headers = getallheaders();
+            if(isset($headers['Authorization'])) {
+                $user_bearer_auth = $headers['Authorization'];
+                $user_token_auth = $user_bearer_auth;
+                if (preg_match('/Bearer\s(\S+)/', $authHeader, $matches)) {
+                    $token = $matches[1];
+                    $is_correct_jwt = verify_jwt($token);
+                    $auth_token = get_jwt_info($token);
+                } else {
+                    echo "Bearer token not found.";
+                }
+            }
             $jwt_match = verify_jwt($_COOKIE['auth_token']);
             $user_role = get_jwt_info($_COOKIE['auth_token']);
-            if($jwt_match && ($user_role == 'admin' || $user_role == 'superadmin')) {
+            if(($jwt_match && ($user_role == 'admin' || $user_role == 'superadmin' )) || ($auth_token == 'admin' || $auth_token == 'superadmin')) {
                 if($total_points > 10) {
                     $new_points = $total_points - 11;
                     $current_prize = true;
