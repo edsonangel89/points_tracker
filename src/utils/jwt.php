@@ -25,7 +25,8 @@
         }
     }
 
-    function get_jwt_info($jwt) {
+    function get_jwt_info($crypted_jwt) {
+        $jwt = base64_decode($crypted_jwt, true);
         list($header_base64, $payload_base64, $signature_received_base64) = explode('.', $jwt);
         $payload_decoded = base64_decode($payload_base64); 
         $role = json_decode($payload_decoded, true)['role'];
