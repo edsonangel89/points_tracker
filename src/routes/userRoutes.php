@@ -44,7 +44,7 @@
                 
                 $token = substr($headers['Authorization'], 8);
                 $is_token_correct = verify_jwt_token($token);
-                echo json_encode($token);
+                echo json_encode($headers['Authorization']);
                 exit;
                 
                 if($_SESSION['ID'] == $user_id || $_SESSION['ROLE'] == 'admin' || $_SESSION['ROLE'] == 'superadmin' || $is_token_correct) {
