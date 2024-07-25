@@ -40,11 +40,11 @@
         }
         else {
             $headers = getallheaders();
-            $test = $headers['Authorization'];
-            echo json_encode($test);
-            exit;
+            $auth_header = $headers['Authorization'];
+            /*echo json_encode($auth_header);
+            exit;*/
 
-            if(isset($_SESSION['ID']) && isset($_SESSION['ROLE']) || isset($headers['Authorization'])) {
+            if(isset($_SESSION['ID']) && isset($_SESSION['ROLE']) || $auth_header) {
                 
                 $token = substr($headers['Authorization'], 8);
                 $is_token_correct = verify_jwt_token($token);
