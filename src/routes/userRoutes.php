@@ -39,7 +39,7 @@
             }
         }
         else {
-            $headers = get_header("Authorization");
+            $headers = getallheaders();
             echo json_encode($headers);
             exit;
 
