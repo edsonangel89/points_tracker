@@ -40,8 +40,6 @@
         }
         else {
             $headers = getallheaders();
-            echo json_encode($headers);
-            exit;
             if(isset($_SESSION['ID']) && isset($_SESSION['ROLE']) || isset($headers['Authorization'])) {
                 
                 $token = substr($headers['Authorization'], 8);
