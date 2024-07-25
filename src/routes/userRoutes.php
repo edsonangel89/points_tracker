@@ -2,7 +2,7 @@
     
     require 'src/controllers/userControllers.php';
     require 'src/controllers/viewControllers.php';
-    include 'src/utils/jwt.php';
+    /*include 'src/utils/jwt.php';*/
     require 'src/utils/inputValidation.php';
 
     $user_routes = [
