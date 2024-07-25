@@ -39,7 +39,7 @@
             }
         }
         else {
-            $headers = json_decode(getallheaders());
+            $headers = getallheaders();
             echo json_encode($headers);
             exit;
 
