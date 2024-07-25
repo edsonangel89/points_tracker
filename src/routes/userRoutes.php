@@ -41,20 +41,13 @@
         else {
             $headers = getallheaders();
             $auth_header = $headers['Authorization'];
-            /*echo json_encode($auth_header);
-            exit;*/
 
             if(isset($_SESSION['ID']) && isset($_SESSION['ROLE']) || $auth_header) {
                 
                 $token = substr($headers['Authorization'], 7);
-                /*echo json_encode($token);
-                exit;*/
                 $is_token_correct = verify_jwt($token);
-                echo json_encode($is_token_correct);
-                exit;
                 
-                
-                if($_SESSION['ID'] == $user_id || $_SESSION['ROLE'] == 'admin' || $_SESSION['ROLE'] == 'superadmin' || $token) {
+                if($_SESSION['ID'] == $user_id || $_SESSION['ROLE'] == 'admin' || $_SESSION['ROLE'] == 'superadmin' || $is_token_correct) {
                     call_user_func($user_routes['/get/id'], $user_id);
                 }
                 else {
