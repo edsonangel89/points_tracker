@@ -40,7 +40,12 @@
         }
         else {
             if(isset($_SESSION['ID']) && isset($_SESSION['ROLE'])) {
-                if($_SESSION['ID'] == $user_id || $_SESSION['ROLE'] == 'admin' || $_SESSION['ROLE'] == 'superadmin') {
+                $headers = getallheaders();
+                if(isset($headers['Authorization'])) {
+                    $token = substr($headers['Authorization'], 8);
+                    $is_token_correct = verify_jwt_token($token);
+                }
+                if($_SESSION['ID'] == $user_id || $_SESSION['ROLE'] == 'admin' || $_SESSION['ROLE'] == 'superadmin' || $is_token_correct) {
                     call_user_func($user_routes['/get/id'], $user_id);
                 }
                 else {
