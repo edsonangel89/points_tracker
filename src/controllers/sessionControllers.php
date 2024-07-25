@@ -30,9 +30,19 @@
                             ];
                             $jwt = generate_jwt($user_info);
                             $crypted_jwt = encrypt_jwt($jwt);
+                            $user_db_info = [
+                                "UserID" => $user_db_id,
+                                "FirstName" => $user_db_fname,
+                                "LastName" => $user_db_lname,
+                                "Email" => $user_db_email,
+                                "Role" => $user_db_role,
+                                "Points" => $user_db_points,
+                                "Prize" => $user_db_prize,
+                                "Token" => $crypted_jwt
+                            ];
                             header("Authorization: Bearer $crypted_jwt");
                             setcookie('auth_token', "$crypted_jwt", time() + 43200,"/","",true, true);
-                            echo json_encode($user);
+                            echo json_encode($user_db_info);
                         }
                         elseif ($_SESSION['ROLE'] == 'user'){
                             $user_info = [
@@ -41,9 +51,19 @@
                             ];
                             $jwt = generate_jwt($user_info);
                             $crypted_jwt = encrypt_jwt($jwt);
+                            $user_db_info = [
+                                "UserID" => $user_db_id,
+                                "FirstName" => $user_db_fname,
+                                "LastName" => $user_db_lname,
+                                "Email" => $user_db_email,
+                                "Role" => $user_db_role,
+                                "Points" => $user_db_points,
+                                "Prize" => $user_db_prize,
+                                "Token" => $crypted_jwt
+                            ];
                             header("Authorization: Bearer $crypted_jwt");
                             setcookie('auth_token', "$crypted_jwt", time() + 604800,"/","",true, true);
-                            echo json_encode($user);
+                            echo json_encode($user_db_info);
                         }
                     }
                     else {
