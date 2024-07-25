@@ -47,8 +47,8 @@
             if(isset($_SESSION['ID']) && isset($_SESSION['ROLE']) || $auth_header) {
                 
                 $token = substr($headers['Authorization'], 7);
-                /*echo json_encode($token);
-                exit;*/
+                echo json_encode($token);
+                exit;
                 $is_token_correct = verify_jwt_token($token);
                 
                 
