@@ -49,7 +49,7 @@
                 $token = substr($headers['Authorization'], 7);
                 /*echo json_encode($token);
                 exit;*/
-                $is_token_correct = verify_jwt_token($token);
+                $is_token_correct = verify_jwt($token);
                 echo json_encode($is_token_correct);
                 exit;
                 
