@@ -40,7 +40,7 @@
         }
         else {
             $headers = getallheaders();
-            echo json_encode($headers);
+            echo json_encode($headers->Authorization);
             exit;
 
             if(isset($_SESSION['ID']) && isset($_SESSION['ROLE']) || isset($headers['Authorization'])) {
