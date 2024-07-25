@@ -47,9 +47,11 @@
             if(isset($_SESSION['ID']) && isset($_SESSION['ROLE']) || $auth_header) {
                 
                 $token = substr($headers['Authorization'], 7);
+                /*echo json_encode($token);
+                exit;*/
+                $is_token_correct = verify_jwt_token($token);
                 echo json_encode($token);
                 exit;
-                $is_token_correct = verify_jwt_token($token);
                 
                 
                 if($_SESSION['ID'] == $user_id || $_SESSION['ROLE'] == 'admin' || $_SESSION['ROLE'] == 'superadmin' || $is_token_correct) {
