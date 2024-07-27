@@ -21,6 +21,9 @@
 
     $sub_path = substr($path, 10);
 
+    echo json_encode($sub_path);
+    exit;
+
     if(preg_match_all('/\/get\//', $sub_path)) {
         $user_id = substr($sub_path, 5);
         $headers = getallheaders();
