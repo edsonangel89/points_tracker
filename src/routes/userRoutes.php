@@ -26,6 +26,8 @@
         call_user_func($user_routes['404']);
     }
 
+    $headers = getallheaders();
+
     if(preg_match_all('/\/get\//', $sub_path)) {
         $user_id = substr($sub_path, 5);
         $headers = getallheaders();
@@ -137,7 +139,7 @@
             echo json_encode('Non-user');
         }
     }   
-    elseif(preg_match_all('/\/update\/points\//', $sub_path) && $_SESSION['ROLE'] == 'superadmin') {
+    elseif(preg_match_all('/\/update\/points\//', $sub_path) && $_SESSION['ROLE'] == 'superadmin' || isset($headers['Authorization'])) {
         $user_id = substr($sub_path, 15);
         $user_info = get_points_prizes($user_id);
         $current_points = $user_info['Points'];
@@ -191,7 +193,7 @@
             echo json_encode('Non-token');
         }
     }
-    elseif(preg_match_all('/\/update\/prize\//', $sub_path) && $_SESSION['ROLE'] == 'superadmin') {
+    elseif(preg_match_all('/\/update\/prize\//', $sub_path) && $_SESSION['ROLE'] == 'superadmin' || isset($headers['Authorization'])) {
         $user_id = substr($sub_path, 14);
         $user_info = get_points_prizes($user_id);
         $current_prize = $user_info['Prize'];
