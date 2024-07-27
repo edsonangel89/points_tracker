@@ -151,8 +151,6 @@
             if ($token) {
                 $is_correct_jwt = verify_jwt($token);
                 $auth_token = get_jwt_info($token);
-            } else {
-                echo "Bearer token not found.";
             }
             $jwt_match = verify_jwt($_COOKIE['auth_token']);
             $user_role = get_jwt_info($_COOKIE['auth_token']);
