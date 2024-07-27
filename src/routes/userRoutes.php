@@ -143,6 +143,8 @@
             $headers = getallheaders();
             $user_bearer_auth = $headers['Authorization'];
             $user_token_auth = $user_bearer_auth;
+            echo json_encode($user_token_auth);
+            exit;
             if (preg_match('/Bearer\s(\S+)/', $authHeader, $matches)) {
                 $token = $matches[1];
                 $is_correct_jwt = verify_jwt($token);
