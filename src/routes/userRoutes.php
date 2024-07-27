@@ -143,11 +143,7 @@
         if(isset($_COOKIE['auth_token']) || isset($headers['Authorization'])) {   
             $user_bearer_auth = $headers['Authorization'];
             $user_token_auth = $user_bearer_auth;
-            /*echo json_encode($headers['Authorization']);
-            exit;*/
             $token = substr($headers['Authorization'], 7);
-            /*echo json_encode($token);
-            exit;*/
             if ($token) {
                 $is_correct_jwt = verify_jwt($token);
                 $auth_token = get_jwt_info($token);
