@@ -245,10 +245,10 @@
         }
     }
     else {
+        echo json_encode($sub_path);
+    exit;
         http_response_code(404);
         call_user_func($user_routes['404']);
     }
-    echo json_encode($sub_path);
-    exit;
 
 ?>
