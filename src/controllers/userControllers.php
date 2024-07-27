@@ -105,7 +105,7 @@
         if($update) {
             $user = User::get_user_by_id($uid);
             http_response_code(200);
-            echo json_encode('prize-updated');
+            echo json_encode($user);
         }
         else {
             http_response_code(401);
