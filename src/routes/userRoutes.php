@@ -139,18 +139,16 @@
         $current_prize = $user_info['Prize'];
         $incoming_points = $_POST['points'];
         $total_points = $current_points + $incoming_points;
-        if(isset($_COOKIE['auth_token'])) {   
+        if(isset($_COOKIE['auth_token']) || isset($headers['Authorization'])) {   
             $headers = getallheaders();
-            if(isset($headers['Authorization'])) {
-                $user_bearer_auth = $headers['Authorization'];
-                $user_token_auth = $user_bearer_auth;
-                if (preg_match('/Bearer\s(\S+)/', $authHeader, $matches)) {
-                    $token = $matches[1];
-                    $is_correct_jwt = verify_jwt($token);
-                    $auth_token = get_jwt_info($token);
-                } else {
-                    echo "Bearer token not found.";
-                }
+            $user_bearer_auth = $headers['Authorization'];
+            $user_token_auth = $user_bearer_auth;
+            if (preg_match('/Bearer\s(\S+)/', $authHeader, $matches)) {
+                $token = $matches[1];
+                $is_correct_jwt = verify_jwt($token);
+                $auth_token = get_jwt_info($token);
+            } else {
+                echo "Bearer token not found.";
             }
             $jwt_match = verify_jwt($_COOKIE['auth_token']);
             $user_role = get_jwt_info($_COOKIE['auth_token']);
