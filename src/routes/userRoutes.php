@@ -22,7 +22,7 @@
     $sub_path = substr($path, 10);
 
     echo json_encode($path);
-    if(!$sub_path || $sub_path == ) {
+    if(!$sub_path) {
         echo json_encode($sub_path);
         call_user_func($user_routes['404']);
     }
