@@ -21,6 +21,10 @@
 
     $sub_path = substr($path, 10);
 
+    if(!$sub_path) {
+        call_user_func($user_routes['404']);
+    }
+
     if(preg_match_all('/\/get\//', $sub_path)) {
         $user_id = substr($sub_path, 5);
         $headers = getallheaders();
