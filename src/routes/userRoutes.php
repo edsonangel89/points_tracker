@@ -197,9 +197,10 @@
         $user_id = substr($sub_path, 14);
         $user_info = get_points_prizes($user_id);
         $current_prize = $user_info['Prize'];
-        if(isset($_COOKIE['auth_token'])) {   
-            $jwt_match = verify_jwt($_COOKIE['auth_token']);
-            if($jwt_match) {
+        if(isset($_COOKIE['auth_token']) || isset($headers['Authorization'])) {   
+            $jwt_match1 = verify_jwt($_COOKIE['auth_token']);
+            $jwt_match2 = verify_jwt($headers['Authorization']);
+            if($jwt_match1 || $jwt_match2) {
                 if($current_prize) {
                     $current_prize = false;
                 }
