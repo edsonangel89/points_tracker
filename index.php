@@ -1,4 +1,6 @@
 <?php
+    require 'src/utils/jwt.php';
+
     session_start();
 
     if(isset($_SESSION['ID'])) {
