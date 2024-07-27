@@ -139,8 +139,8 @@
         $current_prize = $user_info['Prize'];
         $incoming_points = $_POST['points'];
         $total_points = $current_points + $incoming_points;
+        $headers = getallheaders();
         if(isset($_COOKIE['auth_token']) || isset($headers['Authorization'])) {   
-            $headers = getallheaders();
             $user_bearer_auth = $headers['Authorization'];
             $user_token_auth = $user_bearer_auth;
             echo json_encode($user_token_auth);
