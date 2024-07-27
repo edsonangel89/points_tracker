@@ -143,7 +143,7 @@
         if(isset($_COOKIE['auth_token']) || isset($headers['Authorization'])) {   
             $user_bearer_auth = $headers['Authorization'];
             $user_token_auth = $user_bearer_auth;
-            echo json_encode($user_token_auth);
+            echo json_encode($_COOKIE['auth_token']);
             exit;
             if (preg_match('/Bearer\s(\S+)/', $authHeader, $matches)) {
                 $token = $matches[1];
