@@ -6,7 +6,7 @@
     require 'src/utils/inputValidation.php';
 
     $user_routes = [
-        '/' => '',
+        '/' => 'not_found_page',
         '/get/' => 'get_users',
         '/get/id' => 'get_user_by_id',
         '/get/email' => 'get_user_by_email',
