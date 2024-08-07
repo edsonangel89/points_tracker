@@ -38,7 +38,7 @@
 
         }
         catch (Exception $e) {
-            echo json_encode($e->Message());
+            echo json_encode("email-no-sent");
             exit;
         }
     }
