@@ -48,8 +48,7 @@
         ];*/
         /*if($token_match) {*/
         $user_info = [
-            $email,
-            $token
+            $email
         ];
             send_email($fname, $email);
                 $create = User::add_user($fname, $lname, $email, $password, $role, $points, $prizes, $verify);
