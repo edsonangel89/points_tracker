@@ -47,8 +47,6 @@
         include 'src/utils/jwt.php';
         require 'src/controllers/userControllers.php';
         $user = get_user_by_email($_GET['email']);
-        /*echo json_encode($user);
-        exit;*/
         $email_verified = $user['EmailVerified'];
         if(!$email_verified) {
             $token_gen = urldecode(generate_jwt(htmlspecialchars($_GET['email'])));  
@@ -74,24 +72,16 @@
             $email = $_GET['email'];
             $user = get_user_by_email($email);
             $email_verified = $user['EmailVerified'];
-            if(isset($_GET['token']) && $email_verified) {
-                $token = urldecode($_GET['token']);
-                $match = verify_jwt($token); 
-                if($match) {
-                    require 'src/views/succeed.php';
-                }
-                else {
-                    echo json_encode("verify-failed");
-                }
+            if($email_verified) {
+                require 'src/views/succeed.php';
             }
             else {
-                echo json_encode("no-token-no-email");
+                echo json_encode("verify-failed");
             }
         }
         else {
             echo json_encode("no-email-set");
         }
-        
     }
 
     function get_info($current_role) {

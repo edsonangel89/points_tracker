@@ -132,16 +132,9 @@
         }
     }
 
-    function confirm_email($email, $token) {
-        $match = verify_jwt($token);
-        if($match) {
-            User::update_email_verify(urldecode($email));
-            http_response_code(200);
-            header("Location: /succeed?email=" . $email. "&token=" . $token . "");
-        }
-        else {
-            http_response_code(400);
-            echo json_encode('email-no-verified');
-        }
+    function confirm_email($email) {
+        User::update_email_verify(urldecode($email));
+        http_response_code(200);
+        header("Location: /succeed?email=" . $email);
     }
 ?>
