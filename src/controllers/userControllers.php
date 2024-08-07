@@ -38,38 +38,19 @@
     }
 
     function add_user($fname, $lname, $email, $password, $role, $points, $prizes, $verify) {
-        $token = generate_jwt($email);
-        $token_match = verify_jwt($token);
-        /*echo json_encode($token_match);
-        exit;*/
-        $user_info = [
-            $email,
-            $token
-        ];
-        if($token_match) {
-            if(send_email($fname, $email) != 'email-no-sent') {  
-                $create = User::add_user($fname, $lname, $email, $password, $role, $points, $prizes, $verify);
-                if($create) {
-                    notification();
-                    http_response_code(201);
-                    header("Cache-Control: no-cache");
-                    header("Pragma: no-cache");
-                    header("Expires: 0");
-                    echo json_encode($user_info);
-                }
-                else {
-                    http_response_code(400);
-                    echo json_encode('user-no-added');
-                }
-            }
-            else {
-                http_response_code(400);
-                echo json_encode('email-no-sent');
-            }
+        send_email($fname, $email);
+        $create = User::add_user($fname, $lname, $email, $password, $role, $points, $prizes, $verify);
+        if($create) {
+            notification();
+            http_response_code(201);
+            header("Cache-Control: no-cache");
+            header("Pragma: no-cache");
+            header("Expires: 0");
+            echo json_encode($user_info);
         }
         else {
             http_response_code(400);
-            echo json_encode('token-no-match');
+            echo json_encode('user-no-added');
         }
     }
 
