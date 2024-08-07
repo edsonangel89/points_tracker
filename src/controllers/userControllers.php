@@ -38,10 +38,6 @@
     }
 
     function add_user($fname, $lname, $email, $password, $role, $points, $prizes, $verify) {
-        
-        $user_info = [
-            $email
-        ];
         send_email($fname, $email);
         $create = User::add_user($fname, $lname, $email, $password, $role, $points, $prizes, $verify);
         if($create) {
@@ -50,7 +46,7 @@
             header("Cache-Control: no-cache");
             header("Pragma: no-cache");
             header("Expires: 0");
-            echo json_encode($user_info);
+            echo json_encode($email);
         }
         else {
             http_response_code(400);
