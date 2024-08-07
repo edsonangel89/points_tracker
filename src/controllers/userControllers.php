@@ -40,8 +40,8 @@
     function add_user($fname, $lname, $email, $password, $role, $points, $prizes, $verify) {
         $token = generate_jwt($email);
         $token_match = verify_jwt($token);
-        echo json_encode($token_match);
-        exit;
+        /*echo json_encode($token_match);
+        exit;*/
         $user_info = [
             $email,
             $token
