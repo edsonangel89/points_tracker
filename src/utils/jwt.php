@@ -12,8 +12,8 @@
 
     function verify_jwt($jwt) {
         $decrypted_token = decrypt_jwt($jwt);
-        echo json_encode($decrypted_token);
-        exit;
+        /*echo json_encode($decrypted_token);
+        exit;*/
         list($header_base64, $payload_base64, $signature_received_base64) = explode('.', $decrypted_token);
         $signature_received_base64_urldec = urldecode($signature_received_base64);
         $header_urldecoded = urldecode($header_base64);
@@ -43,6 +43,8 @@
 
     function decrypt_jwt($crypted_jwt) {
         $decrypted_token = base64_decode($crypted_jwt, true);
+        echo json_encode($decrypted_token);
+        exit;
         return $decrypted_token;
     }
 
