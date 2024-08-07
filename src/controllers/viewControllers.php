@@ -44,7 +44,7 @@
     }
 
     function get_confirm() {
-        require 'src/utils/jwt.php';
+        include 'src/utils/jwt.php';
         require 'src/controllers/userControllers.php';
         $user = get_user_by_email($_GET['email']);
         $email_verified = $user['EmailVerified'];
