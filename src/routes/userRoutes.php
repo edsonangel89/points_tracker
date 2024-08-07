@@ -125,12 +125,10 @@
         }
     }
     elseif(preg_match_all('/\/update\/confirm/', $sub_path)) {
-        if(isset($_GET['token']) && isset($_GET['email'])) {
-            $token = urlencode($_GET['token']);
+        if(isset($_GET['email'])) {
             $email = urlencode($_GET['email']);
             $user_info = [
-                $email,
-                $token
+                $email
             ];
             call_user_func_array($user_routes['/update/confirm'], $user_info);
         }
