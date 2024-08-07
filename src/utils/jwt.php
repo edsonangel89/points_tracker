@@ -43,7 +43,7 @@
 
     function decrypt_jwt($crypted_jwt) {
         $decrypted_token = base64_decode($crypted_jwt, true);
-        echo json_encode($decrypted_token);
+        echo json_encode($crypted_jwt);
         exit;
         return $decrypted_token;
     }
