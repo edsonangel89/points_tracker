@@ -48,6 +48,7 @@
         require 'src/controllers/userControllers.php';
         $user = get_user_by_email($_GET['email']);
         echo json_encode($user);
+        exit;
         $email_verified = $user['EmailVerified'];
         if(isset($_GET['token']) && !$email_verified) {
             $token = urldecode(htmlspecialchars($_GET['token']));
