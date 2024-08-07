@@ -66,7 +66,6 @@
     }
 
     function get_succeed() {
-        require 'src/utils/jwt.php';
         require 'src/controllers/userControllers.php';
         if(isset($_GET['email'])) {
             $email = $_GET['email'];
