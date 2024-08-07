@@ -17,7 +17,7 @@
             $mail->Host       = 'smtp.gmail.com';                     
             $mail->SMTPAuth   = true;                                   
             $mail->Username   = 'puntoaquaoficial@gmail.com';                     
-            $mail->Password   = 'puntoaquapointstracker2024';  /*vbkysnwrtngkczzx*/                             
+            $mail->Password   = 'vbkysnwrtngkczzx';  /*vbkysnwrtngkczzx*/                             
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
             $mail->Port       = 465; 
 
