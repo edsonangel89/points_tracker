@@ -21,7 +21,8 @@
         if ($signature_received_base64_urldec == $signature_expected_base64) {
             return true;
         } else {
-            return false;
+            /*return false;*/
+            return "$signature_received_base64_urldec == $signature_expected_base64";
         }
     }
 
