@@ -47,8 +47,8 @@
         include 'src/utils/jwt.php';
         require 'src/controllers/userControllers.php';
         $user = get_user_by_email($_GET['email']);
-        echo json_encode($user);
-        exit;
+        /*echo json_encode($user);
+        exit;*/
         $email_verified = $user['EmailVerified'];
         if(!$email_verified) {
             $token_gen = urldecode(generate_jwt(htmlspecialchars($_GET['email'])));  
