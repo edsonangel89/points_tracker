@@ -48,7 +48,11 @@ signForm.addEventListener('submit', function(e) {
                         inputEmail.value = '';
                     break;
                     case 'token-no-match':
-                        alert('El correo electrónico que proporcionaste no es válido, porfavor vuelve a intentar');
+                        alert('Token inválido, porfavor vuelve a intentar');
+                        inputEmail.value = '';
+                    break;
+                    case 'notification-failed':
+                        alert('Problema de notificacion');
                         inputEmail.value = '';
                     break;
                     default:

@@ -39,7 +39,7 @@
 
         }
         catch (Exception $e) {
-            echo json_encode('email-no-sent');
+            echo json_encode($e->Message());
             exit;
         }
     }
@@ -71,7 +71,7 @@
 
         }
         catch (Exception $e) {
-            echo json_encode('email-no-sent');
+            echo json_encode('notification-failed');
             exit;
         }
     }
