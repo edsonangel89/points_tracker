@@ -1,7 +1,8 @@
 <?php
+    
+    require 'src/controllers/userControllers.php';
     echo json_encode('test');
     exit;
-    require 'src/controllers/userControllers.php';
     require 'src/controllers/viewControllers.php';
     /*require 'src/utils/jwt.php';*/
     require 'src/utils/inputValidation.php';
