@@ -20,6 +20,8 @@
     ];
 
     $sub_path = substr($path, 10);
+    json_encode($user);
+    exit;
 
     if(!$sub_path || $sub_path == '/') {
         echo json_encode($sub_path);
