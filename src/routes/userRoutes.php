@@ -68,8 +68,6 @@
                 if($user_id == 'email') {
                     if(isset($_POST['email'])) {
                         $user_email = validate_email($_POST['email']);
-                        json_encode($user_email);
-                        exit;
                         echo json_encode(call_user_func($user_routes['/get/email'], $user_email));
                     }
                 }
