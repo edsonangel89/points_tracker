@@ -8,8 +8,6 @@
         '/api/sessions' => 'src/routes/sessionRoutes.php',
         '404' => 'src/views/404.php'
     ];
-    echo json_encode('test');
-    exit;
 
     if (preg_match_all('/\//', $path) == 1 && $path == '/') {
         header('Location: home');
