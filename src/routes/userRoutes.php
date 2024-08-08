@@ -18,11 +18,12 @@
         '/delete/' => 'delete_user_by_id',
         '404' => 'not_found_page'
     ];
-
-    $sub_path = substr($path, 10);
-    echo json_encode($sub_path);
+    echo json_encode('test');
     exit;
 
+
+    $sub_path = substr($path, 10);
+    
     if(!$sub_path || $sub_path == '/') {
         echo json_encode($sub_path);
         call_user_func($user_routes['404']);
