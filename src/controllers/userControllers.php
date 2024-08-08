@@ -2,9 +2,10 @@
 
 
     require 'src/models/userModels.php';
-    require 'src/utils/mailer.php';
     echo json_encode('test');
     exit;
+    require 'src/utils/mailer.php';
+    
 
     function get_users() {
         $users = User::get_users();
