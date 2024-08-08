@@ -1,9 +1,10 @@
 <?php
 
     use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\Exception;
     echo json_encode('test');
     exit;
+    use PHPMailer\PHPMailer\Exception;
+    
 
     require 'src/libs/PHPMailer/src/Exception.php';
     require 'src/libs/PHPMailer/src/PHPMailer.php';
