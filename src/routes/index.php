@@ -1,6 +1,8 @@
 <?php
 
     $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    echo json_encode('test');
+    exit;
     
     $main_routes = [
         '/' => 'src/routes/viewRoutes.php',

@@ -10,8 +10,7 @@
             header('Location: /');
         }
     }
-    echo json_encode('test');
-    exit;
+    
     require 'src/config/dbInit.php';
     require 'src/routes/index.php';
 ?>
