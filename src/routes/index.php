@@ -1,8 +1,6 @@
 <?php
 
     $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-    echo json_encode('test');
-    exit;
     
     $main_routes = [
         '/' => 'src/routes/viewRoutes.php',
@@ -10,6 +8,8 @@
         '/api/sessions' => 'src/routes/sessionRoutes.php',
         '404' => 'src/views/404.php'
     ];
+    echo json_encode('test');
+    exit;
 
     if (preg_match_all('/\//', $path) == 1 && $path == '/') {
         header('Location: home');
