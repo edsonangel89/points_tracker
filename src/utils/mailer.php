@@ -1,8 +1,6 @@
 <?php
 
     use PHPMailer\PHPMailer\PHPMailer;
-    echo json_encode('test');
-    exit;
     use PHPMailer\PHPMailer\Exception;
     
 
