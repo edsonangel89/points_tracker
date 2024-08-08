@@ -1,5 +1,6 @@
 <?php
-    
+    echo json_encode('test');
+    exit;
     require 'src/controllers/userControllers.php';
     require 'src/controllers/viewControllers.php';
     /*require 'src/utils/jwt.php';*/
@@ -18,8 +19,7 @@
         '/delete/' => 'delete_user_by_id',
         '404' => 'not_found_page'
     ];
-    echo json_encode('test');
-    exit;
+    
 
 
     $sub_path = substr($path, 10);
