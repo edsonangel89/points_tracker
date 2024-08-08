@@ -32,7 +32,7 @@
                 <h2>Hola " . $fname . "</h2>
                 <p>Muchas gracias por registrarte con nosotros</p>
                 <p>Oprime el siguiente enlace para confirmar tu correo electrónico:</p>
-                <a href=" . "https://www.puntoaqua.com/api/users/update/confirm?email=" . $user_email">Confirmar correo</a>
+                <a href=" . "https://www.puntoaqua.com/api/users/update/confirm?email=" . $user_email . ">Confirmar correo</a>
                 <p>Para soporte técnico manda un mensaje al siguiente correo:</p>
                 <a href='mailto:support@libertyws.com.mx'>support@libertyws.com.mx</a>
             ";
