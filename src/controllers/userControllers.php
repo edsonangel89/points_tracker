@@ -2,8 +2,6 @@
 
 
     require 'src/models/userModels.php';
-    echo json_encode('test');
-    exit;
     require 'src/utils/mailer.php';
     
 
