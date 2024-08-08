@@ -79,8 +79,6 @@
     }
     elseif(preg_match_all('/\/add/', $sub_path)) {
         $fname = validate_text_input($_POST['fname']);
-        json_encode($user);
-        exit;
         $lname = validate_text_input($_POST['lname']);
         $email = validate_email($_POST['email']);
         $password = encrypt_password(validate_password($_POST['password']));
