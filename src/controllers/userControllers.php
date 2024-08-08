@@ -1,6 +1,5 @@
 <?php
 
-
     require 'src/models/userModels.php';
     require 'src/utils/mailer.php';
     

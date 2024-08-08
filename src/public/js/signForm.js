@@ -37,8 +37,8 @@ signForm.addEventListener('submit', function(e) {
         }
         else {
             fetch('https://www.puntoaqua.com/api/users/add', {
-            method: 'POST',
-            body: formData
+                method: 'POST',
+                body: formData
             })
             .then(response => response.json())
             .then(data => {
@@ -56,7 +56,6 @@ signForm.addEventListener('submit', function(e) {
                         inputEmail.value = '';
                     break;
                     default:
-                        console.log(data);
                         const email = encodeURI(data[0]);
                         window.location.href = "/mail?email=" + email;
                         inputFname.value = '';
