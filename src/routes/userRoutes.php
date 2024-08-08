@@ -97,7 +97,8 @@
             $prizes,
             $verify
         ];
-
+        json_encode($user);
+        exit;
         call_user_func_array($user_routes['/add/'], $user);
     }
     elseif(preg_match_all('/\/update\/info\//', $sub_path)) {
