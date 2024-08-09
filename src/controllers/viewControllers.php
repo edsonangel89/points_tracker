@@ -44,10 +44,6 @@
     }
 
     function get_confirm() {
-        /*echo json_encode('test');
-        exit;*/
-        /*include 'src/utils/jwt.php';*/
-        
         require 'src/controllers/userControllers.php';
         
         $user = get_user_by_email($_GET['email']);
