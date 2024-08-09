@@ -44,9 +44,9 @@
     }
 
     function get_confirm() {
-        echo json_encode('test');
-        exit;
-        include 'src/utils/jwt.php';
+        /*echo json_encode('test');
+        exit;*/
+        /*include 'src/utils/jwt.php';*/
         
         require 'src/controllers/userControllers.php';
         
