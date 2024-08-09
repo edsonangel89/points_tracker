@@ -56,7 +56,7 @@ signForm.addEventListener('submit', function(e) {
                         inputEmail.value = '';
                     break;
                     default:
-                        const email = encodeURI(data[0]);
+                        const email = data;
                         window.location.href = "/mail?email=" + email;
                         inputFname.value = '';
                         inputLname.value = '';
